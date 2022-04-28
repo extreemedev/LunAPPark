@@ -1,0 +1,15 @@
+version: "3.9"
+    
+services:
+
+  web:
+    container_name: sitoweb
+    image: nginx:latest
+    volumes:
+      - type: bind
+        source: /home/matt/app/linguaggiweb  #localhost
+        target: /usr/share/nginx/html  #container
+    ports:
+      - "80:80"   #localhost:container
+    restart: always
+
