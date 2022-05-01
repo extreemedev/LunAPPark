@@ -3,8 +3,8 @@ version: "3.4"
 services:
 
   nginx:
-    depends_on:
-      - pg
+    #depends_on:
+      #- postgresql
     container_name: sitoweb
     image: nginx:latest
     volumes:
@@ -15,7 +15,7 @@ services:
       - "80:80"   #localhost:container
     restart: always
 
-  pg:
+  postgresql:
     container_name: database
     image: postgres
     volumes:
@@ -42,7 +42,7 @@ services:
 
       
 volumes:
-  pg_data: {}
+  postgresql_data: {}
   admin_data: {}
 
 
