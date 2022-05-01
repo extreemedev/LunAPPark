@@ -1,4 +1,4 @@
-version: "3.9"
+version: "3.4"
     
 services:
 
@@ -22,9 +22,9 @@ services:
       - pg_data:/var/lib/postgresql/data
     restart: always
     environment:
-      POSTGRES_USER: example
-      POSTGRES_PASSWORD: example
-      POSTGRES_DB: example
+      - POSTGRES_USER=example
+      - POSTGRES_PASSWORD=example
+      - POSTGRES_DB=example
     ports:
       - 5432:5432
 
@@ -35,8 +35,8 @@ services:
       - admin_data:/var/lib/pgadmin
     restart: always
     environment:
-      - 'PGADMIN_DEFAULT_EMAIL=mattallev@gmail.com'
-      - 'PGADMIN_DEFAULT_PASSWORD=example'
+      - PGADMIN_DEFAULT_EMAIL=mattallev@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=example
     ports:
       - 5050:80
 
