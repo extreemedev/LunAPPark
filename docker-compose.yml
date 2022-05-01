@@ -42,7 +42,7 @@ services:
 
       
 volumes:
-  postgresql_data: {}
+  pg_data: {}
   admin_data: {}
 
 
