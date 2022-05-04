@@ -1,12 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html>
+    <head>
+        <title>Esercitazione-login</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../css/bootstrap.min.css" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="rememberMe.js"></script>
+    </head>
+    <body class="text-center">
+        <form action="validateLogin.php" class="form-signin" method="post" name="myForm" onsubmit="validaForm()">
+            <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" width="72"/>
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <input type="email" name="inputEmail" class="form-control" placeholder="Email address" required autofocus/>
+            <input type="password" name="inputPassword" class="form-control" placeholder="Password" required/>
+            <div id="divRemember" class="checkbox mb-3">
+                <input type="checkbox" name="remember" />
+                <label for="remember">Remember me</label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" name="loginButton" type="submit">Sign in</button>
+        </form>
+    </body>
 </html>
