@@ -40,6 +40,14 @@ services:
     ports:
       - 5050:80
 
+  php:
+    image: php:latest
+    ports:
+      - 3030:80
+    volumes:
+      - ./src:/var/www/html/
+    restart: always
+    
       
 volumes:
   pg_data: {}
