@@ -3,8 +3,8 @@ version: "3.4"
 services:
 
   nginx:
-    #depends_on:
-      #- postgresql
+    depends_on:
+      - postgresql
     container_name: webphp
     image: webdevops/php-nginx:latest
     volumes:
