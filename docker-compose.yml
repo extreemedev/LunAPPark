@@ -6,7 +6,7 @@ services:
     #depends_on:
       #- postgresql
     container_name: sitoweb
-    image: nginx:latest
+    image: webdevops/php-nginx:latest
     volumes:
       - type: bind
         source: /home/matt/app/linguaggiweb  #localhost
@@ -39,14 +39,6 @@ services:
       - PGADMIN_DEFAULT_PASSWORD=example
     ports:
       - 5050:80
-
-  php:
-    image: php:latest
-    ports:
-      - 3030:80
-    volumes:
-      - ./src:/var/www/html/
-    restart: always
     
       
 volumes:
