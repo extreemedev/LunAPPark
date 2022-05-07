@@ -10,7 +10,7 @@
     <title>LunAPPark Homepage</title>
 </head>
 <body class="text-center">
-    
+  
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container px-5">
                 <a class="navbar-brand" href="#page-top">LunAPPark</a>
@@ -22,7 +22,7 @@
                     </ul>
                 </div>
             </div>
-    </nav>  
+    </nav>
     <div class="mb-lg-5"></div>
 
 	<div class="p-2"></div>
