@@ -36,7 +36,7 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="parchi-a-tema-00.jpg" class="d-block w-100" alt="">
+            <img src="src/assets/img/parchi-a-tema-00.jpg" class="d-block w-100" alt="">
           </div>
           <div class="carousel-item">
             <img src="bootstrap/assets/img/bootstrap-icons.png" class="d-block w-100" alt="">
