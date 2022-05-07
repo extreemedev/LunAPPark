@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="refresh" content="5" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Griglie</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template:'elem1 elem1' 50px
+                          'elem3 elem4' 90px / 1fr 2fr;
+            border: solid 2px;
+            background-color: white;
+
+        }
+        .container > div {
+            border: solid 2px;
+            background-color: rgb(176, 127, 255);
+        }
+        .container > div:nth-child(1) {
+            grid-area: elem1;
+            background-color: rgba(240, 248, 255, 0);
+        }
+        .container > div:nth-child(2) { grid-area: elem2;}
+        .container > div:nth-child(3) { grid-area: elem3;}
+        .container > div:nth-child(4) { grid-area: elem4;}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    
+
+    </div>
+    
+</body>
+</html>

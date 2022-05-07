@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="refresh" content="5" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .flexbox{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .flexbox > cell {
+            width: 1020px;
+            height: 40px;
+            border: 2px;
+        }
+        .flexbox > cell:nth-child(1) {
+            flex: 1 2 1200px ;
+            background-color: orange;
+            font: bold;
+        }
+        .flexbox > cell:nth-child(2) {
+            flex: 0 2 300px ;
+            background-color: purple;
+        }
+        .flexbox > cell:nth-child(3) {
+            flex: 0 2 300px ;
+            background-color: greenyellow;
+        }
+        .flexbox > cell:nth-child(4) {
+            flex: 0 2 300px ;
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flexbox">
+        <cell>Guida sulle Flexbox</cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell>Quinto Box</cell>
+        <cell>Sesto Box</cell>
+
+    </div>
+    
+</body>
+</html>
