@@ -10,7 +10,7 @@
     <title>LunAPPark Homepage</title>
 </head>
 <body class="text-center">
-  
+
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container px-5">
                 <a class="navbar-brand" href="#page-top">LunAPPark</a>
@@ -18,7 +18,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#!">Sign Up</a></li>
-                        <li class="nav-item"><a class="nav-link" href="login/index.html" role="button">Log In</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./src/login/index.html" role="button">Log In</a></li>
                     </ul>
                 </div>
             </div>
