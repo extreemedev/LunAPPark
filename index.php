@@ -25,7 +25,7 @@
     </nav>
     <div class="mb-lg-5"></div>
 
-	<div class="p-2"></div>
+	  <div class="p-2"></div>
 
 
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
