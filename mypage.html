@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myPage</title>
+    <style>
+        @media screen and (min-width: 600px){
+            .myPage {
+                display: grid;
+                grid-template:
+                    'h h h'
+                    'n m m'
+                    'n f f' / 1fr 2fr 2fr
+            }
+        }
+
+        @media screen and (max-width: 599px){
+            nav {display: flex;}
+        }
+
+        
+        header { grid-area: h; padding: 3em ; background-color: aquamarine;}
+        nav    { grid-area: n; padding: 3em ; background-color: aliceblue;}
+        main   { grid-area: m; padding: 3em ; background-color: olivedrab;}
+        footer { grid-area: f; padding: 3em ; background-color: orange;}
+
+    </style>
+</head>
+<body>
+    <div class="myPage">
+        <header>Header</header>
+        <nav>
+            <div>Il mio link</div>
+            <div>Il mio link</div>
+            <div>Il mio link</div>
+            <div>Il mio link</div>
+        </nav>
+        <main>Il mio sito web</main>
+        <footer>Altre informazioni</footer>
+    </div>
+    
+</body>
+</html>
