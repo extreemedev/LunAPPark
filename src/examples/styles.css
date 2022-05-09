@@ -8,7 +8,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3px 4%;
+  padding: 0px 4%;
   background: rgb(52,62,122);
   background: linear-gradient(90deg, rgba(52,62,122,1) 23%, rgba(159,84,230,1) 66%, rgba(251,233,158,1) 100%);
 }
@@ -64,6 +64,7 @@ header {
 }
 
 .overlay {
+  cursor: pointer;
   height: 100%;
   width: 0;
   position: fixed;
