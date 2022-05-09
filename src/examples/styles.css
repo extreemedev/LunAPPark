@@ -8,12 +8,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10%;
-  background-color: #24252a;
+  padding: 3px 4%;
+  background: rgb(52,62,122);
+  background: linear-gradient(90deg, rgba(52,62,122,1) 23%, rgba(159,84,230,1) 66%, rgba(251,233,158,1) 100%);
 }
 
 .logo {
   cursor: pointer;
+  padding-right: 50px;
 }
 
 .nav__links a,
@@ -39,12 +41,12 @@ header {
 }
 
 .nav__links li a:hover {
-  color: #0088a9;
+  color: #a96500;
 }
 
 .cta {
   padding: 9px 25px;
-  background-color: rgba(0, 136, 169, 1);
+  background-color: #343e7a;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -52,7 +54,7 @@ header {
 }
 
 .cta:hover {
-  background-color: rgba(0, 136, 169, 0.8);
+  background-color: #a96500;
 }
 
 /* Mobile Nav */
