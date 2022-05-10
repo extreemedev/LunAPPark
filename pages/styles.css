@@ -4,13 +4,25 @@
   padding: 0;
 }
 
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0px 4%;
   background: rgb(52,62,122);
-  background: linear-gradient(90deg, rgba(52,62,122,1) 23%, rgba(159,84,230,1) 66%, rgba(251,233,158,1) 100%);
+  background: linear-gradient(90deg, rgba(52,62,122,1) 0%, rgba(48,135,134,1) 55%, rgba(255,158,1,1) 100%);
+}
+
+
+.back{
+  background: #EFEFBB;
+  background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
+  background: linear-gradient(to right, #D4D3DD, #EFEFBB); 
+}
+
+.back2{
+  background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% );
 }
 
 .logo {
@@ -22,7 +34,7 @@ header {
 .cta,
 .overlay__content a {
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-weight: bold;
   color: #edf0f1;
   text-decoration: none;
 }
@@ -54,7 +66,7 @@ header {
 }
 
 .cta:hover {
-  background-color: #a96500;
+  background-color: #2d9292;
 }
 
 /* Mobile Nav */
@@ -72,8 +84,7 @@ header {
   left: 0;
   top: 0;
   background: rgb(52,62,122);
-  background: linear-gradient(90deg, rgba(52,62,122,1) 23%, rgba(159,84,230,1) 66%, rgba(251,233,158,1) 100%);
-  
+  background: linear-gradient(90deg, rgba(52,62,122,1) 0%, rgba(48,135,134,1) 55%, rgba(255,158,1,1) 100%);
   overflow-x: hidden;
   transition: width 0.5s ease 0s;
 }
@@ -104,13 +115,13 @@ header {
 .overlay .close {
   cursor: pointer;
   position: absolute;
-  top: 20px;
-  right: 45px;
+  top: 0px;
+  right: 40px;
   font-size: 60px;
   color: #edf0f1;
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 450px) {         /*LANDSCAPE*/
   .overlay a {
     font-size: 20px;
   }
@@ -121,7 +132,7 @@ header {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {       /*MOBILE*/
   .nav__links,
   .cta {
     display: none;
