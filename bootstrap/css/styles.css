@@ -50,10 +50,10 @@ header {
 }
 
 .nav__links li a:hover {
-  color: #2d9292;
+  color: #F2994A;
 }
 
-.cta {
+.cta {                            /*BOTTONE ACQUISTA E PRENOTA*/
   padding: 9px 25px;
   background-color: #ff9e01;
   box-shadow: 0 0 15px rgb(17, 17, 17);
@@ -64,7 +64,7 @@ header {
 }
 
 .cta:hover {
-  background-color: #2d9292;
+  background-color: #F2994A;
 }
 
 
@@ -92,7 +92,6 @@ header {
 .cut{
   padding: 15px;
   border-radius: 30px;
-  
 }
 
 
@@ -137,7 +136,7 @@ header {
 
 .overlay a:hover,
 .overlay a:focus {
-  color: #2d9292;
+  color: #F2994A;
 }
 .overlay .close {
   cursor: pointer;
