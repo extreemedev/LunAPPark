@@ -50,12 +50,12 @@ header {
 }
 
 .nav__links li a:hover {
-  color: #F2994A;
+  color: #ffc465;
 }
 
 .cta {                            /*BOTTONE ACQUISTA E PRENOTA*/
   padding: 9px 25px;
-  background-color: #ff9e01;
+  background-color: #ffc465;
   box-shadow: 0 0 15px rgb(17, 17, 17);
   border: none;
   border-radius: 50px;
@@ -64,13 +64,14 @@ header {
 }
 
 .cta:hover {
-  background-color: #F2994A;
+  background-color: #ffc465;
 }
 
 
 .btn-grad {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
+  text-decoration: none;
   background-image: linear-gradient(to right, #F2994A 0%, #F2C94C  51%, #F2994A  100%);
   margin: 10px;
   padding: 15px 45px;
@@ -136,7 +137,7 @@ header {
 
 .overlay a:hover,
 .overlay a:focus {
-  color: #F2994A;
+  color: #ffc465;
 }
 .overlay .close {
   cursor: pointer;
