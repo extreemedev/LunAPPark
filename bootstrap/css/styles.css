@@ -142,8 +142,8 @@ header {
 .overlay .close {
   cursor: pointer;
   position: absolute;
-  top: 0px;
-  right: 40px;
+  top: 10px;
+  right: 30px;
   font-size: 60px;
   color: #edf0f1;
 }
@@ -164,7 +164,11 @@ header {
   .cta {
     display: none;
   }
+  .btn-grad{
+    display: none;
+  }
   .menu {
     display: initial;
   }
+
 }
