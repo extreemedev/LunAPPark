@@ -18,7 +18,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#!">Sign Up</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./src/login/index.html" role="button">Log In</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/login/index.html" role="button">Log In</a></li>
                     </ul>
                 </div>
             </div>

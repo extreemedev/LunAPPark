@@ -71,7 +71,9 @@ header {
   z-index: 1;
   left: 0;
   top: 0;
-  background-color: #24252a;
+  background: rgb(52,62,122);
+  background: linear-gradient(90deg, rgba(52,62,122,1) 23%, rgba(159,84,230,1) 66%, rgba(251,233,158,1) 100%);
+  
   overflow-x: hidden;
   transition: width 0.5s ease 0s;
 }
@@ -97,7 +99,7 @@ header {
 
 .overlay a:hover,
 .overlay a:focus {
-  color: #0088a9;
+  color: #a96500;
 }
 .overlay .close {
   cursor: pointer;
