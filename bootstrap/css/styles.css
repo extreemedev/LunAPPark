@@ -212,6 +212,7 @@ header {
 
 @media only screen and (max-width: 800px) {       /*MOBILE*/
   .nav__links,
+  .navbar-nav,
   .cta {
     display: none;
   }
