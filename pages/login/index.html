@@ -15,7 +15,7 @@
         </style>
     </head>
     <body class="text-center">
-        <form action="validateLogin.php" class="form-signin" method="post" name="myForm" onsubmit="validaForm()">
+        <form action="validateLogin.php" class="form-signin" method="post" name="myForm">
             <img class="mb-4" src="../../bootstrap/assets/brand/bootstrap-logo.svg" width="72"/>
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
             <input type="email" name="inputEmail" class="form-control" placeholder="Email address" required autofocus/>
@@ -25,7 +25,8 @@
                 <input type="checkbox" name="remember" />
                 <label for="remember">Remember me</label>
             </div>
-            <button class="btn btn-lg btn-primary btn-block" name="loginButton" type="submit">Sign in</button>
+            <button class="btn btn-lg btn-primary btn-block" name="loginButton" type="submit" onclick="validaForm()">Sign in</button>
+            <button class="btn btn-lg btn-secondary btn-block" name="singupButton" type="submit"><a href="../singup/index.html">Sign up</a></button>
         </form>
     </body>
 </html>

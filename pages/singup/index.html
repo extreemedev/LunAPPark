@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Sing-Up</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="../../bootstrap/js/bootstrap.min.js"></script>
+        <script src="rememberMe.js"></script>
+        <style>
+            body{
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+            }
+        </style>
+    </head>
+    <body class="text" style="text-align: center">
+        <form action="validateSingup.php" class="form-signup" method="post" name="myRegistr">
+            Registrati
+            cognome:
+            <input type="text" name="cognome" size="40" maxlength="40">
+            nome:
+            <input type="text" name="nome" size="30" maxlength="30">
+            email:
+            <input type="email" name="email" size="30" maxlength="30">
+            conferma email:
+            <input type="email" name="confermaemail" size="30" maxlength="30">
+            password:
+            <input type="password" name="password" size="20" maxlength="20">
+            conferma password:
+            <input type="password" name="confermapassword" size="20" maxlength="20">
+            telefono:
+            <input type="text" name="tel" size="15" maxlength="15">
+            data di nascita:
+            <input type="date" name="data">
+            <input type="submit" value="Registrati">
+        </form>
+    </body>
+</html>
