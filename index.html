@@ -13,19 +13,21 @@
     </head>
     <body id="page-top" class="back5">
         
-        <header>
-            <a class="logo" href="#page-top"><img src="src/assets/img/logo.png" width="120px" height="110px" object-fit="scale-down" alt="logo"></a>
-            <div>
-                <ul class="nav__links">
-                    <li><a href="#">Scopri il parco</a></li>
-                    <li><a href="#">Calendario e tariffe</a></li>
-                    <li><a href="#">Info e contatti</a></li>
-                    <li><a href="#">Area personale</a></li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container">
+                <a class="logo" href="#page-top"><img src="src/assets/img/logo.png" width="120px" height="110px" object-fit="scale-down" alt="logo"></a>
+                <div>
+                    <ul class="nav__links navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Scopri il parco</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Calendario e tariffe</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Info e contatti</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Area personale</a></li>
+                    </ul>
+                </div>
+                <a class="btn-grad" href="#">Acquista e prenota</a>
+                <p class="menu btn-grad">-</p>
             </div>
-            <a class="btn-grad" href="#">Acquista e prenota</a>
-            <p class="menu btn-grad">-</p>
-        </header>
+        </nav>
         <div class="overlay">
             <!--i class="fa-solid fa-bars">&times;</i-->
             <a class="close">&times;</a>
@@ -36,12 +38,12 @@
             </div>
         </div>
         <script type="text/javascript" src="scripts/mobile.js"></script>
-            
+        <div class="text"></div>    
         <div class="text" style="text-align: center">Scopri un nuovo mondo pieno di emozioni!
             <div class="subtext">Biglietto a partire da 20€</div>
             <a class="btn-grad" href="#scroll">Scopri di piú</a>  
         </div>
-        <picture><img class="cut" src="../src/assets/img/russian-mountain.jpg" width="100%" alt=""></picture>
+        <picture id="scroll"><img class="cut" src="../src/assets/img/russian-mountain.jpg" width="100%" alt=""></picture>
 
     </body>
 </html>
