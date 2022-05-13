@@ -139,6 +139,11 @@ header {
   padding: 30px;
 }
 
+.text .checky{
+  filter: drop-shadow(3px 5px 2px rgba(34, 34, 34, 0.192));
+  font-size: 15px;
+}
+
 .text .btn-grad{
   padding: 15px 15px;
   font-size: 20px;

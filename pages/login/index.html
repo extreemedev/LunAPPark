@@ -1,32 +1,60 @@
 <html>
     <head>
-        <title>Login</title>
-        <meta charset="utf-8" />
+        <meta http-equiv="refresh" content="5" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Area personale</title>
+        <link rel="icon" href="../../src/assets/img/logo.png">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css" />
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="../../bootstrap/css/styles.css" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
         <script src="../../bootstrap/js/bootstrap.min.js"></script>
         <script src="rememberMe.js"></script>
-        <style>
-            body{
-            background-color: #4158D0;
-            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-            }
-        </style>
     </head>
-    <body class="text-center">
-        <form action="validateLogin.php" class="form-signin" method="post" name="myForm">
-            <img class="mb-4" src="../../bootstrap/assets/brand/bootstrap-logo.svg" width="72"/>
-            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-            <input type="email" name="inputEmail" class="form-control" placeholder="Email address" required autofocus/>
-            <div></div>
-            <input type="password" name="inputPassword" class="form-control" placeholder="Password" required/>
-            <div id="divRemember" class="checkbox mb-3">
-                <input type="checkbox" name="remember" />
-                <label for="remember">Remember me</label>
+    <body id="page-top" class="back5">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container">
+                <a class="logo" href="#page-top"><img src="../../src/assets/img/logo.png" width="120px" height="110px" object-fit="scale-down" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="nav__links navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html">Scopri il parco</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Calendario e tariffe</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Info e contatti</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Area personale</a></li>
+                    </ul>
+                    <a class="btn-grad" href="#">Acquista e prenota</a>
+                <!--p class="menu btn-grad">-</p-->
+                </div>
             </div>
-            <button class="btn btn-lg btn-primary btn-block" name="loginButton" type="submit" onclick="validaForm()">Sign in</button>
-            <button class="btn btn-lg btn-secondary btn-block" name="singupButton" type="submit"><a href="../singup/index.html">Sign up</a></button>
-        </form>
+        </nav>
+        <div class="overlay">
+            <!--i class="fa-solid fa-bars">&times;</i-->
+            <a class="close">&times;</a>
+            <div class="overlay__content">
+                <a href="#">Scopri il parco</a>
+                <a href="#">Calendario e tariffe</a>
+                <a href="#">Info e contatti</a>
+            </div>
+        </div>
+        <div class="text"></div>
+        <div class="text">
+            <form action="validateLogin.php" class="form-signin" method="post" name="myForm">
+                <div class="subtext">Accedi o Registrati</div>
+                <div class="mb-5"></div>
+                <input type="email" name="inputEmail" class="form-control" placeholder="Email address" required autofocus/>
+                <input type="password" name="inputPassword" class="form-control" placeholder="Password" required/>
+                
+                <div id="divRemember" class="checkbox">
+                    <input type="checkbox" name="remember"></input>
+                    <label class="checky" for="remember">Remember me</label>
+                </div>
+                <a class="btn-grad" name="loginButton" type="submit" onclick="validaForm()">Log in</a>
+                <a class="btn-grad" name="singupButton" type="submit" href="../singup/index.html">Sign up</a>
+            </form>
+        </div>
+        <picture id="scroll"><img class="cut" src="../../src/assets/img/wide-park.jpg" height="50%" width="120%" alt=""></picture>
+        
     </body>
 </html>
