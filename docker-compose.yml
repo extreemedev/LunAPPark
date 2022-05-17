@@ -22,9 +22,9 @@ services:
       - pg_data:/var/lib/postgresql/data
     restart: always
     environment:
-      - POSTGRES_USER=example
+      - POSTGRES_USER=extreemedev
       - POSTGRES_PASSWORD=example
-      - POSTGRES_DB=example
+      - POSTGRES_DB=lunappark
     ports:
       - 5432:5432
 
