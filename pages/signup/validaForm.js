@@ -10,6 +10,9 @@ function valida() {
             x[i].setAttribute("placeholder",Array[i]);
         }
     }
+
+//#########################################################################################################################################
+
     if (document.myRegistr.nome.value=="") {
         var nome = document.getElementsByName("nome");
         for(var i=0; i < nome.length; i++){
@@ -35,6 +38,8 @@ function valida() {
         b = false;
     }
 
+//#########################################################################################################################################
+
     if (document.myRegistr.cognome.value=="") {
         var cognome = document.getElementsByName("cognome");
         for(var i=0; i < cognome.length; i++){
@@ -45,45 +50,87 @@ function valida() {
         b = false;
     }
 
+//#########################################################################################################################################
+
     if (document.myRegistr.email.value=="") {
         var email = document.getElementsByName("email");
         for(var i=0; i < email.length; i++){
-            Array[1]=cognome[i].getAttribute("placeholder");
-            cognome[i].setAttribute("placeholder","Inserire un cognome");
-            cognome[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+            Array[2]=email[i].getAttribute("placeholder");
+            email[i].setAttribute("placeholder","Inserire un email");
+            email[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+        }
+        b = false;
+    } else {
+        if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.myRegistr.email.value))){
+            window.alert("L'indirizzo email che hai inserito non e' valido")
+            var email = document.getElementsByName("email");
+            for(var i=0; i < email.length; i++){
+                Array[2]=email[i].getAttribute("placeholder");
+                email[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+            }
         }
         b = false;
     }
 
-    if (document.myRegistr.confermaemail.value=="") {
-        var cognome = document.getElementsByName("cognome");
-        for(var i=0; i < cognome.length; i++){
-            Array[1]=cognome[i].getAttribute("placeholder");
-            cognome[i].setAttribute("placeholder","Inserire un cognome");
-            cognome[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+//#########################################################################################################################################
+
+    if ((document.myRegistr.confermaemail.value=="") && (document.myRegistr.email.value=="")) {
+        var confermaemail = document.getElementsByName("confermaemail");
+        for(var i=0; i < confermaemail.length; i++){
+            Array[3]=confermaemail[i].getAttribute("placeholder");
+            confermaemail[i].setAttribute("placeholder","Inserire un email");
+            confermaemail[i].style.boxShadow="0 0 0 0.25rem #e400007a";
         }
         b = false;
+    } else {
+        if (document.myRegistr.confermaemail.value!=document.myRegistr.email.value) {
+            window.alert("inserire lo stesso indirizzo email!")
+            var confermaemail = document.getElementsByName("confermaemail");
+            for(var i=0; i < confermaemail.length; i++){
+                Array[3]=confermaemail[i].getAttribute("placeholder");
+                confermaemail[i].setAttribute("placeholder","Inserire un email");
+                confermaemail[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+            }
+            b = false;
+        }
     }
+
+//#########################################################################################################################################
 
     if (document.myRegistr.password.value=="") {
-        var cognome = document.getElementsByName("cognome");
-        for(var i=0; i < cognome.length; i++){
-            Array[1]=cognome[i].getAttribute("placeholder");
-            cognome[i].setAttribute("placeholder","Inserire un cognome");
-            cognome[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+        var password = document.getElementsByName("password");
+        for(var i=0; i < password.length; i++){
+            Array[4]=password[i].getAttribute("placeholder");
+            password[i].setAttribute("placeholder","Inserire una password");
+            password[i].style.boxShadow="0 0 0 0.25rem #e400007a";
         }
         b = false;
     }
 
-    if (document.myRegistr.confermapassword.value=="") {
-        var cognome = document.getElementsByName("cognome");
-        for(var i=0; i < cognome.length; i++){
-            Array[1]=cognome[i].getAttribute("placeholder");
-            cognome[i].setAttribute("placeholder","Inserire un cognome");
-            cognome[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+//#########################################################################################################################################
+
+    if ((document.myRegistr.confermapassword.value=="") && (document.myRegistr.password.value=="")) {
+        var confermapassword = document.getElementsByName("confermapassword");
+        for(var i=0; i < confermapassword.length; i++){
+            Array[5]=confermapassword[i].getAttribute("placeholder");
+            confermapassword[i].setAttribute("placeholder","Inserire una password");
+            confermapassword[i].style.boxShadow="0 0 0 0.25rem #e400007a";
         }
         b = false;
+    } else {
+        if (document.myRegistr.confermapassword.value!=document.myRegistr.password.value) {
+            window.alert("inserire la stessa password!")
+            var confermapassword = document.getElementsByName("confermapassword");
+            for(var i=0; i < confermapassword.length; i++){
+                Array[5]=confermapassword[i].getAttribute("placeholder");
+                confermapassword[i].setAttribute("placeholder","Inserire una password");
+                confermapassword[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+            }
+            b = false;
+        }
     }
+
+//#########################################################################################################################################
 
     if (document.myRegistr.tel.value=="") {
         var cognome = document.getElementsByName("cognome");
@@ -94,6 +141,8 @@ function valida() {
         }
         b = false;
     }
+
+//#########################################################################################################################################
 
     if (document.myRegistr.data.value=="") {
         var cognome = document.getElementsByName("cognome");
