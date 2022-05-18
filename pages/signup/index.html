@@ -1,7 +1,7 @@
 
 <html>
     <head>
-        <meta http-equiv="refresh" content="5" />
+        <!--<meta http-equiv="refresh" content="5" />-->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Area personale</title>
@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="../../bootstrap/css/styles.css" />
         <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
         <script src="../../bootstrap/js/bootstrap.min.js"></script>
-        <script src="rememberMe.js"></script>
+        <script src="validaForm.js"></script>
     </head>
     <body id="page-top" class="back5">
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
@@ -26,12 +26,12 @@
         </nav>
         <div class="text"></div>
         <div class="text">
-            <form action="validateSingup.php" class="form-signup" method="post" name="myRegistr">
+            <form action="validateSingup.php" class="form-signup" method="post" name="myRegistr" onsubmit="return valida();">
                 <div class="subtext">Registrati</div>
                 <div class="h3">Nome:</div>
-                <input type="text" name="cognome" class="form-control" placeholder="Nome" size="40" maxlength="40">
+                <input type="text" name="nome" class="form-control" placeholder="Nome" size="40" maxlength="40"><!--box-shadow: 0 0 0 0.25rem #ffc4657a;-->
                 <div class="h3">Cognome:</div>
-                <input type="text" name="nome" class="form-control" placeholder="Cognome" size="30" maxlength="30">
+                <input type="text" name="cognome" class="form-control" placeholder="Cognome" size="30" maxlength="30">
                 <div class="h3">Email:</div>
                 <input type="email" name="email" class="form-control" placeholder="Indirizzo email" size="30" maxlength="30">
                 <div class="h3">Conferma email:</div>
