@@ -2,6 +2,7 @@
 //var pn="";
 function valida() {
     var b = true;
+    var b2 = true;
     var x = document.getElementsByClassName("form-control");
     for(var i=0; i < x.length; i++){
         //window.alert(x[i]);
@@ -63,6 +64,7 @@ function valida() {
     } else {
         if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.myRegistr.email.value))){
             window.alert("L'indirizzo email che hai inserito non e' valido")
+            b2=false;
             var email = document.getElementsByName("email");
             for(var i=0; i < email.length; i++){
                 Array[2]=email[i].getAttribute("placeholder");
@@ -74,7 +76,7 @@ function valida() {
 
 //#########################################################################################################################################
 
-    if ((document.myRegistr.confermaemail.value=="") && (document.myRegistr.email.value=="")) {
+    if (((document.myRegistr.confermaemail.value=="") && (document.myRegistr.email.value=="")) || (b2==false)) {
         var confermaemail = document.getElementsByName("confermaemail");
         for(var i=0; i < confermaemail.length; i++){
             Array[3]=confermaemail[i].getAttribute("placeholder");
