@@ -6,13 +6,16 @@
   padding: 0;
 }
 
-
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0px 2%;
   background: #3e434a;
+}
+
+.mb-custom {
+  margin-bottom: 6.5rem !important;
 }
 
 .floating{
