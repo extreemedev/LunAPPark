@@ -8,7 +8,9 @@ function valida() {
         //window.alert(x[i]);
         if (x[i].style.boxShadow!="") {
             x[i].style.boxShadow="";
-            x[i].setAttribute("placeholder",Array[i]);
+            if (x[i] != document.myRegistr.data) {
+                x[i].setAttribute("placeholder",Array[i]);
+            }
         }
     }
 
@@ -70,8 +72,8 @@ function valida() {
                 Array[2]=email[i].getAttribute("placeholder");
                 email[i].style.boxShadow="0 0 0 0.25rem #e400007a";
             }
+            b = false;
         }
-        b = false;
     }
 
 //#########################################################################################################################################
@@ -135,23 +137,32 @@ function valida() {
 //#########################################################################################################################################
 
     if (document.myRegistr.tel.value=="") {
-        var cognome = document.getElementsByName("cognome");
-        for(var i=0; i < cognome.length; i++){
-            Array[1]=cognome[i].getAttribute("placeholder");
-            cognome[i].setAttribute("placeholder","Inserire un cognome");
-            cognome[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+        var tel = document.getElementsByName("tel");
+        for(var i=0; i < tel.length; i++){
+            Array[6]=tel[i].getAttribute("placeholder");
+            tel[i].setAttribute("placeholder","Inserire un telefono");
+            tel[i].style.boxShadow="0 0 0 0.25rem #e400007a";
         }
         b = false;
+    } else {
+        if ((document.myRegistr.tel.value.length<10) || (document.myRegistr.tel.value.length>12)) {
+            window.alert("inserire un numero tra 10 e 12 cifre")
+            var tel = document.getElementsByName("tel");
+            for(var i=0; i < tel.length; i++){
+                Array[6]=tel[i].getAttribute("placeholder");
+                tel[i].setAttribute("placeholder","Inserire un telefono");
+                tel[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+            }
+            b = false;
+        }
     }
 
 //#########################################################################################################################################
 
     if (document.myRegistr.data.value=="") {
-        var cognome = document.getElementsByName("cognome");
-        for(var i=0; i < cognome.length; i++){
-            Array[1]=cognome[i].getAttribute("placeholder");
-            cognome[i].setAttribute("placeholder","Inserire un cognome");
-            cognome[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+        var data = document.getElementsByName("data");
+        for(var i=0; i < data.length; i++){
+            data[i].style.boxShadow="0 0 0 0.25rem #e400007a";
         }
         b = false;
     }
@@ -162,7 +173,7 @@ function valida() {
         //return false;
     //}
     if (b==false){
-        //window.alert("Dati non inseriti correttamente");
+        window.alert("Dati non inseriti correttamente");
         return false;
     }
     window.alert("Dati inseriti correttamente");
