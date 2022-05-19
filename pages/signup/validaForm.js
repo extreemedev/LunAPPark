@@ -173,7 +173,7 @@ function valida() {
         //return false;
     //}
     if (b==false){
-        window.alert("Dati non inseriti correttamente");
+        //window.alert("Dati non inseriti correttamente");
         return false;
     }
     window.alert("Dati inseriti correttamente");
