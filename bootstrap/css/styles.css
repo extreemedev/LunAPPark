@@ -121,11 +121,16 @@ header {
    color: #fff;
 }
 
-.cut{
+.imgcut{
   padding: 15px;
   border-radius: 30px;
 }
 
+.imgcenter{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 .text{
