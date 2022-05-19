@@ -12,7 +12,8 @@
             header("Location: index.html");
         }
         else{
-            $dbconn = pg_connect();
+            $dbconn = pg_connect("host=localhost port=5432
+            dbname=lunappark user=extreemedev password=example");
             $email = $_POST["email"];
             $query = "SELECT * FROM utente where email=$1";
             $result = pg_query_params($dbconn, $query, array($email));

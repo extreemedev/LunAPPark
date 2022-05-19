@@ -15,6 +15,9 @@ header {
   background: #3e434a;
 }
 
+.floating{
+  animation: to-top 1s forwards;
+}
 
 .back{
   background: #EFEFBB;
