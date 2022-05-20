@@ -123,9 +123,9 @@ header {
 
 .imgcut2{
   padding: 0px;
-  border-bottom-left-radius: 30px;
+  /*border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  /*border-radius: 30px;*/
+  border-radius: 30px;*/
 }
 
 .imgcut{
@@ -151,7 +151,7 @@ header {
   text-align: center;
   padding: 60px;
   position: absolute;
-  top: 350px;
+  top: 280px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: fit-content;
