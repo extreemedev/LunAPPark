@@ -12,22 +12,22 @@
             header("Location: index.html");
         }
         else{
-            $dbconn = pg_connect("host=localhost port=5432
+            $dbconn = pg_connect("host=postgresql port=5432
             dbname=lunappark user=extreemedev password=example");
             $email = $_POST["inputEmail"];
-            $query = "SELECT * FROM utente where email=$1";
+            $query = 'SELECT * FROM public."UTENTE" where email=$1';
             $result = pg_query_params($dbconn, $query, array($email));
             if(!($tuple=pg_fetch_array($result,null,PGSQL_ASSOC))) {
-                echo"il login non e' andato a buon fine";
+                echo"L'utente non é registrato!";
             }
             else {
                 $password = md5($_POST["inputPassword"]);
-                $query2 = "SELECT * FROM utente where email=$1 and paswd=$2";
+                $query2 = 'SELECT * FROM public."UTENTE" where email=$1 and password=$2';
                 $result = pg_query_params($dbconn, $query2, array($email, $password));
                 if(($tuple=pg_fetch_array($result,null,PGSQL_ASSOC))) {
-                    echo"il login e' andato a buon fine";
+                    echo"Il login é andato a buon fine";
                 }
-                else die("c'e' stato un errore");
+                else die("C'é stato un errore");
             }
         }
     ?>

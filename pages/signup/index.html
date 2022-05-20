@@ -29,10 +29,10 @@
             <form action="validateRegistration.php" class="form-signup" method="post" name="myRegistr" onsubmit="return valida();">
                 <div class="subtext">Registrati</div>
                 <label class="checky" for="nome">Nome:</label>
-                <input type="text" name="nome" class="form-control" placeholder="Nome" size="30" maxlength="30"><!--box-shadow: 0 0 0 0.25rem #ffc4657a;-->
+                <input type="nome" name="nome" class="form-control" placeholder="Nome" size="30" maxlength="30"><!--box-shadow: 0 0 0 0.25rem #ffc4657a;-->
                 <div class="mb-3"></div>
                 <label class="checky" for="cognome">Cognome:</label>
-                <input type="text" name="cognome" class="form-control" placeholder="Cognome" size="30" maxlength="30">
+                <input type="cognome" name="cognome" class="form-control" placeholder="Cognome" size="30" maxlength="30">
                 <div class="mb-3"></div>
                 <label class="checky" for="email">Email:</label>
                 <input type="email" name="email" class="form-control" placeholder="Indirizzo email" size="40" maxlength="40">
@@ -52,7 +52,7 @@
                 <label class="checky" for="data">Data di nascita:</label>
                 <input type="date" name="data" class="form-control" max="2021-12-31" min="1900-01-01">
                 <div class="mb-3"></div>
-                <a class="btn-grad" name="signupButton" type="submit" onclick="return valida();">Registrati</a>
+                <button class="btn-grad" name="signupButton" type="submit" onclick="return valida();">Registrati</button>
                 <!--<input type="submit" value="Registrati">-->
             </form>
         </div>
