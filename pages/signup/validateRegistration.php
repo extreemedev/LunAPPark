@@ -33,7 +33,7 @@
                 $result = pg_query_params($dbconn, $query2, array($email, $nome, $cognome, $password, $telefono, $datanasc));
                 if($result) {
                     echo"La registrazione e' andato a buon fine \n";
-                    echo"Clicca <a href=\"index.html\"> qui </a>  per loggarti";
+                    echo"Clicca <a href=\"../login/index.html\"> qui </a>  per loggarti";
                 }
                 else die("C'e' stato un errore");
             }

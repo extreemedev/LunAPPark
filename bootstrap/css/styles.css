@@ -85,7 +85,8 @@ header {
   color: #ffc465;
 }
 
-.cta {                            /*BOTTONE ACQUISTA E PRENOTA*/
+
+.cta {                            
   padding: 9px 25px;
   background-color: #ffc465;
   box-shadow: 0 0 15px rgb(17, 17, 17);
@@ -121,17 +122,12 @@ header {
    color: #fff;
 }
 
-.imgcut2{
-  padding: 0px;
-  /*border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  border-radius: 30px;*/
-}
 
 .imgcut{
   padding: 15px;
   border-radius: 30px;
 }
+
 
 .imgcenter{
   display: block;
@@ -139,25 +135,6 @@ header {
   margin-right: auto;
 }
 
-/*#####################################################################*/
-
-.text2{
-  font-family: "Montserrat", sans-serif;
-  font-size: 70px;
-  font-weight: bold;
-  color: white;
-  filter: drop-shadow(3px 5px 3px rgb(0, 0, 0));
-  text-decoration: none;
-  text-align: center;
-  padding: 60px;
-  position: absolute;
-  top: 280px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: fit-content;
-}
-
-/*#####################################################################*/
 
 .text{
   font-family: "Montserrat", sans-serif;
@@ -190,7 +167,7 @@ header {
   display:initial;
 }
 
-/* Mobile Nav */
+/* ###################################################### Mobile Nav ###################################################### */
 
 .menu {
   display: none;
