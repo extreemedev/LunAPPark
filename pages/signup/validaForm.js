@@ -1,6 +1,17 @@
+var myVar;
 
-//var pn="";
-function valida() {
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+
+function showPage() {
+  document.getElementById("form").style.display = "none";
+  document.getElementById("loader").style.display = "block";
+}
+
+
+function validaForm() {
     var b = true;
     var b2 = true;
     var x = document.getElementsByClassName("form-control");
@@ -177,5 +188,6 @@ function valida() {
         return false;
     }
     window.alert("Dati inseriti correttamente");
+    myFunction();
     return true;
 }

@@ -25,8 +25,9 @@
             </div>
         </nav>
         <div class="mb-custom"></div>
-        <div class="text">
-            <form action="validateRegistration.php" class="form-signup" method="post" name="myRegistr" onsubmit="return valida();">
+        <div id="loader" style="display: none;"></div>
+        <div id="form" class="text">
+            <form action="validateRegistration.php" class="form-signup" method="post" name="myRegistr" onsubmit="return validaForm();">
                 <div class="subtext">Registrati</div>
                 <label class="checky" for="nome">Nome:</label>
                 <input type="nome" name="nome" class="form-control" placeholder="Nome" size="30" maxlength="30"><!--box-shadow: 0 0 0 0.25rem #ffc4657a;-->
@@ -52,7 +53,7 @@
                 <label class="checky" for="data">Data di nascita:</label>
                 <input type="date" name="data" class="form-control" max="2021-12-31" min="1900-01-01">
                 <div class="mb-3"></div>
-                <button class="btn-grad" name="signupButton" type="submit" onclick="return valida();">Registrati</button>
+                <button class="btn-grad" name="signupButton" type="submit" onclick="return validaForm();">Registrati</button>
                 <!--<input type="submit" value="Registrati">-->
             </form>
         </div>
