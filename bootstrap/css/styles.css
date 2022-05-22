@@ -114,6 +114,9 @@ header {
   color: white;            
   box-shadow: 0px 0px 10px rgb(17, 17, 17);
   border-radius: 30px;
+  border: 2px solid transparent; /* QUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
+  border-color: transparent;
+  border-style: none;
   display: block;
 }
 
@@ -1129,6 +1132,9 @@ label {
 
 button {
   border-radius: 0;
+  border: 2px solid transparent; /* QUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
+  border-color: transparent;
+  border-style: none;
 }
 
 button:focus:not(:focus-visible) {
