@@ -27,7 +27,7 @@
                 if(($tuple=pg_fetch_array($result,null,PGSQL_ASSOC))) {
                     echo"Il login é andato a buon fine";
                 }
-                else die("C'é stato un errore");
+                else die("Email o password errate!");
             }
         }
     ?>
