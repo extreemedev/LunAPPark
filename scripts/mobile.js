@@ -1,6 +1,8 @@
+function clicca(){
+
 const doc = document;
-const menuOpen = doc.querySelector(".menu");
-const menuClose = doc.querySelector(".close");
+const menuOpen = doc.querySelector("navbar-toggler");
+const menuClose = doc.querySelector("navbar-toggler");
 const overlay = doc.querySelector(".overlay");
 
 menuOpen.addEventListener("click", () => {
@@ -10,3 +12,4 @@ menuOpen.addEventListener("click", () => {
 menuClose.addEventListener("click", () => {
   overlay.classList.remove("overlay--active");
 });
+}

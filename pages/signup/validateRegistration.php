@@ -20,8 +20,6 @@
             if($tuple=pg_fetch_array($result,null,PGSQL_ASSOC)) {
                 echo"La registrazione non e' andato a buon fine";
                 echo"Nel nostro sistema essiste già un account con questa email";
-                echo"La registrazione non e' andato a buon fine";
-                echo"Clicca <a href=\"index.html\"> qui </a>  per loggarti";
             }
             else {
                 $nome = $_POST["nome"];
@@ -32,7 +30,7 @@
                 $query2 = 'INSERT into public."UTENTE" values ($1,$2,$3,$4,$5,$6)';
                 $result = pg_query_params($dbconn, $query2, array($email, $nome, $cognome, $password, $telefono, $datanasc));
                 if($result) {
-                    echo"La registrazione e' andato a buon fine \n";
+                    echo"La registrazione e' andata a buon fine \n";
                     echo"Clicca <a href=\"../login/index.html\"> qui </a>  per loggarti";
                 }
                 else die("C'e' stato un errore");
