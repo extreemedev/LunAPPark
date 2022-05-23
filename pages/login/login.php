@@ -12,8 +12,13 @@
         $query2 = 'SELECT * FROM public."UTENTE" where email=$1 and password=$2';
         $result = pg_query_params($dbconn, $query2, array($email, $password));
         if(($tuple=pg_fetch_array($result,null,PGSQL_ASSOC))) {
+            session_start();
+            /*$_SESSION['id'] = $_POST['id'];*/
+            $_SESSION['id'] = $email;
             header("location: yourarea.php");
         }
-        else die("Email o password errate!");
+        else{
+            header("location: error.php");
+        };
     }
 ?>

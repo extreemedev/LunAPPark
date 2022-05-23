@@ -48,7 +48,7 @@
         <div class="mb-custom"></div>
         <div id="loader" style="display: none;"></div>
         <div id="form" class="text">
-            <form action="validateLogin.php" class="form-signin" method="post" name="myForm" onsubmit="validaForm()">
+            <form action="login.php" class="form-signin" method="post" name="myForm" onsubmit="validaForm()">
                 <div class="subtext">Accedi</div>
                 
                 <input type="email" name="inputEmail" class="form-control" placeholder="Email address" value="<?php echo ($e);?>" required autofocus/>

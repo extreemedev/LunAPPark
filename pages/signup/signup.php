@@ -9,7 +9,6 @@
         $query = 'SELECT * FROM public."UTENTE" where email=$1';
         $result = pg_query_params($dbconn, $query, array($email));
         if($tuple=pg_fetch_array($result,null,PGSQL_ASSOC)) {
-            echo"La registrazione non e' andata a buon fine! \n";
             echo"Nel nostro sistema esiste già un account con questa email.";
         }
         else {
@@ -22,7 +21,7 @@
             $result = pg_query_params($dbconn, $query2, array($email, $nome, $cognome, $password, $telefono, $datanasc));
             if($result) {
                 /*echo'<script type="text/javascript">myLoader();</script>';*/
-                header("Location: regConfirmed.html");
+                header("Location: loading.html");
             }
             else die("C'é stato un errore");
         }
