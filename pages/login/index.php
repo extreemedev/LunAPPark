@@ -1,3 +1,11 @@
+<?php
+session_start();
+$sessionmail = $_SESSION["id"];
+if($sessionmail){
+    header('location: yourarea.php');
+}
+
+?>
 <html>
     <head>
         <meta http-equiv="refresh" content="" />
