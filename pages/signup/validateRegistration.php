@@ -21,7 +21,7 @@
             $query2 = 'INSERT into public."UTENTE" values ($1,$2,$3,$4,$5,$6)';
             $result = pg_query_params($dbconn, $query2, array($email, $nome, $cognome, $password, $telefono, $datanasc));
             if($result) {
-                echo'<script type="text/javascript">myFunction();</script>';
+                echo'<script type="text/javascript">myLoader();</script>';
                 /*header("Location: ../login/index.html");*/
             }
             else die("C'é stato un errore");

@@ -1,7 +1,7 @@
 var myVar;
 var myVar2;
 
-function myFunction() {
+function myLoader() {
   myVar = setTimeout(hidePage, 3000);
   myVar2 = setTimeout(showPage, 3000);
 }

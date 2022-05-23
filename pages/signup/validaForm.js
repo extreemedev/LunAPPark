@@ -1,6 +1,6 @@
 var myVar;
 
-function myFunction() {
+function myLoader() {
   myVar = setTimeout(showPage, 3000);
 }
 
@@ -188,6 +188,6 @@ function validaForm() {
         return false;
     }
     window.alert("Dati inseriti correttamente");
-    myFunction();
+    myLoader();
     return true;
 }
