@@ -15,6 +15,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container">
                 <a class="logo" href="#page-top"><img src="../../src/assets/img/logo.png" width="120px" height="110px" object-fit="scale-down" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="nav__links navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="../../index.html">Scopri il parco</a></li>
@@ -25,7 +26,6 @@
                     <a style="margin-left: 50px;"  class="btn-grad" href="#">Acquista e prenota</a>
                 <!--p class="menu btn-grad">-</p-->
                 </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             </div>
         </nav>
         <?php
@@ -34,10 +34,10 @@
         $p = "";
         if (array_key_exists('rem', $_COOKIE)) {
             $rm=htmlspecialchars($_COOKIE['rem']);
-            echo($rm);
+            //echo($rm);
             if($rm=='true'){
                 $rm="checked";
-                echo($rm);
+                //echo($rm);
                 $e=htmlspecialchars($_COOKIE['email']);
                 $p=htmlspecialchars($_COOKIE['pas']);
             } else {
