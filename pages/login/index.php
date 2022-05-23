@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="../../bootstrap/css/styles.css" />
         <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
-        <script src="rememberMe.js"></script>
+        <script src="./rememberMe.js"></script>
     </head>
     <body id="page-top" class="back5">
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
@@ -48,7 +48,7 @@
         <div class="mb-custom"></div>
         <div id="loader" style="display: none;"></div>
         <div id="form" class="text">
-            <form action="validateLogin.php" class="form-signin" method="post" name="myForm" onsubmit="checkRem()">
+            <form action="validateLogin.php" class="form-signin" method="post" name="myForm" onsubmit="validaForm()">
                 <div class="subtext">Accedi</div>
                 
                 <input type="email" name="inputEmail" class="form-control" placeholder="Email address" value="<?php echo ($e);?>" required autofocus/>
