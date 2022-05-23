@@ -1,6 +1,6 @@
 <?php
     if(!isset($_POST["loginButton"])) {
-        header("Location: index.html");
+        header("Location: index.php");
     }
     else{
         $dbconn = pg_connect("host=postgresql port=5432

@@ -28,18 +28,35 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             </div>
         </nav>
+        <?php
+        $rm = "";
+        $e = "";
+        $p = "";
+        if (array_key_exists('rem', $_COOKIE)) {
+            $rm=htmlspecialchars($_COOKIE['rem']);
+            echo($rm);
+            if($rm=='true'){
+                $rm="checked";
+                echo($rm);
+                $e=htmlspecialchars($_COOKIE['email']);
+                $p=htmlspecialchars($_COOKIE['pas']);
+            } else {
+                $rm = "";
+            }
+        }
+        ?>
         <div class="mb-custom"></div>
         <div id="loader" style="display: none;"></div>
         <div id="form" class="text">
             <form action="validateLogin.php" class="form-signin" method="post" name="myForm" onsubmit="checkRem()">
                 <div class="subtext">Accedi</div>
                 
-                <input type="email" name="inputEmail" class="form-control" placeholder="Email address" required autofocus/>
+                <input type="email" name="inputEmail" class="form-control" placeholder="Email address" value="<?php echo ($e);?>" required autofocus/>
                 <div class="mb-2"></div>
-                <input type="password" name="inputPassword" class="form-control" placeholder="Password" required/>
+                <input type="password" name="inputPassword" class="form-control" placeholder="Password" value="<?php echo ($p);?>" required/>
                 
                 <div id="divRemember" class="checkbox">
-                    <input type="checkbox" name="remember" />
+                    <input type="checkbox" name="remember" <?php echo ($rm);?>/>
                     <label class="checky" for="remember">Remember me</label>
                 </div>
                 <button class="btn-grad" name="loginButton" type="submit">Accedi</button>
