@@ -16,7 +16,7 @@
             $query2 = 'SELECT * FROM public."UTENTE" where email=$1 and password=$2';
             $result = pg_query_params($dbconn, $query2, array($email, $password));
             if(($tuple=pg_fetch_array($result,null,PGSQL_ASSOC))) {
-                echo"Il login é andato a buon fine";
+                header("location: yourarea.php");
             }
             else die("Email o password errate!");
         }
