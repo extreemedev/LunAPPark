@@ -5,7 +5,7 @@
 
     $queryname = 'SELECT nome FROM public."UTENTE" where email=$1';
     $resultname = pg_query_params($dbconn, $queryname, array($email));
-    $finalname = pg_fetch_array($resultname,null,PGSQL_ASSOC);
+    $finalname = pg_fetch_array($resultname,null,PGSQL_NUM);
 
     $query = 'SELECT * FROM public."UTENTE" where email=$1';
     $result = pg_query_params($dbconn, $query, array($email));
