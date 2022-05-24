@@ -91,7 +91,7 @@ if($sessionmail==""){
 </nav>
 <div class="mb-custom"></div>
 <div id="mypage" class="animate-bottom" >
-    <div class="text"><?php echo"Benvenuto ".$sessionmail?></div>
+    <div class="text"><?php echo"Benvenuto ".$sessioname?></div>
     <a class="btn-grad" style="display: initial;" href="./out.php">Logout</a>
 </div>
 

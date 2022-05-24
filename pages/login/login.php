@@ -4,8 +4,8 @@
     $email = $_POST["inputEmail"];
 
     $queryname = 'SELECT nome FROM public."UTENTE" where email=$1';
-    $resultname = pg_query_params($dbconn, $queryname, array($name));
-    $finalname = pg_fetch_array($name,null,PGSQL_ASSOC);
+    $resultname = pg_query_params($dbconn, $queryname, array($email));
+    $finalname = pg_fetch_array($resultname,null,PGSQL_ASSOC);
 
     $query = 'SELECT * FROM public."UTENTE" where email=$1';
     $result = pg_query_params($dbconn, $query, array($email));
@@ -18,7 +18,7 @@
         $result = pg_query_params($dbconn, $query2, array($email, $password));
         if(($tuple=pg_fetch_array($result,null,PGSQL_ASSOC))) {
             session_start();
-            $_SESSION["user"] = $finalname;
+            $_SESSION["user"] = $finalname[0];
             $_SESSION["id"] = $email;
             header("location: yourarea.php");
         }
