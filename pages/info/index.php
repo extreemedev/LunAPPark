@@ -1,6 +1,5 @@
 <?php
 define("TITLE","Info e contatti");
-/*include("./pages/layouts/header.php");*/
 ?>
 <!DOCTYPE html>
     <head>

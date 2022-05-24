@@ -1,28 +1,11 @@
+<?php
+define("TITLE","Registrazione");
+?>
 
-<!DOCTYPE html>
-    <head>
-        <!--<meta http-equiv="refresh" content="5" />-->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Registrazione</title>
-        <link rel="icon" href="../../src/assets/img/logo.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="../../bootstrap/css/styles.css" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
-    </head>
-    <body id="page-top" class="back5">
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-            <div class="container">
-                <a class="logo" href="#page-top"><img src="../../src/assets/img/logo.png" width="120px" height="110px" object-fit="scale-down" alt="logo"></a>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="nav__links navbar-nav ms-auto">
-                        <li id="indietro" class="nav-item"><a class="nav-link" href="../login/index.php">Indietro</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="mb-custom"></div>
+<?php
+include("../layouts/header.php")
+?>
+
         <div id="loader" style="display: none;"></div>
         <div id="form" class="text">
             <form action="signup.php" class="form-signup" method="post" name="myRegistr" onsubmit="return validaForm();">
@@ -55,8 +38,8 @@
                 <!--<input type="submit" value="Registrati">-->
             </form>
         </div>
-        <script src="../../bootstrap/js/bootstrap.bundle.js"></script>
         <script src="validaForm.js"></script>
         <script src="../../scripts/loader.js" ></script>
-    </body>
-</html>
+<?php
+include("../layouts/footer.php")
+?>

@@ -20,7 +20,7 @@
                     <li class="nav-item"><a class="nav-link <?php if(TITLE=="LunAPPark"){echo "border-bottom border-warning";}?>" href="../../index.php">Scopri il parco</a></li>
                     <li class="nav-item"><a class="nav-link <?php if(TITLE=="Calendario e tariffe"){echo "border-bottom border-warning";}?>" href="../calendar/index.php">Calendario e tariffe + hotel</a></li>
                     <li class="nav-item"><a class="nav-link <?php if(TITLE=="Info e contatti"){echo "border-bottom border-warning";}?>" href="../info/index.php">Info e contatti</a></li>
-                    <li class="nav-item"><a class="nav-link <?php if(TITLE=="Area personale"){echo "border-bottom border-warning";}?>" href="../login/index.php">Area personale</a></li>
+                    <li class="nav-item"><a class="nav-link <?php if(TITLE=="Area personale" or TITLE=="Registrazione"){echo "border-bottom border-warning";}?>" href="../login/index.php">Area personale</a></li>
                 </ul>
                 <a style="margin-left: 50px;" class="btn-grad" href="#">Acquista e prenota</a>
             </div>

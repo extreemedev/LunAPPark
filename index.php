@@ -44,7 +44,6 @@ define("TITLE","LunAPPark");
             <a class="btn-grad" href="#scroll">Scopri di piú</a>  
         </div>    
         <!--picture id="scroll"><img class="imgcut imgcenter" src="../src/assets/img/wide-park.jpg" width="95%" alt=""></picture-->
-        <script type="text/javascript" src="scripts/mobile2.js"></script>
         <script src="bootstrap/js/bootstrap.bundle.js"></script>
     </body>
 </html>
