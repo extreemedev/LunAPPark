@@ -1,4 +1,4 @@
 <?php
-$dir = dirname(__FILE__);
+$dir = $_SERVER['SCRIPT_NAME'];
 echo $dir;
 ?>

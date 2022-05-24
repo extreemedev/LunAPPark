@@ -33,7 +33,7 @@ define("TITLE","LunAPPark");
                     <li class="nav-item"><a class="nav-link <?php if(TITLE=="Info e contatti"){echo "border-bottom border-warning";}?>" href="/pages/info/index.php">Info e contatti</a></li>
                     <li class="nav-item"><a class="nav-link <?php if(TITLE=="Area personale"){echo "border-bottom border-warning";}?>" href="/pages/login/index.php">Area personale</a></li>
                 </ul>
-                <a style="margin-left: 50px;"  class="btn-grad" href="#">Acquista e prenota</a>
+                <a style="margin-left: 50px;"  class="btn-grad" href="/pages/shop/index.php">Acquista e prenota</a>
             <!--p class="menu btn-grad">-</p-->
             </div>
         </div>
