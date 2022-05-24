@@ -1,9 +1,12 @@
+<?php
+define("TITLE","LunAPPark")
+?>
 <!DOCTYPE html>
     <head>
         <meta http-equiv="refresh" content="" />
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>LunAPPark</title>
+        <title> <?php echo TITLE?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="src/assets/img/logo.png">
@@ -25,7 +28,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="nav__links navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link border-bottom border-warning" href="#">Scopri il parco</a></li>
+                        <li class="nav-item"><a class="nav-link <?php if(TITLE=="LunAPPark"){echo "border-bottom border-warning";}?>" href="#">Scopri il parco</a></li>
                         <li class="nav-item"><a class="nav-link" href="/pages/calendar/index.html">Calendario e tariffe + hotel</a></li>
                         <li class="nav-item"><a class="nav-link" href="/pages/info/index.html">Info e contatti</a></li>
                         <li class="nav-item"><a class="nav-link" href="./pages/login/index.php">Area personale</a></li>
