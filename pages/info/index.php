@@ -2,7 +2,7 @@
 define("TITLE","Info e contatti");
 /*include("./pages/layouts/header.php");*/
 ?>
-<html>
+<!DOCTYPE html>
     <head>
         <meta http-equiv="refresh" content="5" />
         <meta charset="utf-8">
@@ -13,6 +13,8 @@ define("TITLE","Info e contatti");
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="../../bootstrap/css/styles.css" />
         <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+        <script src="../../bootstrap/js/bootstrap.min.js"></script>
+        <script src="rememberMe.js"></script>
         <style>
             img:hover {
             /* Start the shake animation and make the animation last for 0.5 seconds */
@@ -38,9 +40,23 @@ define("TITLE","Info e contatti");
         </style>
     </head>
     <body id="page-top" class="back5">
-        <?php 
-        include("./pages/layouts/navbar.php");
-        ?>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container">
+                <a class="logo" href="#page-top"><img src="../../src/assets/img/logo.png" width="120px" height="110px" object-fit="scale-down" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="nav__links navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html">Scopri il parco</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/pages/calendar/index.html">Calendario e tariffe + hotel</a></li>
+                        <li class="nav-item border-bottom border-warning"><a class="nav-link" href="#">Info e contatti</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/pages/login/index.php">Area personale</a></li>
+                    </ul>
+                    <a style="margin-left: 50px;"  class="btn-grad" href="#">Acquista e prenota</a>
+                <!--p class="menu btn-grad">-</p-->
+                </div>
+            </div>
+        </nav>
+        <div class="mb-custom" ></div>
         <div class="text floating" >Chi siamo?</div>
         <picture id="scroll"><img class="imgcut imgcenter floating" src="../../src/assets/img/soffuerenginerin.png" width="35%" style="position: center;" alt=""></picture>
         <script src="../../bootstrap/js/bootstrap.bundle.js"></script>

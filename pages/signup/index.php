@@ -1,5 +1,5 @@
 
-<html>
+<!DOCTYPE html>
     <head>
         <!--<meta http-equiv="refresh" content="5" />-->
         <meta charset="utf-8">
