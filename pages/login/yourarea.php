@@ -18,70 +18,18 @@ if($sessionmail==""){
   <link rel="stylesheet" href="../../bootstrap/css/styles.css" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
   <script src="rememberMe.js"></script>
-  <style>
-/* Center the loader */
-#loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  width: 120px;
-  height: 120px;
-  margin: -76px 0 0 -76px;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #fccf3c;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 3s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
-  to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
-}
-
-#mypage {
-  display: none;
-  text-align: center;
-}
-</style>
 </head>
 <body id="page-top" class="back5" onload="myLoader()">
-
 <div id="loader"></div>
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
     <div class="container">
         <a class="logo" href="#page-top"><img src="../../src/assets/img/logo.png" width="120px" height="110px" object-fit="scale-down" alt="logo"></a>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="nav__links navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="../../index.html">Scopri il parco</a></li>
-                <li class="nav-item"><a class="nav-link" href="/pages/calendar/index.html">Calendario e tariffe + hotel</a></li>
-                <li class="nav-item"><a class="nav-link" href="/pages/info/index.html">Info e contatti</a></li>
-                <li class="nav-item border-bottom border-warning"><a class="nav-link" href="#">Area personale</a></li>
+              <li class="nav-item"><a class="nav-link <?php if(TITLE=="LunAPPark"){echo "border-bottom border-warning";}?>" href="../../index.php">Scopri il parco</a></li>
+              <li class="nav-item"><a class="nav-link <?php if(TITLE=="Calendario e tariffe"){echo "border-bottom border-warning";}?>" href="../calendar/index.php">Calendario e tariffe + hotel</a></li>
+              <li class="nav-item"><a class="nav-link <?php if(TITLE=="Info e contatti"){echo "border-bottom border-warning";}?>" href="../info/index.php">Info e contatti</a></li>
+              <li class="nav-item"><a class="nav-link <?php if(TITLE=="Area personale"){echo "border-bottom border-warning";}?>" href="../login/index.php">Area personale</a></li>
             </ul>
             <a style="margin-left: 50px;"  class="btn-grad" href="#">Acquista e prenota</a>
         <!--p class="menu btn-grad">-</p-->

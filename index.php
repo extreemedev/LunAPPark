@@ -1,6 +1,5 @@
 <?php
 define("TITLE","LunAPPark");
-include("./pages/layouts/header.php");
 ?>
 <!DOCTYPE html>
 <head>
