@@ -6,48 +6,34 @@ if($sessionmail){
     header('location: yourarea.php');
 }
 ?>
-<html>
-    <head>
-        <meta http-equiv="refresh" content="" />
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Area personale</title>
-        <link rel="icon" href="../../src/assets/img/logo.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="../../bootstrap/css/styles.css" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
-        <script src="./rememberMe.js"></script>
-    </head>
 
 
-    <?php 
-    include("./pages/layouts/navbar.php");
-    ?>
-
-
-    <?php
-    $rm = "";
-    $e = "";
-    $p = "";
-    if (array_key_exists('rem', $_COOKIE)) {
-        $rm=htmlspecialchars($_COOKIE['rem']);
+<?php
+$rm = "";
+$e = "";
+$p = "";
+if (array_key_exists('rem', $_COOKIE)) {
+    $rm=htmlspecialchars($_COOKIE['rem']);
+    //echo($rm);
+    if($rm=='true'){
+        $rm="checked";
         //echo($rm);
-        if($rm=='true'){
-            $rm="checked";
-            //echo($rm);
-            $e=htmlspecialchars($_COOKIE['email']);
-            $p=htmlspecialchars($_COOKIE['pas']);
-        } else {
-            $rm = "";
-        }
+        $e=htmlspecialchars($_COOKIE['email']);
+        $p=htmlspecialchars($_COOKIE['pas']);
+    } else {
+        $rm = "";
     }
-    ?>
+}
+?>
 
+
+<?php
+include("../layouts/header.php")
+?>
 
         <div id="loader" style="display: none;"></div>
         <div id="form" class="text">
-            <form action="login.php" class="form-signin" method="post" name="myForm" onsubmit="validaForm()">
+            <form action="login.php" class="form-login" method="post" name="myForm" onsubmit="validaForm()">
                 <div class="subtext">Accedi</div>
                 
                 <input type="email" name="inputEmail" class="form-control" placeholder="Email address" value="<?php echo ($e);?>" required autofocus/>
@@ -59,11 +45,12 @@ if($sessionmail){
                     <label class="checky" for="remember">Remember me</label>
                 </div>
                 <button class="btn-grad" name="loginButton" type="submit">Accedi</button>
-                <a class="btn-grad" name="signupButton" href="../signup/index.html">Registrati</a>  
+                <a class="btn-grad" name="signupButton" href="../signup/index.php">Registrati</a>  
             </form>
             <label class="checky">Se ancora non hai un account registrati</label>
         </div>
-        <script src="../../bootstrap/js/bootstrap.bundle.js"></script>
         <script src="../../scripts/loader.js" ></script>
-    </body>
-</html>
+
+<?php
+include("../layouts/footer.php")
+?>

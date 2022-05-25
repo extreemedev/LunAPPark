@@ -20,6 +20,7 @@
             session_start();
             $_SESSION["user"] = $finalname[0];
             $_SESSION["id"] = $email;
+            $_SESSION["load"] = 0;
             header("location: yourarea.php");
         }
         else{
