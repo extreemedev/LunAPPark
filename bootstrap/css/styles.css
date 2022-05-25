@@ -496,7 +496,7 @@ header {
 
 * {box-sizing: border-box;}
 ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
+body {font-family: "Montserrat", sans-serif;}
 
 .month {
   padding: 40px 25px;
@@ -586,6 +586,12 @@ body {font-family: Verdana, sans-serif;}
 
 @media screen and (max-width: 290px) {
   .weekdays li, .days li {width: 12.2%;}
+}
+
+.month .prev,
+.month .next,
+.days :hover{
+  cursor: pointer;
 }
 
 

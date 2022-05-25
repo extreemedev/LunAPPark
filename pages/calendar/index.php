@@ -22,8 +22,10 @@ include("../layouts/navbar.php")
 ?>
 
 <?php
-include("../layouts/calendar.php")
+include("./calendar.php")
 ?>
+   
+    <script src="calendar.js"></script>
 
 <?php
 include("../layouts/footer.php")
