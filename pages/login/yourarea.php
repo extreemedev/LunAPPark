@@ -15,6 +15,10 @@ if($sessionmail==""){
 include("../layouts/header.php")
 ?>
 
+<?php
+include("../layouts/navbar.php")
+?>
+
 <div id="loader"></div>
 <div id="mypage" class="animate-bottom">
     <div class="text"><?php echo"Benvenuto ".$sessioname?></div>

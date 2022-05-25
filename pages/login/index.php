@@ -31,6 +31,10 @@ if (array_key_exists('rem', $_COOKIE)) {
 include("../layouts/header.php")
 ?>
 
+<?php
+include("../layouts/navbar.php")
+?>
+
         <div id="loader" style="display: none;"></div>
         <div id="form" class="text">
             <form action="login.php" class="form-login" method="post" name="myForm" onsubmit="validaForm()">

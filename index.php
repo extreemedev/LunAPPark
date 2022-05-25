@@ -10,7 +10,7 @@ define("TITLE","LunAPPark");
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../../src/assets/img/logo.png">
-    <link rel="stylesheet" href="../../bootstrap/css/styles.css">
+    <link rel="stylesheet" href="./bootstrap/css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
     <style>
         .imgback{
@@ -44,6 +44,6 @@ define("TITLE","LunAPPark");
             <a class="btn-grad" href="#scroll">Scopri di piú</a>  
         </div>    
         <!--picture id="scroll"><img class="imgcut imgcenter" src="../src/assets/img/wide-park.jpg" width="95%" alt=""></picture-->
-        <script src="bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="./bootstrap/js/bootstrap.bundle.js"></script>
     </body>
 </html>

@@ -11,6 +11,10 @@ if($sessionmail){
 include("../layouts/header.php")
 ?>
 
+<?php
+include("../layouts/navbar.php")
+?>
+
         <div id="loader" style="display: none;"></div>
         <div id="form" class="text">
             <form action="signup.php" class="form-signup" method="post" name="myRegistr" onsubmit="return validaForm();">
