@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../bootstrap/css/styles.css"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
     <script src="rememberMe.js"></script>
+    <script src="//code.jquery.com/jquery-3.6.0.js"></script>
 </head>
 <body id="page-top" class="back5" onload="<?php if(TITLE=="Area personale" and $_SESSION["load"]==0){echo "myLoader()"; $_SESSION["load"]=1; } ?>">
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
