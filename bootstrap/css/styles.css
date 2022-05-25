@@ -84,6 +84,13 @@ header {
   filter: drop-shadow(10px 5px 5px #222);
 }
 
+
+.cart {
+  cursor: pointer;
+  margin-left: 50px;
+  filter: drop-shadow(10px 5px 5px #222);
+}
+
 .nav__links a,
 .cta,
 .overlay__content a {
