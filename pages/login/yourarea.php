@@ -25,13 +25,14 @@ include("../layouts/header.php")
 var myVar;
 
 function myLoader() {
-  myVar = setTimeout(showPage, 3000);
+  myVar = setTimeout(showPage, 2000);
 }
 
 function showPage() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("mypage").style.display = "block";
 }
+
 </script>
 
 <?php

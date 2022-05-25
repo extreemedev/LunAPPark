@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
     <script src="rememberMe.js"></script>
 </head>
-<body id="page-top" class="back5" onload="<?php if(TITLE=="Area personale"){echo "myLoader()";} ?>">
+<body id="page-top" class="back5" onload="<?php if(TITLE=="Area personale" and $_SESSION["load"]==0){echo "myLoader()";} ?>">
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
         <div class="container">
             <a class="logo" href="#page-top"><img src="../../src/assets/img/logo.png" width="120px" height="110px" object-fit="scale-down" alt="logo"></a>
