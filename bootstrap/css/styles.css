@@ -87,7 +87,8 @@ header {
 
 .cart {
   cursor: pointer;
-  margin-left: 50px;
+  position: absolute;
+  right: 150px;
   filter: drop-shadow(10px 5px 5px #222);
 }
 
