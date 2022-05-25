@@ -21,7 +21,7 @@ $("#prec").click(function(){
     }
     var start=0;
     for(var c = 6; c>0; c--){
-        if($("#"+c).text()==""){
+        if($("#"+c).text()=="."){
             if(c==1){
                 if(gt==28){
                     start=2;
@@ -111,13 +111,32 @@ $("#prec").click(function(){
     var g=1;
     for(var c = 1; c<43; c++){
         if(c<start){
-            $("#"+c).text("");
+            $("#"+c).text(".");
         } else{
             if(g<=gt){
                 $("#"+c).text(g);
                 g++;
             } else {
-                $("#"+c).text("");
+                $("#"+c).text(".");
+            }
+        }
+    }
+
+    var g=101;
+    var gt2=parseInt(gt)+100;
+    for(var c = 101; c<143; c++){
+        if(c<start+100){
+            $("#"+c).html("<div style=font-size:15px;padding-bottom:35px;></div>");
+        } else{
+            if(g<=gt2){
+                if(c==106 || c==107 || c==113 || c==114 || c==120 || c==121 || c==127 || c==128 || c==134 || c==135 || c==141 || c==142){
+                    $("#"+c).html("<div style=font-size:15px;padding-bottom:35px;>biglietto adulto:<br>30.00<br>biglietto ridotto:<br>10.00</div>");
+                } else {
+                    $("#"+c).html("<div style=font-size:15px;padding-bottom:35px;>biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div>");
+                }
+                g++;
+            } else {
+                $("#"+c).html("<div style=font-size:15px;padding-bottom:35px;></div>");
             }
         }
     }
@@ -146,7 +165,7 @@ $("#succ").click(function(){
     }
     var start;
     for(var c = 8; c<43; c++){
-        if($("#"+c).text()==""){
+        if($("#"+c).text()=="."){
             if(c==8 || c==15 || c==22 || c==29 || c==36){
                 start=1;
                 break;
@@ -180,13 +199,32 @@ $("#succ").click(function(){
     var g=1;
     for(var c = 1; c<43; c++){
         if(c<start){
-            $("#"+c).text("");
+            $("#"+c).text(".");
         } else{
             if(g<=gt){
                 $("#"+c).text(g);
                 g++;
             } else {
-                $("#"+c).text("");
+                $("#"+c).text(".");
+            }
+        }
+    }
+
+    var g=101;
+    var gt2=parseInt(gt)+100;
+    for(var c = 101; c<143; c++){
+        if(c<start+100){
+            $("#"+c).html("<div style=font-size:15px;padding-bottom:35px;></div>");
+        } else{
+            if(g<=gt2){
+                if(c==106 || c==107 || c==113 || c==114 || c==120 || c==121 || c==127 || c==128 || c==134 || c==135 || c==141 || c==142){
+                    $("#"+c).html("<div style=font-size:15px;padding-bottom:35px;>biglietto adulto:<br>30.00<br>biglietto ridotto:<br>10.00</div>");
+                } else {
+                    $("#"+c).html("<div style=font-size:15px;padding-bottom:35px;>biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div>");
+                }
+                g++;
+            } else {
+                $("#"+c).html("<div style=font-size:15px;padding-bottom:35px;></div>");
             }
         }
     }
@@ -209,8 +247,35 @@ $("#2").click(function(){
 });*/
 
 $("#giorni >").click(function(){
-    $(".active").removeClass("active");
-    $("#giorni >").css("margin-bottom","0px");
-    $(this).html("<span class=active>"+$(this).text()+"</span>");
-    $(this).css("margin-bottom","150px")
+    if($(this).text()=="." || $(this).text()==""){
+
+        $(".active").removeClass("active");
+        $(".active2").removeClass("active2");
+
+    } else {
+
+        $(".active").removeClass("active");
+        $(".active2").removeClass("active2");
+
+        if(parseInt($(this).text())<10) {
+
+            $(this).html("<span class=active2>"+$(this).html()+"</span>");
+
+        } else{
+
+            if(parseInt($(this).text())<100){
+
+                $(this).html("<span class=active>"+$(this).html()+"</span>");
+
+            }else{
+                /*window.alert($(this).attr("id"));*/
+                var x=parseInt($(this).attr("id"))-100;
+                if(parseInt($("#"+x).text())<10){
+                    $("#"+x).html("<span class=active2>"+$("#"+x).html()+"</span>");
+                } else{
+                    $("#"+x).html("<span class=active>"+$("#"+x).html()+"</span>");
+                }
+            }
+        }
+    }
 });
