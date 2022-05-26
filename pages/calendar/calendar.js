@@ -4,6 +4,8 @@ const total_day = ['31', '28', '31', '30', '31', '30', '31', '31', '30', '31', '
 
 $("#prec").click(function(){
     var gt;
+    $("#giorni >").css("background","#eee");
+    $("#giorni >").css("color","#777");
     for(var c = 0; c<month_names.length; c++){
         if($("#mese").text().replace(/\s+/g, " ").replace(/^\s|\s$/g, "")==month_names[c]){
             if(c==0){
@@ -130,9 +132,15 @@ $("#prec").click(function(){
         } else{
             if(g<=gt2){
                 if(c==106 || c==107 || c==113 || c==114 || c==120 || c==121 || c==127 || c==128 || c==134 || c==135 || c==141 || c==142){
+<<<<<<< HEAD
+                    $("#"+c).html("<div style=font-size:12px;padding-bottom:35px;>Biglietto adulto:<br>30.00<br>Biglietto ridotto:<br>10.00</div>");
+                } else {
+                    $("#"+c).html("<div style=font-size:12px;padding-bottom:35px;>Biglietto adulto:<br>22.50<br>Biglietto ridotto:<br>10.00</div>");
+=======
                     $("#"+c).html("<div style=font-size:12px;padding-bottom:35px;>Biglietto adulto:<br>30.00 €<br>Biglietto ridotto:<br>10.00 €</div>");
                 } else {
                     $("#"+c).html("<div style=font-size:12px;padding-bottom:35px;>Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div>");
+>>>>>>> 012a5626982590b6edae1cfe44bd7976347e9ec4
                 }
                 g++;
             } else {
@@ -147,6 +155,8 @@ $("#prec").click(function(){
 
 $("#succ").click(function(){
     var gt;
+    $("#giorni >").css("background","#eee");
+    $("#giorni >").css("color","#777");
     for(var c = 0; c<month_names.length; c++){
         if($("#mese").text().replace(/\s+/g, " ").replace(/^\s|\s$/g, "")==month_names[c]){
 
@@ -218,9 +228,15 @@ $("#succ").click(function(){
         } else{
             if(g<=gt2){
                 if(c==106 || c==107 || c==113 || c==114 || c==120 || c==121 || c==127 || c==128 || c==134 || c==135 || c==141 || c==142){
+<<<<<<< HEAD
+                    $("#"+c).html("<div style=font-size:12px;padding-bottom:35px;>Biglietto adulto:<br>30.00<br>Biglietto ridotto:<br>10.00</div>");
+                } else {
+                    $("#"+c).html("<div style=font-size:12px;padding-bottom:35px;>Biglietto adulto:<br>22.50<br>Biglietto ridotto:<br>10.00</div>");
+=======
                     $("#"+c).html("<div style=font-size:12px;padding-bottom:35px;>Biglietto adulto:<br>30.00 €<br>Biglietto ridotto:<br>10.00 €</div>");
                 } else {
                     $("#"+c).html("<div style=font-size:12px;padding-bottom:35px;>Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div>");
+>>>>>>> 012a5626982590b6edae1cfe44bd7976347e9ec4
                 }
                 g++;
             } else {
@@ -231,51 +247,34 @@ $("#succ").click(function(){
 
 });
 
-/*$("#1").click(function(){
-    $(".days").removeClass("active");
-    $(this).addClass("active");
-});
-
-$("#2").click(function(){
-    $(".days").removeClass("active");
-    $(this).addClass("active");
-});*/
-
-/*$("#giorni >").click(function(){
-    $("#giorni >").removeClass("active");
-    $(this).addClass("active");
-});*/
 
 $("#giorni >").click(function(){
     if($(this).text()==""){
 
-        $(".active").removeClass("active");
-        $(".active2").removeClass("active2");
+        $("#giorni >").css("background","#eee");
+        $("#giorni >").css("color","#777");
 
     } else {
 
-        $(".active").removeClass("active");
-        $(".active2").removeClass("active2");
+        $("#giorni >").css("background","#eee");
+        $("#giorni >").css("color","#777");
 
-        if(parseInt($(this).text())<10) {
+        if(parseInt($(this).text())<100) {
 
-            $(this).html("<span class=active2>"+$(this).html()+"</span>");
+            var x2=parseInt($(this).attr("id"))+100;
+            $(this).css("background","#ffb656");
+            $(this).css("color","white");
+            $("#"+x2).css("background","#ffb656");
+            $("#"+x2).css("color","white");
 
         } else{
 
-            if(parseInt($(this).text())<100){
+            var x=parseInt($(this).attr("id"))-100;
+            $(this).css("background","#ffb656");
+            $(this).css("color","white");
+            $("#"+x).css("background","#ffb656");
+            $("#"+x).css("color","white");
 
-                $(this).html("<span class=active>"+$(this).html()+"</span>");
-
-            }else{
-                /*window.alert($(this).attr("id"));*/
-                var x=parseInt($(this).attr("id"))-100;
-                if(parseInt($("#"+x).text())<10){
-                    $("#"+x).html("<span class=active2>"+$("#"+x).html()+"</span>");
-                } else{
-                    $("#"+x).html("<span class=active>"+$("#"+x).html()+"</span>");
-                }
-            }
         }
     }
 });
