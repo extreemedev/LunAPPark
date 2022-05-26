@@ -12,7 +12,10 @@ include("../layouts/navbar.php")
 
     <div class="pt-5"></div>
     <div class="container">
-    <a id="carrello"  class="cart" style="position: sticky; right: 200px;" href="#page-top"><img src="../../src/assets/img/icons8-cart-64.png" alt="cart"></a>
+        
+        <div style="position: sticky;">
+        <a id="carrello"  class="cart" style="position: absolute; right: 0px;" href="#page-top"><img src="../../src/assets/img/icons8-cart-64.png" alt="cart"></a>
+        </div>
     </div>
     
 <?php
