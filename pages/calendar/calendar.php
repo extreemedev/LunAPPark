@@ -33,11 +33,11 @@
 
         <li id="101"><div style="font-size: 12px; padding-bottom: 35px;"></div></li>
         <li id="102"><div style="font-size: 12px; padding-bottom: 35px;"></div></li>
-        <li id="103"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="104"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="105"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="106"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>30.00<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="107"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>30.00<br>biglietto ridotto:<br>10.00</div></li>
+        <li id="103"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="104"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="105"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="106"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>30.00 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="107"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>30.00 €<br>Biglietto ridotto:<br>10.00 €</div></li>
 
         <li id="8">6</li>
         <li id="9">7</li>
@@ -47,13 +47,13 @@
         <li id="13">11</li>
         <li id="14">12</li>
 
-        <li id="108"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="109"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="110"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="111"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="112"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="113"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>30.00<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="114"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>30.00<br>biglietto ridotto:<br>10.00</div></li>
+        <li id="108"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="109"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="110"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="111"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="112"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="113"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>30.00 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="114"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>30.00 €<br>Biglietto ridotto:<br>10.00 €</div></li>
 
         <li id="15">13</li>
         <li id="16">14</li>
@@ -63,13 +63,13 @@
         <li id="20">18</li>
         <li id="21">19</li>
 
-        <li id="115"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="116"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="117"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="118"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="119"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="120"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>30.00<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="121"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>30.00<br>biglietto ridotto:<br>10.00</div></li>
+        <li id="115"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="116"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="117"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="118"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="119"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="120"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>30.00 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="121"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>30.00 €<br>Biglietto ridotto:<br>10.00 €</div></li>
 
         <li id="22">20</li>
         <li id="23">21</li>
@@ -79,13 +79,13 @@
         <li id="27">25</li>
         <li id="28">26</li>
 
-        <li id="122"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="123"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="124"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="125"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="126"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="127"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>30.00<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="128"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>30.00<br>biglietto ridotto:<br>10.00</div></li>
+        <li id="122"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="123"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="124"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="125"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="126"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="127"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>30.00 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="128"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>30.00 €<br>Biglietto ridotto:<br>10.00 €</div></li>
 
         <li id="29">27</li>
         <li id="30">28</li>
@@ -95,10 +95,10 @@
         <li id="34"></li>
         <li id="35"></li>
 
-        <li id="129"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="130"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="131"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
-        <li id="132"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
+        <li id="129"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="130"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="131"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
+        <li id="132"><div style="font-size: 12px; padding-bottom: 35px;">Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div></li>
         <li id="133"><div style="font-size: 12px; padding-bottom: 35px;"></div></li>
         <li id="134"><div style="font-size: 12px; padding-bottom: 35px;"></div></li>
         <li id="135"><div style="font-size: 12px; padding-bottom: 35px;"></div></li>
