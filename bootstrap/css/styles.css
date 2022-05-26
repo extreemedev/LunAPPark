@@ -218,19 +218,22 @@ header {
   padding: 60px;
 }
 
-.title .subtitle{
+.subtitle{
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
-  filter: drop-shadow(3px 5px 2px rgba(34, 34, 34, 0.192));
-  text-align: center;
-  padding: 30px;
+  color: white;
+  filter: drop-shadow(3px 5px 10px #222);
+  text-decoration: none;
 }
 
-.title .checky{
+.title .checky,
+.subtitle .checky{
   filter: drop-shadow(3px 5px 2px rgba(34, 34, 34, 0.192));
   font-size: 15px;
 }
 
-.title .btn-grad{
+.title .btn-grad,
+.subtitle .btn-grad{
   padding: 15px 15px;
   font-size: 20px;
   filter: drop-shadow(0px 0px 30px rgba(34, 34, 34, 0.192));
@@ -12146,10 +12149,10 @@ header.masthead .bg-circle-4 {
   }
   header.masthead .masthead-content .masthead-heading,
   .title{
-    font-size: 70px;
+    font-size: 60px;
   }
   header.masthead .masthead-content .masthead-subheading,
-  .title .subtitle{
+  .subtitle{
     font-size: 50px;
   }
 }

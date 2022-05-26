@@ -43,7 +43,7 @@ define("TITLE","LunAPPark");
 
         <div class="container imgback" style="max-width: 100%; filter: drop-shadow(0px 5px 50px #222);">
             <div class="title" style="title-align: center; filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));">Scopri un nuovo mondo pieno di emozioni!
-                <div class="subtitle">Biglietto a partire da 20€</div>
+                <div class="subtitle">Biglietto a partire da 10€*</div>
                 <a class="btn-grad" href="#scroll">Scopri di piú</a>  
             </div> 
         </div>
@@ -51,11 +51,11 @@ define("TITLE","LunAPPark");
         <div class="container px-5 text-white">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6 order-lg-2">
-                    <div class="p-5"><img class="img-fluid rounded-circle" src="./src/assets/img/russian-mountain.jpg" alt="..." /></div>
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="./src/assets/img/gardaland.jpg" alt="..." /></div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="p-5">
-                        <h2 class="text">For those about to rock...</h2>
+                        <h2 class="subtitle">Piú di 150.000mq</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
                     </div>
                 </div>
@@ -67,11 +67,11 @@ define("TITLE","LunAPPark");
         <div class="container px-5 text-white">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6">
-                    <div class="p-5"><img class="img-fluid rounded-circle" src="./src/assets/img/gardaland.jpg" alt="..." /></div>
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="./src/assets/img/russian-mountain.jpg" alt="..." /></div>
                 </div>
                 <div class="col-lg-6">
                     <div class="p-5">
-                        <h2 class="text">We salute you!</h2>
+                        <h2 class="subtitle">Giostre da mozzafiato!</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
                     </div>
                 </div>
@@ -87,7 +87,7 @@ define("TITLE","LunAPPark");
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="p-5">
-                        <h2 class="text">Let there be rock!</h2>
+                        <h2 class="subtitle">Let there be rock!</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
                     </div>
                 </div>
