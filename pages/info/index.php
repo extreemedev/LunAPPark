@@ -53,7 +53,7 @@ define("TITLE","Info e contatti");
             </div>
         </nav>
         <div class="mb-custom" ></div>
-        <div class="text floating" >Chi siamo?</div>
+        <div class="title floating" >Chi siamo?</div>
         <picture id="scroll"><img class="imgcut imgcenter floating" src="../../src/assets/img/soffuerenginerin.png" width="35%" style="position: center;" alt=""></picture>
         <script src="../../bootstrap/js/bootstrap.bundle.js"></script>
     </body>
