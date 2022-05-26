@@ -14,8 +14,20 @@ header {
   background: #3e434a;
 }
 
+.mb-top {
+  margin-top: 6.5rem !important;
+}
+
 .mb-custom {
   margin-bottom: 6.5rem !important;
+}
+
+.pt-custom{
+  padding-top: 6.5rem !important;
+}
+
+.pb-custom{
+  padding-bottom: 6.5rem !important;
 }
 
 
@@ -203,6 +215,7 @@ header {
 
 .text{
   font-family: "Montserrat", sans-serif;
+  color: white;
   filter: drop-shadow(3px 5px 10px #222);
 }
 
@@ -214,7 +227,6 @@ header {
   filter: drop-shadow(3px 5px 10px #222);
   text-decoration: none;
   text-align: center;
-  padding: 60px;
 }
 
 .subtitle{
@@ -256,8 +268,9 @@ header {
 .form-login {
   width: 100%;
   max-width: 400px;
-  padding: 15px;
   margin: auto;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .form-login .checkbox {
@@ -295,8 +308,10 @@ header {
 
 .form-signup {
   width: 100%;
-  max-width: 330px;
+  max-width: 500px;
   margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .form-signup .checkbox {

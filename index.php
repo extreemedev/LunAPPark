@@ -41,7 +41,7 @@ define("TITLE","LunAPPark");
     <div class="mb-custom"></div>
     <div style="padding-top: 38px;"></div>
 
-        <div class="container pb-5 mb-5 imgback" style="max-width: 100%; filter: drop-shadow(0px 5px 50px #222);">
+        <div class="container pt-custom pb-5 mb-5 imgback" style="max-width: 100%; filter: drop-shadow(0px 5px 50px #222);">
             <div class="title" style="text-align: center; filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));">Scopri un nuovo mondo pieno di emozioni!
                 <div class="pt-5"></div>
                 <div class="subtitle">Biglietto a partire da 10€*</div>

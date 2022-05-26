@@ -36,9 +36,9 @@ include("../layouts/navbar.php")
 ?>
 
     <div id="loader" style="display: none;"></div>
-    <div id="form" class="title">Accedi
+    <div id="form" class="title pt-custom" style="text-align: center;">Accedi
         <form action="login.php" class="form-login" method="post" name="myForm" onsubmit="validaForm()">
-            <div class="subtitle">Accedi</div>
+            <!--div class="subtitle">Accedi</div-->
             <div class="mb-5" ></div>
             <input type="email" name="inputEmail" class="form-control" placeholder="Email address" value="<?php echo ($e);?>" required autofocus/>
             <div class="mb-2"></div>
