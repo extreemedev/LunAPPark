@@ -16,7 +16,7 @@ include("../layouts/navbar.php")
 ?>
 
         <div id="loader" style="display: none;"></div>
-        <div id="form" class="title">
+        <div id="form" class="title">Registrati
             <form action="signup.php" class="form-signup" method="post" name="myRegistr" onsubmit="return validaForm();">
                 <div class="subtitle">Registrati</div>
                 <label class="checky" for="nome">Nome:</label>

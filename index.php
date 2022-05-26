@@ -41,9 +41,11 @@ define("TITLE","LunAPPark");
     <div class="mb-custom"></div>
     <div style="padding-top: 38px;"></div>
 
-        <div class="container imgback" style="max-width: 100%; filter: drop-shadow(0px 5px 50px #222);">
+        <div class="container pb-5 mb-5 imgback" style="max-width: 100%; filter: drop-shadow(0px 5px 50px #222);">
             <div class="title" style="text-align: center; filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));">Scopri un nuovo mondo pieno di emozioni!
+                <div class="pt-5"></div>
                 <div class="subtitle">Biglietto a partire da 10€*</div>
+                <div class="pt-5"></div>
                 <a class="btn-grad" href="#scroll">Scopri di piú</a>  
             </div> 
         </div>
@@ -52,7 +54,7 @@ define("TITLE","LunAPPark");
         <div class="container px-5 text-white">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6 order-lg-2">
-                    <div class="p-5"><img class="img-fluid rounded-circle" src="./src/assets/img/gardaland.jpg" alt="..." /></div>
+                    <div class="p-5" style="filter: drop-shadow(0px 5px 70px #e6ffe6);"><img class="img-fluid rounded-circle" src="./src/assets/img/gardaland.jpg" alt="..." /></div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="p-5">
@@ -68,7 +70,7 @@ define("TITLE","LunAPPark");
         <div class="container px-5 text-white">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6">
-                    <div class="p-5"><img class="img-fluid rounded-circle" src="./src/assets/img/biglietto.jpg" alt="..." /></div>
+                    <div class="p-5" style="filter: drop-shadow(0px 5px 70px #333333);"><img class="img-fluid rounded-circle" src="./src/assets/img/biglietto.jpg" alt="..." /></div>
                 </div>
                 <div class="col-lg-6">
                     <div class="p-5">
@@ -84,7 +86,7 @@ define("TITLE","LunAPPark");
         <div class="container px-5 text-white">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6 order-lg-2">
-                    <div class="p-5"><img class="img-fluid rounded-circle" src="./src/assets/img/rainbow.jpg" alt="..." /></div>
+                    <div class="p-5" style="filter: drop-shadow(0px 5px 70px #003366);"><img class="img-fluid rounded-circle" src="./src/assets/img/rainbow.jpg" alt="..." /></div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="p-5">
@@ -100,7 +102,7 @@ define("TITLE","LunAPPark");
         <div class="container px-5 text-white">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6">
-                    <div class="p-5"><img class="img-fluid rounded-circle" src="./src/assets/img/russian-mountain.jpg" alt="..." /></div>
+                    <div class="p-5" style="filter: drop-shadow(0px 5px 70px #99ccff);"><img class="img-fluid rounded-circle" src="./src/assets/img/russian-mountain.jpg" alt="..." /></div>
                 </div>
                 <div class="col-lg-6">
                     <div class="p-5">
@@ -116,7 +118,7 @@ define("TITLE","LunAPPark");
         <div class="container px-5 text-white">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6 order-lg-2">
-                    <div class="p-5"><img class="img-fluid rounded-circle" src="./src/assets/img/stanza.jpg" alt="..." /></div>
+                    <div class="p-5" style="filter: drop-shadow(0px 5px 70px #ccccb3);"><img class="img-fluid rounded-circle" src="./src/assets/img/stanza.jpg" alt="..." /></div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="p-5">
@@ -128,12 +130,10 @@ define("TITLE","LunAPPark");
         </div>
     </section>
 
-    <!-- Footer-->
-    <footer class="py-5 bg-black">
-            <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; LunAPPark 2022</p></div>
-    </footer>
+    
+    <!--picture style="display: absolute;" id="scroll"><img class="imgcut imgcenter" src="../src/assets/img/wide-park.jpg" width="100%" alt=""></picture-->   
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
 
-        <!--picture style="display: absolute;" id="scroll"><img class="imgcut imgcenter" src="../src/assets/img/wide-park.jpg" width="100%" alt=""></picture-->   
-        <script src="./bootstrap/js/bootstrap.bundle.js"></script>
-    </body>
-</html>
+<?php 
+include("./pages/layouts/footer.php")
+?>
