@@ -132,9 +132,15 @@ $("#prec").click(function(){
         } else{
             if(g<=gt2){
                 if(c==106 || c==107 || c==113 || c==114 || c==120 || c==121 || c==127 || c==128 || c==134 || c==135 || c==141 || c==142){
+<<<<<<< HEAD
                     $("#"+c).html("<div style=font-size:12px;padding-bottom:35px;>Biglietto adulto:<br>30.00<br>Biglietto ridotto:<br>10.00</div>");
                 } else {
                     $("#"+c).html("<div style=font-size:12px;padding-bottom:35px;>Biglietto adulto:<br>22.50<br>Biglietto ridotto:<br>10.00</div>");
+=======
+                    $("#"+c).html("<div style=font-size:12px;padding-bottom:35px;>Biglietto adulto:<br>30.00 €<br>Biglietto ridotto:<br>10.00 €</div>");
+                } else {
+                    $("#"+c).html("<div style=font-size:12px;padding-bottom:35px;>Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div>");
+>>>>>>> 012a5626982590b6edae1cfe44bd7976347e9ec4
                 }
                 g++;
             } else {
@@ -222,9 +228,15 @@ $("#succ").click(function(){
         } else{
             if(g<=gt2){
                 if(c==106 || c==107 || c==113 || c==114 || c==120 || c==121 || c==127 || c==128 || c==134 || c==135 || c==141 || c==142){
+<<<<<<< HEAD
                     $("#"+c).html("<div style=font-size:12px;padding-bottom:35px;>Biglietto adulto:<br>30.00<br>Biglietto ridotto:<br>10.00</div>");
                 } else {
                     $("#"+c).html("<div style=font-size:12px;padding-bottom:35px;>Biglietto adulto:<br>22.50<br>Biglietto ridotto:<br>10.00</div>");
+=======
+                    $("#"+c).html("<div style=font-size:12px;padding-bottom:35px;>Biglietto adulto:<br>30.00 €<br>Biglietto ridotto:<br>10.00 €</div>");
+                } else {
+                    $("#"+c).html("<div style=font-size:12px;padding-bottom:35px;>Biglietto adulto:<br>22.50 €<br>Biglietto ridotto:<br>10.00 €</div>");
+>>>>>>> 012a5626982590b6edae1cfe44bd7976347e9ec4
                 }
                 g++;
             } else {
