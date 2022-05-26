@@ -204,6 +204,7 @@ header {
 
 .text{
   font-family: "Montserrat", sans-serif;
+  filter: drop-shadow(3px 5px 10px #222);
 }
 
 .title{

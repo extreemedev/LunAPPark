@@ -48,7 +48,7 @@ define("TITLE","LunAPPark");
             </div> 
         </div>
     <section id="scroll">
-        <div class="container px-5 text">
+        <div class="container px-5 text-white">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6 order-lg-2">
                     <div class="p-5"><img class="img-fluid rounded-circle" src="./src/assets/img/russian-mountain.jpg" alt="..." /></div>
@@ -64,10 +64,10 @@ define("TITLE","LunAPPark");
     </section>
     <!-- Content section 2-->
     <section>
-        <div class="container px-5">
+        <div class="container px-5 text-white">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6">
-                    <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/02.jpg" alt="..." /></div>
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="./src/assets/img/gardaland.jpg" alt="..." /></div>
                 </div>
                 <div class="col-lg-6">
                     <div class="p-5">
@@ -80,10 +80,10 @@ define("TITLE","LunAPPark");
     </section>
     <!-- Content section 3-->
     <section>
-        <div class="container px-5">
+        <div class="container px-5 text-white">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6 order-lg-2">
-                    <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/03.jpg" alt="..." /></div>
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="./src/assets/img/rainbow.jpg" alt="..." /></div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="p-5">
