@@ -23,8 +23,8 @@
     </ul>
 
     <ul id="giorni" class="days">  
-        <li id="1">.</li>
-        <li id="2">.</li>
+        <li id="1"></li>
+        <li id="2"></li>
         <li id="3">1</li>
         <li id="4">2</li>
         <li id="5">3</li>
@@ -91,9 +91,9 @@
         <li id="30">28</li>
         <li id="31">29</li>
         <li id="32">30</li>
-        <li id="33">.</li>
-        <li id="34">.</li>
-        <li id="35">.</li>
+        <li id="33"></li>
+        <li id="34"></li>
+        <li id="35"></li>
 
         <li id="129"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
         <li id="130"><div style="font-size: 12px; padding-bottom: 35px;">biglietto adulto:<br>22.50<br>biglietto ridotto:<br>10.00</div></li>
@@ -103,13 +103,13 @@
         <li id="134"><div style="font-size: 12px; padding-bottom: 35px;"></div></li>
         <li id="135"><div style="font-size: 12px; padding-bottom: 35px;"></div></li>
 
-        <li id="36">.</li>
-        <li id="37">.</li>
-        <li id="38">.</li>
-        <li id="39">.</li>
-        <li id="40">.</li>
-        <li id="41">.</li>
-        <li id="42">.</li>
+        <li id="36"></li>
+        <li id="37"></li>
+        <li id="38"></li>
+        <li id="39"></li>
+        <li id="40"></li>
+        <li id="41"></li>
+        <li id="42"></li>
 
         <li id="136"><div style="font-size: 12px; padding-bottom: 35px;"></div></li>
         <li id="137"><div style="font-size: 12px; padding-bottom: 35px;"></div></li>

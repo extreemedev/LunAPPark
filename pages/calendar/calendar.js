@@ -21,7 +21,7 @@ $("#prec").click(function(){
     }
     var start=0;
     for(var c = 6; c>0; c--){
-        if($("#"+c).text()=="."){
+        if($("#"+c).text()==""){
             if(c==1){
                 if(gt==28){
                     start=2;
@@ -111,13 +111,13 @@ $("#prec").click(function(){
     var g=1;
     for(var c = 1; c<43; c++){
         if(c<start){
-            $("#"+c).text(".");
+            $("#"+c).text("");
         } else{
             if(g<=gt){
                 $("#"+c).text(g);
                 g++;
             } else {
-                $("#"+c).text(".");
+                $("#"+c).text("");
             }
         }
     }
@@ -165,7 +165,7 @@ $("#succ").click(function(){
     }
     var start;
     for(var c = 8; c<43; c++){
-        if($("#"+c).text()=="."){
+        if($("#"+c).text()==""){
             if(c==8 || c==15 || c==22 || c==29 || c==36){
                 start=1;
                 break;
@@ -199,13 +199,13 @@ $("#succ").click(function(){
     var g=1;
     for(var c = 1; c<43; c++){
         if(c<start){
-            $("#"+c).text(".");
+            $("#"+c).text("");
         } else{
             if(g<=gt){
                 $("#"+c).text(g);
                 g++;
             } else {
-                $("#"+c).text(".");
+                $("#"+c).text("");
             }
         }
     }
@@ -247,7 +247,7 @@ $("#2").click(function(){
 });*/
 
 $("#giorni >").click(function(){
-    if($(this).text()=="." || $(this).text()==""){
+    if($(this).text()==""){
 
         $(".active").removeClass("active");
         $(".active2").removeClass("active2");
