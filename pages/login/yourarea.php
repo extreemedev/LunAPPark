@@ -21,7 +21,7 @@ include("../layouts/navbar.php")
 
 <div id="loader"></div>
 <div id="mypage" class="animate-bottom">
-    <div class="title"><?php echo"Benvenuto ".$sessioname?></div>
+    <div class="subtitle"><?php echo"Benvenuto ".$sessioname?></div>
     <a class="btn-grad" style="display: initial;" href="./out.php">Logout</a>
 </div>
 

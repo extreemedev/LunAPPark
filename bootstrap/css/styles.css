@@ -12142,7 +12142,7 @@ header.masthead .bg-circle-4 {
 
 
 
-@media (min-width: 992px) {
+@media (min-width: 992px) {   /*QUANDO É PIU GRANDE DI 992px*/
   header.masthead {
     padding-top: calc(10rem + 55px);
     padding-bottom: 10rem;
@@ -12155,4 +12155,5 @@ header.masthead .bg-circle-4 {
   .subtitle{
     font-size: 50px;
   }
+  
 }

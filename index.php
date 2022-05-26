@@ -47,6 +47,7 @@ define("TITLE","LunAPPark");
                 <a class="btn-grad" href="#scroll">Scopri di piú</a>  
             </div> 
         </div>
+    <!-- Content section 1-->
     <section id="scroll">
         <div class="container px-5 text-white">
             <div class="row gx-5 align-items-center">
@@ -67,11 +68,11 @@ define("TITLE","LunAPPark");
         <div class="container px-5 text-white">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6">
-                    <div class="p-5"><img class="img-fluid rounded-circle" src="./src/assets/img/russian-mountain.jpg" alt="..." /></div>
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="./src/assets/img/biglietto.jpg" alt="..." /></div>
                 </div>
                 <div class="col-lg-6">
                     <div class="p-5">
-                        <h2 class="subtitle">Giostre da mozzafiato!</h2>
+                        <h2 class="subtitle">Il biglietto ridotto costa solo 10€!</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
                     </div>
                 </div>
@@ -87,12 +88,45 @@ define("TITLE","LunAPPark");
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="p-5">
-                        <h2 class="subtitle">Let there be rock!</h2>
+                        <h2 class="subtitle">Spettacoli serali e notturni!</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+    <!-- Content section 4-->
+    <section>
+        <div class="container px-5 text-white">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="./src/assets/img/russian-mountain.jpg" alt="..." /></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-5">
+                        <h2 class="subtitle">Giostre da mozzafiato!</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Content section 5-->
+    <section>
+        <div class="container px-5 text-white">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="./src/assets/img/stanza.jpg" alt="..." /></div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="subtitle">Anche con hotel convenzionato!</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer-->
     <footer class="py-5 bg-black">
