@@ -39,11 +39,17 @@ define("TITLE","LunAPPark");
         </div>
     </nav>
     <div class="mb-custom"></div>
-        <div class="text imgback imgcut" style="text-align: center">Scopri un nuovo mondo pieno di emozioni!
-            <div class="subtext">Biglietto a partire da 20€</div>
-            <a class="btn-grad" href="#scroll">Scopri di piú</a>  
-        </div>    
-        <!--picture id="scroll"><img class="imgcut imgcenter" src="../src/assets/img/wide-park.jpg" width="95%" alt=""></picture-->
+    <div style="padding-top: 38px;"></div>
+        <div class="container imgback" style="max-width: 100%; filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));" >
+            
+            <div class="text" style="text-align: center; filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));">Scopri un nuovo mondo pieno di emozioni!
+                <div class="subtext">Biglietto a partire da 20€</div>
+                <a class="btn-grad" href="#scroll">Scopri di piú</a>  
+            </div> 
+        </div>
+        
+
+        <!--picture style="display: absolute;" id="scroll"><img class="imgcut imgcenter" src="../src/assets/img/wide-park.jpg" width="100%" alt=""></picture-->   
         <script src="./bootstrap/js/bootstrap.bundle.js"></script>
     </body>
 </html>
