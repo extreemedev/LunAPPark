@@ -5,13 +5,13 @@
             if (isset($_GET['invio'])) {
                 if ($_GET['invio'] == "ok") {
             ?>
-                    <div class="alert alert-success text-center" role="alert">
+                    <div class="alert alert-success text-center ml-5 mr-5" role="alert">
                         Grazie per averci scritto. Risponderemo entro 24 ore
                     </div>
                 <?php
                 } else {
                 ?>
-                    <div class="alert alert-danger text-center" role="alert">
+                    <div class="alert alert-danger text-center ml-5 mr-5" role="alert">
                         Si è verificato un errore
                     </div>
             <?php

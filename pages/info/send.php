@@ -7,11 +7,11 @@ $messaggio = $_POST['messaggio'];
 
 //Controlli
 if($nome==""){
-    header('location: ./contatti.php?invio=no');
+    header('location: ./index.php?invio=no');
     die();
 }
 
-$a = "mattallev@gmail.com";
+$a = "matt.allev@gmail.com";
 $oggetto = "Email dal Modulo Contatti del sito web";
 $messaggio = "
 <h1>Messaggio dal sito:</h1>
@@ -29,12 +29,14 @@ $messaggio = "
 
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:title/html;charset=UTF-8" . "\r\n";
-$headers .= 'From: mattallev@gmail.com' . "\r\n";
+$headers .= 'From: matt.allev@gmail.com' . "\r\n";
 
 if (mail($a, $oggetto, $messaggio, $headers)) {
-    header('location: ./contatti.php?invio=ok');
+    header('location: ./index.php?invio=ok');
     die();
 } else {
-    header('location: ./contatti.php?invio=no');
+    header('location: ./index.php?invio=no');
     die();
 }
+
+?>
