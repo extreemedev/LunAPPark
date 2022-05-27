@@ -246,7 +246,7 @@ header {
 .title .btn-grad,
 .subtitle .btn-grad{
   padding: 15px 15px;
-  font-size: 20px;
+  font-size: 17px;
   filter: drop-shadow(0px 0px 30px rgba(34, 34, 34, 0.192));
   box-shadow: none;
   display:initial;
@@ -320,6 +320,16 @@ header {
 
 .form-signup .form-floating:focus-within {
   z-index: 2;
+}
+
+
+
+.form-contacts {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 

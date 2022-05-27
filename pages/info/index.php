@@ -15,6 +15,7 @@ include("./contatti.php")
 ?>
    
         <!--picture id="scroll"><img class="imgcut imgcenter floating" src="../../src/assets/img/soffuerenginerin.png" width="35%" style="position: center;" alt=""></picture-->
-        <script src="../../bootstrap/js/bootstrap.bundle.js"></script>
-    </body>
-</html>
+
+<?php
+include("../layouts/footer.php")
+?>

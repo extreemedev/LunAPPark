@@ -42,7 +42,7 @@ include("../layouts/navbar.php")
                 
                 <label class="checky" for="data">Data di nascita:</label>
                 <input type="date" name="data" class="form-control" max="2021-12-31" min="1900-01-01">
-                
+                <div class="mt-4" ></div>
                 <button class="btn-grad" name="signupButton" type="submit">Registrati</button>
             </form>
         </div>
