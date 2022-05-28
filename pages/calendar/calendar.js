@@ -2,6 +2,7 @@
 const month_names = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre']
 const total_day = ['31', '28', '31', '30', '31', '30', '31', '31', '30', '31', '30', '31']
 
+var yy;
 
 $(window).on('load',function () {
     //window.alert("Finestra caricata completamente, compresa la grafica");
@@ -29,12 +30,12 @@ $(window).on('load',function () {
     }
     for(var c = 1; c<43; c++){
         if(g==giorno){
-            $("#"+c).css("background","#aaaaaa");
+            /*$("#"+c).css("background","#aaaaaa");
             $("#"+c).css("color","white");
             var g2=c+100;
             $("#"+g2).css("background","#aaaaaa");
-            $("#"+g2).css("color","white");
-            var y=c;
+            $("#"+g2).css("color","white");*/
+            yy=c;
         }
         if(c<gs+1){
             $("#"+c).text("");
@@ -56,13 +57,13 @@ $(window).on('load',function () {
         } else{
             if(g<=gt2){
 
-                /*if(c<y+100){
-                    $("#"+c).css("background","#ffbebe");
+                if(c<yy+100){
+                    $("#"+c).css("background","#aaaaaa");
                     $("#"+c).css("color","white");
                     var g2=c-100;
-                    $("#"+g2).css("background","#ffbebe");
+                    $("#"+g2).css("background","#aaaaaa");
                     $("#"+g2).css("color","white");
-                }*/
+                }
 
                 if(c==106 || c==107 || c==113 || c==114 || c==120 || c==121 || c==127 || c==128 || c==134 || c==135 || c==141 || c==142){
                     $("#"+c).html("<div style=font-size:12px;padding-bottom:35px;>Biglietto adulto:<br>30.00<br>Biglietto ridotto:<br>10.00</div>");
@@ -197,16 +198,16 @@ $("#prec").click(function(){
         
         var g=1;
         for(var c = 1; c<43; c++){
-            if((g==giorno) && ($("#mese").text().replace(/\s+/g, " ").replace(/^\s|\s$/g, "")==month_names[mese]) && (parseInt($("#anno").text())==anno)){
-                $("#"+c).css("background","#aaaaaa");
-                $("#"+c).css("color","white");
-                var g2=c+100;
-                $("#"+g2).css("background","#aaaaaa");
-                $("#"+g2).css("color","white");
-            }
             if(c<start){
                 $("#"+c).text("");
             } else{
+                if((g<giorno) && ($("#mese").text().replace(/\s+/g, " ").replace(/^\s|\s$/g, "")==month_names[mese]) && (parseInt($("#anno").text())==anno)){
+                    $("#"+c).css("background","#aaaaaa");
+                    $("#"+c).css("color","white");
+                    var g2=c+100;
+                    $("#"+g2).css("background","#aaaaaa");
+                    $("#"+g2).css("color","white");
+                }
                 if(g<=gt){
                     $("#"+c).text(g);
                     g++;
@@ -330,10 +331,13 @@ $("#succ").click(function(){
 
 $("#giorni >").click(function(){
     var data = new Date();
-    var mese, giorno, anno;
+    var mese, giorno, anno, gs;
+    gs=parseInt(data.getDay())-1;
     giorno = parseInt(data.getDate());
     mese = parseInt(data.getMonth());
     anno=parseInt(data.getFullYear());
+    var gt=total_day[mese];
+    var m=(((((giorno/7)|0)+1)*7)-giorno)+1;
 
     if($(this).text()==""){
 
@@ -353,7 +357,7 @@ $("#giorni >").click(function(){
             $("#"+x2).css("background","#ffb656");
             $("#"+x2).css("color","white");
 
-            if(($(this).text()!=giorno) && ($("#mese").text().replace(/\s+/g, " ").replace(/^\s|\s$/g, "")==month_names[mese]) && (parseInt($("#anno").text())==anno)){
+            /*if(($(this).text()!=giorno) && ($("#mese").text().replace(/\s+/g, " ").replace(/^\s|\s$/g, "")==month_names[mese]) && (parseInt($("#anno").text())==anno)){
                 for(var c = 1; c<43; c++){
                     if(parseInt($("#"+c).text())==giorno){
                         $("#"+c).css("background","#aaaaaa");
@@ -363,7 +367,7 @@ $("#giorni >").click(function(){
                         $("#"+g2).css("color","white");
                     }
                 }
-            }
+            }*/
 
         } else{
 
@@ -373,7 +377,7 @@ $("#giorni >").click(function(){
             $("#"+x).css("background","#ffb656");
             $("#"+x).css("color","white");
 
-            if(($("#"+x).text()!=giorno) && ($("#mese").text().replace(/\s+/g, " ").replace(/^\s|\s$/g, "")==month_names[mese]) && (parseInt($("#anno").text())==anno)){
+            /*if(($("#"+x).text()!=giorno) && ($("#mese").text().replace(/\s+/g, " ").replace(/^\s|\s$/g, "")==month_names[mese]) && (parseInt($("#anno").text())==anno)){
                 for(var c = 1; c<43; c++){
                     if(parseInt($("#"+c).text())==giorno){
                         $("#"+c).css("background","#aaaaaa");
@@ -383,6 +387,30 @@ $("#giorni >").click(function(){
                         $("#"+g2).css("color","white");
                     }
                 }
+            }*/
+        }
+    }
+
+    for(var x=0;x<m;x++){
+        if(gs==6){
+            gs=0;
+        } else {
+            gs++;
+        }
+    }
+    var g=1;
+    for(var c = 1; c<43; c++){
+        if(c<gs+1){
+        } else{
+            if((g<giorno) && ($("#mese").text().replace(/\s+/g, " ").replace(/^\s|\s$/g, "")==month_names[mese]) && (parseInt($("#anno").text())==anno)){
+                $("#"+c).css("background","#aaaaaa");
+                $("#"+c).css("color","white");
+                var g2=c+100;
+                $("#"+g2).css("background","#aaaaaa");
+                $("#"+g2).css("color","white");
+            }
+            if(g<=gt){
+                g++;
             }
         }
     }

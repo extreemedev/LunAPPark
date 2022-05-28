@@ -595,7 +595,7 @@ body {font-family: "Montserrat", sans-serif;}
   display: inline-block;
   width: 13.6%;
   text-align: center;
-  padding-bottom: 10px;
+  /*padding-bottom: 10px;*/
   font-size:30px;
   color: #777;
 }
