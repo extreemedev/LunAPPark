@@ -29,7 +29,7 @@ $messaggio = "
 
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:title/html;charset=UTF-8" . "\r\n";
-$headers .= 'From: matt.allev@gmail.com' . "\r\n";
+$headers .= "From: matt.allev@gmail.com" . "\r\n";
 
 if (mail($a, $oggetto, $messaggio, $headers)) {
     header('location: ./index.php?invio=ok');
