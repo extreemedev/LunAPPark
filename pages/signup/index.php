@@ -17,7 +17,7 @@ include("../layouts/navbar.php")
 
         <div id="loader" style="display: none;"></div>
         <div id="form" class="title pt-custom" style="text-align: center;">Effettua la registrazione
-            <form action="signup.php" class="form-signup" method="post" name="myRegistr" onsubmit="return validaForm2();">
+            <form action="signup.php" class="form-signup" method="post" name="myRegistr" onsubmit="return validaForm();">
                 <!--div class="subtitle">Effettua la registrazione</div-->
                 <label class="checky" for="nome">Nome:</label>
                 <input type="nome" name="nome" class="form-control" placeholder="Nome" size="30" maxlength="30"><!--box-shadow: 0 0 0 0.25rem #ffc4657a;-->

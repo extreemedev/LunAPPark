@@ -1,17 +1,5 @@
-var myVar;
 
-function myLoader() {
-  myVar = setTimeout(showPage, 3000);
-}
-
-
-function showPage() {
-  document.getElementById("form").style.display = "none";
-  document.getElementById("loader").style.display = "block";
-}
-
-
-function validaForm2() {
+function validaForm() {
     var b = true;
     var b2 = true;
     var x = document.getElementsByClassName("form-control");
@@ -188,6 +176,5 @@ function validaForm2() {
         return false;
     }
     window.alert("Dati inseriti correttamente");
-    myLoader();
     return true;
 }
