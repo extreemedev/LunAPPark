@@ -683,7 +683,7 @@ padding:8px;
 
 /* Style the counter cards */
 .card2 {
-  height: 490px;
+  height: 500px;
   border-radius: 12px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
@@ -751,96 +751,80 @@ padding:8px;
   .row2 {
     margin: 0 5%;
   }
-}
-
-@media screen and (max-width: 750px) {
-  .column2 {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-  .row2 {
-    margin: 0 5%;
+  .card2 {
+    height: 550px;
   }
 }
 
-@media screen and (max-width: 700px) {
-  .column2 {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
+@media screen and (max-width: 720px) {
   .row2 {
     margin: 0 2%;
+  }
+  .card2 {
+    height: 565px;
   }
 }
 
 @media screen and (max-width: 620px) {
-  .column2 {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
   .row2 {
     margin: 0 2%;
   }
   .card2 {
-    height: 520px;
+    height: 595px;
   }
 }
 
-@media screen and (max-width: 565px) {
-  .column2 {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
+@media screen and (max-width: 570px) {
   .row2 {
     margin: 0 0%;
+  }
+  .card2 {
+    height: 605px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .column2 {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
+  .card2 {
+    height: 610px;
   }
   .card2 {
-    height: 525px;
+    height: 630px;
   }
 }
 
-@media screen and (max-width: 450px) {
-  .column2 {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
+@media screen and (max-width: 452px) {
   .card2 {
-    height: 700px;
+    height: 710px;
   }
 }
 
-@media screen and (max-width: 400px) {
-  .column2 {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
+@media screen and (max-width: 415px) {
   .card2 {
     height: 750px;
   }
 }
 
-@media screen and (max-width: 350px) {
-  .column2 {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
+@media screen and (max-width: 392px) {
+  .card2 {
+    height: 790px;
   }
+}
+
+@media screen and (max-width: 340px) {
+  .card2 {
+    height: 820px;
+  }
+}
+
+@media screen and (max-width: 331px) {
   .card2 {
     height: 880px;
+  }
+}
+
+@media screen and (max-width: 317px) {
+  .card2 {
+    height: 940px;
   }
 }
 

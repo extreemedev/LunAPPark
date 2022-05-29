@@ -1,14 +1,14 @@
+
   <div class="title pt-custom">Calendario di apertura e Tariffe
-    <div class="nav-item pt-3 pb-1" style="font-size: 20px;">Consulta il nostro calendario di apertura e le tariffe per organizzare al meglio la tua giornata.<br><br></div>
-    <div class="nav-item pb-1" style="font-size: 17px;">Sfruttare al massimo il tuo giorno al Parco è fondamentale. Ti invitiamo a consultare tutte le informazioni riguardanti i nostri orari e i prezzi d’entrata. Così non ti<br>perderai nulla e trascorrerai una giornata che vorrai ripetere il prima possibile! Ti aspettiamo!</div>
+    <div class="nav-item" style="font-size: 20px;"><br>Consulta il nostro calendario di apertura e le tariffe per organizzare al meglio la tua giornata.<br><br></div>
+    <div class="nav-item" style="font-size: 17px;">Sfruttare al massimo il tuo giorno al Parco è fondamentale. Ti invitiamo a<br>consultare tutte le informazioni riguardanti i nostri orari e i prezzi d’entrata. Così non ti<br>perderai nulla e trascorrerai una giornata che vorrai ripetere il prima possibile! Ti aspettiamo!</div>
   </div>
   <br>
   <br>
-
-
+  
   <div class="row2">
-    <div class="column2 pb-5" style="align-items: center; width: 100%; margin-bottom:auto">
-      <div class="card2 text">
+    <div class="column2">
+      <div class="card2">
         <img src="../../src/assets/img/calendar.png" align="right" height="120px" width="120px">
         <div class="nav-item" style="font-size: 50px;"><b>Calendario di apertura</b></div>
         <div class="nav-item" style="font-size: 30px;">Controlla i nostri giorni di apertura e pianifica un soggiorno indimenticabile!</div>
@@ -29,9 +29,9 @@
         </p>
       </div>
     </div>
-    
-    <div class="column2" style="align-items: center; width: 100%;">
-      <div class="card2 text">
+  
+    <div class="column2">
+      <div class="card2">
         <img src="../../src/assets/img/ticket.png" align="right" height="110px" width="110px">
         <div class="nav-item" style="font-size: 50px;"><b>Tariffe</b></div>
         <div class="nav-item" style="font-size: 30px;">Scopri i prezzi e le offerte dei biglietti<br>per entrare a LunAPPark!</div>
