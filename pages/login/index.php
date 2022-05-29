@@ -12,16 +12,17 @@ if($sessionmail){
 $rm = "";
 $e = "";
 $p = "";
+$rm2="";
 if (array_key_exists('rem', $_COOKIE)) {
     $rm=htmlspecialchars($_COOKIE['rem']);
     //echo($rm);
     if($rm=='true'){
-        $rm="checked";
+        $rm2="checked";
         //echo($rm);
         $e=htmlspecialchars($_COOKIE['email']);
         $p=htmlspecialchars($_COOKIE['pas']);
     } else {
-        $rm = "";
+        $rm2 = "";
     }
 }
 ?>
@@ -45,7 +46,7 @@ include("../layouts/navbar.php")
             <input type="password" name="inputPassword" class="form-control" placeholder="Password" value="<?php echo ($p);?>" required/>
             
             <div id="divRemember" class="checkbox">
-                <input type="checkbox" name="remember" <?php echo ($rm);?>/>
+                <input type="checkbox" name="remember" <?php echo ($rm2);?>/>
                 <label class="checky" for="remember">Remember me</label>
             </div>
             <button class="btn-grad" name="loginButton" type="submit">Accedi</button>
