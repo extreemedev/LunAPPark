@@ -7,7 +7,7 @@ session_start();
 $sessionmail = $_SESSION["id"];
 $sessioname = $_SESSION["user"];
 if($sessionmail==""){
-    header('location: error.php');
+    header('location: ./index.php');
 }
 ?>
 
