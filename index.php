@@ -22,7 +22,7 @@ define("TITLE","LunAPPark");
     </style>
 </head>
 <body id="page-top" class="back5">
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <div class="container">
             <a class="logo" href="#page-top"><img src="src/assets/img/logo.png" width="120px" height="110px" object-fit="scale-down" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
