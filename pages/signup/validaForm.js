@@ -11,7 +11,7 @@ function showPage() {
 }
 
 
-function validaForm() {
+function validaForm2() {
     var b = true;
     var b2 = true;
     var x = document.getElementsByClassName("form-control");

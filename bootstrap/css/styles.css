@@ -575,11 +575,12 @@ body {font-family: "Montserrat", sans-serif;}
   margin: 0;
   padding: 10px 0;
   background-color: #ddd;
+  padding-left: 12px;
 }
 
 .weekdays li {
   display: inline-block;
-  width: 13.6%;
+  width: 13.8%;
   color: #666;
   text-align: center;
 }
@@ -588,12 +589,13 @@ body {font-family: "Montserrat", sans-serif;}
   padding: 10px 0;
   background: #eee;
   margin: 0;
+  padding-left: 12px;
 }
 
 .days li {
   list-style-type: none;
   display: inline-block;
-  width: 13.6%;
+  width: 13.8%;
   text-align: center;
   /*padding-bottom: 10px;*/
   font-size:30px;
@@ -638,6 +640,115 @@ body {font-family: "Montserrat", sans-serif;}
   cursor: pointer;
 }
 
+
+
+
+/*₵₳ⱠɆ₦Đ₳ⱤłØ Ɇ ₮₳Ɽł₣₣Ɇ*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column2 {
+  float: left;
+  width: 750px;
+  /*min-width: 600px;*/
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row2 {
+    margin: 0 20%;
+}
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+
+@media screen and (max-width: 2520px) {
+  .row2 {
+    margin: 0 15%;
+  }
+}
+
+@media screen and (max-width: 2159px) {
+  .row2 {
+    margin: 0 10%;
+  }
+}
+
+@media screen and (max-width: 1900px) {
+  .row2 {
+    margin: 0 5%;
+  }
+}
+
+@media screen and (max-width: 1685px) {
+  .row2 {
+    margin: 0 2%;
+  }
+}
+
+@media screen and (max-width: 1580px) {
+  .column2 {
+    width: 750px;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .row2 {
+    margin: 0 20%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .column2 {
+    width: 750px;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .row2 {
+    margin: 0 10%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .column2 {
+    width: 750px;
+    display: block;
+    margin-bottom: 20px;
+    padding-right: 19px;
+  }
+  .row2 {
+    margin: 0 0%;
+  }
+}
+
+.card2 table {
+border-collapse:collapse
+}
+.card2 td, th {
+border:2px solid rgb(255, 255, 255);
+padding:8px;
+}
+
+/* Style the counter cards */
+.card2 {
+  height: 450px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: left;
+  /*background-color: #f1f1f1;*/
+  background: rgb(227,129,129);
+  background: linear-gradient(90deg, rgba(227,129,129,1) 0%, rgba(255,201,91,1) 100%);
+  color: rgb(255, 255, 255);
+}
 
 
 /*#####################################################################*/
