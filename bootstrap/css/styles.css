@@ -575,11 +575,12 @@ body {font-family: "Montserrat", sans-serif;}
   margin: 0;
   padding: 10px 0;
   background-color: #ddd;
+  padding-left: 12px;
 }
 
 .weekdays li {
   display: inline-block;
-  width: 13.6%;
+  width: 13.8%;
   color: #666;
   text-align: center;
 }
@@ -588,12 +589,13 @@ body {font-family: "Montserrat", sans-serif;}
   padding: 10px 0;
   background: #eee;
   margin: 0;
+  padding-left: 12px;
 }
 
 .days li {
   list-style-type: none;
   display: inline-block;
-  width: 13.6%;
+  width: 13.8%;
   text-align: center;
   /*padding-bottom: 10px;*/
   font-size:30px;
