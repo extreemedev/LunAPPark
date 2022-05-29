@@ -1107,7 +1107,7 @@ label {
 
 button {
   border-radius: 0;
-  border: 2px solid transparent; /* QUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
+  border: 2px solid transparent;
   border-color: transparent;
   border-style: none;
 }
