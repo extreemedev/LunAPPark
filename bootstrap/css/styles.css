@@ -669,6 +669,27 @@ body {
   clear: both;
 }
 
+.card2 table {
+border-collapse:collapse
+}
+.card2 td, th {
+border:2px solid rgb(255, 255, 255);
+padding:8px;
+}
+
+/* Style the counter cards */
+.card2 {
+  height: 490px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: left;
+  /*background-color: #f1f1f1;*/
+  background: rgb(227,129,129);
+  background: linear-gradient(90deg, rgba(227,129,129,1) 0%, rgba(255,201,91,1) 100%);
+  color: rgb(255, 255, 255);
+}
+
 /* Responsive columns */
 
 @media screen and (max-width: 2520px) {
@@ -719,35 +740,104 @@ body {
 
 @media screen and (max-width: 900px) {
   .column2 {
-    width: 750px;
+    width: 100%;
     display: block;
     margin-bottom: 20px;
-    padding-right: 19px;
+  }
+  .row2 {
+    margin: 0 5%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .column2 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .row2 {
+    margin: 0 5%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .column2 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .row2 {
+    margin: 0 2%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .column2 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .row2 {
+    margin: 0 2%;
+  }
+  .card2 {
+    height: 520px;
+  }
+}
+
+@media screen and (max-width: 565px) {
+  .column2 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
   .row2 {
     margin: 0 0%;
   }
 }
 
-.card2 table {
-border-collapse:collapse
-}
-.card2 td, th {
-border:2px solid rgb(255, 255, 255);
-padding:8px;
+@media screen and (max-width: 500px) {
+  .column2 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .card2 {
+    height: 525px;
+  }
 }
 
-/* Style the counter cards */
-.card2 {
-  height: 490px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: left;
-  /*background-color: #f1f1f1;*/
-  background: rgb(227,129,129);
-  background: linear-gradient(90deg, rgba(227,129,129,1) 0%, rgba(255,201,91,1) 100%);
-  color: rgb(255, 255, 255);
+@media screen and (max-width: 450px) {
+  .column2 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .card2 {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .column2 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .card2 {
+    height: 750px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .column2 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .card2 {
+    height: 880px;
+  }
 }
 
 
