@@ -106,7 +106,7 @@ define("TITLE","LunAPPark");
                 </div>
                 <div class="col-lg-6">
                     <div class="p-5">
-                        <h2 class="subtitle">Giostre da mozzafiato!</h2>
+                        <h2 class="subtitle">Giostre mozzafiato!</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
                     </div>
                 </div>
