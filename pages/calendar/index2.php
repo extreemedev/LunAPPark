@@ -63,7 +63,7 @@
             </tr>
           </table>
         </p>
+        <a style="margin-left: 0px; width: fit-content; box-shadow: 0px 0px 3px rgb(17, 17, 17);" class="btn-grad" href="/pages/shop/index.php">Acquista e prenota</a>
       </div>
     </div>
   </div>
-  <div><a style="width: fit-content;" class="btn-grad" href="/pages/shop/index.php">Acquista e prenota</a></div>
