@@ -11,13 +11,33 @@ include("../layouts/navbar.php")
 ?>
 
     <div class="pt-5"></div>
-    <div class="container">
+    <div style="margin-left: 30px; margin-right: 30px;" class="container">
         
-        <div style="position: sticky;">
-        <a id="carrello"  class="cart" style="position: absolute; right: 0px;" href="#page-top"><img src="../../src/assets/img/icons8-cart-64.png" alt="cart"></a>
+       
+
+
+        <!-- Button trigger offcanvas -->
+        <button type="button" style="right: 70px; position: absolute;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <a id="carrello" href="#page-top"><img src="../../src/assets/img/icons8-cart-64.png" alt="cart"></a>
+        </button>
+
+        
+
+    </div>
+
+
+    <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-end" style="top: 143px;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title text" style="color: black" id="offcanvasRightLabel">Riepilogo acquisti:</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            ...
         </div>
     </div>
-    
+
+        
 <?php
 include("../layouts/footer.php")
 ?>
