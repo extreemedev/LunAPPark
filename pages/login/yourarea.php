@@ -19,9 +19,9 @@ include("../layouts/header.php")
 include("../layouts/navbar.php")
 ?>
 
-<div id="loader"></div>
+<div id="loader" style="display: none;"></div>
 <div class="pt-custom"></div>
-<div id="mypage" class="animate-bottom">
+<div id="mypage" style="display: block;" class="animate-bottom">
     <div class="title"><?php echo"Benvenuto ".$sessioname?></div>
     <a class="btn-grad" style="display: initial;" href="./out.php">Logout</a>
 </div>
@@ -30,7 +30,15 @@ include("../layouts/navbar.php")
 var myVar;
 
 function myLoader() {
+  myVar = setTimeout(showLoader, 0);
   myVar = setTimeout(showPage, 2000);
+
+}
+
+function showLoader(){
+  document.getElementById("loader").style.display = "block";
+  document.getElementById("mypage").style.display = "none";
+
 }
 
 function showPage() {
