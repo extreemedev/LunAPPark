@@ -670,6 +670,9 @@ body {font-family: "Montserrat", sans-serif;}
     padding-left: 6px;
   }
   .weekdays li, .days li {width: 13.2%;}
+  .days li {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -8475,11 +8478,12 @@ textarea.form-control-lg {
   padding: 3rem !important;
 }
 
-/*@media screen and (max-width: 420px) {
-  .p-5{
-    padding: 0px !important;
+@media screen and (max-width: 420px) {
+  .col-lg-6 .p-5, #calendario{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
-}*/
+}
 
 .px-0 {
   padding-right: 0 !important;
