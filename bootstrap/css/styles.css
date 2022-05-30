@@ -621,17 +621,35 @@ body {font-family: "Montserrat", sans-serif;}
 }
 
 /* Add media queries for smaller screens */
+@media screen and (max-width:1000px) {
+  .days, .weekdays{
+    padding-left: 10px;
+  }
+  .days li, .weekdays li{
+    width: 13.6%;
+  }
+}
+
 @media screen and (max-width:720px) {
+  .days, .weekdays{
+    padding-left: 6px;
+  }
   .weekdays li, .days li {width: 13.1%;}
 }
 
 @media screen and (max-width: 420px) {
-  .weekdays li, .days li {width: 12.5%;}
+  .days, .weekdays{
+    padding-left: 2px;
+  }
+  .weekdays li, .days li {width: 12.9%;}
   .days li .active {padding: 2px;}
 }
 
-@media screen and (max-width: 290px) {
-  .weekdays li, .days li {width: 12.2%;}
+@media screen and (max-width: 344px) {
+  .days, .weekdays{
+    padding-left: 0px;
+  }
+  .weekdays li, .days li {width: 12.9%;}
 }
 
 .month .prev,
@@ -8421,6 +8439,12 @@ textarea.form-control-lg {
 
 .p-5 {
   padding: 3rem !important;
+}
+
+@media screen and (max-width: 420px) {
+  .p-5{
+    padding: 0px !important;
+  }
 }
 
 .px-0 {
