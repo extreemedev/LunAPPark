@@ -257,7 +257,7 @@ header {
 .title{
   font-family: "Montserrat", sans-serif;
   font-size: 40px;
-  font-weight: bold;
+  
   color: white;
   filter: drop-shadow(3px 5px 10px #222);
   text-decoration: none;

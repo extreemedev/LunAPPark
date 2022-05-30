@@ -36,14 +36,42 @@ include("../layouts/header.php")
 include("../layouts/navbar.php")
 ?>
 
+            
+
     <div id="loader" style="display: none;"></div>
     <div id="form" class="title pt-custom" style="text-align: center;">Accedi
+
+        <?php
+        // Controllo valid
+        if (isset($_GET['valid'])) {
+            if ($_GET['valid'] == "no") {
+        ?>  
+            <div class="text-center mt-5 d-row" style="font-size: 14px;">
+                <div class="alert alert-danger text-center pb-2 pt-2 ml-5 mr-5" style="display: initial;" role="alert">
+                    L'email inserita non é registrata!
+                </div>
+            </div>
+            <?php
+            } 
+            
+            elseif ($_GET['valid'] == "pw") {
+            ?>
+            <div class="text-center mt-5 d-row" style="font-size: 14px;">
+                <div class="alert alert-danger text-center pb-2 pt-2 ml-5 mr-5" style="display: initial;" role="alert">
+                    La password inserita non é corretta!
+                </div>
+            </div>
+        <?php
+            }
+        }
+        ?>
+
         <form action="login.php" class="form-login" method="post" name="myForm" onsubmit="return rememberMe();">
             <!--div class="subtitle">Accedi</div-->
             <div class="mb-5" ></div>
-            <input type="email" name="inputEmail" class="form-control" placeholder="Email address" value="<?php echo ($e);?>" required autofocus/>
+            <input type="email" name="inputEmail" <?php if ($_GET['valid'] == "no"){echo'style="box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5);"';} ?> class="form-control" placeholder="Email address" value="<?php echo ($e);?>" required autofocus/>
             <div class="mb-2"></div>
-            <input type="password" name="inputPassword" class="form-control" placeholder="Password" value="<?php echo ($p);?>" required/>
+            <input type="password" name="inputPassword" <?php if ($_GET['valid'] == "pw"){echo'style="box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5);"';} ?> class="form-control" placeholder="Password" value="<?php echo ($p);?>" required/>
             
             <div id="divRemember" class="checkbox">
                 <input type="checkbox" name="remember" <?php echo ($rm2);?>/>

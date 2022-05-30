@@ -26,7 +26,7 @@ function validaForm() {
                 //var classe=nome[i].getAttribute("class");
                 //window.alert("ao quasi")
                 //window.alert(classe)
-                nome[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+                nome[i].style.boxShadow="box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5);";
                 //classe.setAttribute("box-shadow","0 0 0 0.25rem #ffc4657a");
             //}
             //if (nome[i].style.boxShadow!="") {
@@ -47,7 +47,7 @@ function validaForm() {
         for(var i=0; i < cognome.length; i++){
             Array[1]=cognome[i].getAttribute("placeholder");
             cognome[i].setAttribute("placeholder","Inserire un cognome");
-            cognome[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+            cognome[i].style.boxShadow="box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5);";
         }
         b = false;
     }
@@ -59,7 +59,7 @@ function validaForm() {
         for(var i=0; i < email.length; i++){
             Array[2]=email[i].getAttribute("placeholder");
             email[i].setAttribute("placeholder","Inserire un email");
-            email[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+            email[i].style.boxShadow="box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5);";
         }
         b = false;
     } else {
@@ -69,7 +69,7 @@ function validaForm() {
             var email = document.getElementsByName("email");
             for(var i=0; i < email.length; i++){
                 Array[2]=email[i].getAttribute("placeholder");
-                email[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+                email[i].style.boxShadow="box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5);";
             }
             b = false;
         }
@@ -82,7 +82,7 @@ function validaForm() {
         for(var i=0; i < confermaemail.length; i++){
             Array[3]=confermaemail[i].getAttribute("placeholder");
             confermaemail[i].setAttribute("placeholder","Inserire un email");
-            confermaemail[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+            confermaemail[i].style.boxShadow="box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5);";
         }
         b = false;
     } else {
@@ -92,7 +92,7 @@ function validaForm() {
             for(var i=0; i < confermaemail.length; i++){
                 Array[3]=confermaemail[i].getAttribute("placeholder");
                 confermaemail[i].setAttribute("placeholder","Inserire un email");
-                confermaemail[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+                confermaemail[i].style.boxShadow="box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5);";
             }
             b = false;
         }
@@ -105,7 +105,7 @@ function validaForm() {
         for(var i=0; i < password.length; i++){
             Array[4]=password[i].getAttribute("placeholder");
             password[i].setAttribute("placeholder","Inserire una password");
-            password[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+            password[i].style.boxShadow="box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5);";
         }
         b = false;
     }
@@ -117,7 +117,7 @@ function validaForm() {
         for(var i=0; i < confermapassword.length; i++){
             Array[5]=confermapassword[i].getAttribute("placeholder");
             confermapassword[i].setAttribute("placeholder","Inserire una password");
-            confermapassword[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+            confermapassword[i].style.boxShadow="box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5);";
         }
         b = false;
     } else {
@@ -127,7 +127,7 @@ function validaForm() {
             for(var i=0; i < confermapassword.length; i++){
                 Array[5]=confermapassword[i].getAttribute("placeholder");
                 confermapassword[i].setAttribute("placeholder","Inserire una password");
-                confermapassword[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+                confermapassword[i].style.boxShadow="box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5);";
             }
             b = false;
         }
@@ -140,7 +140,7 @@ function validaForm() {
         for(var i=0; i < tel.length; i++){
             Array[6]=tel[i].getAttribute("placeholder");
             tel[i].setAttribute("placeholder","Inserire un telefono");
-            tel[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+            tel[i].style.boxShadow="box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5);";
         }
         b = false;
     } else {
@@ -150,7 +150,7 @@ function validaForm() {
             for(var i=0; i < tel.length; i++){
                 Array[6]=tel[i].getAttribute("placeholder");
                 tel[i].setAttribute("placeholder","Inserire un telefono");
-                tel[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+                tel[i].style.boxShadow="box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5);";
             }
             b = false;
         }
@@ -161,7 +161,7 @@ function validaForm() {
     if (document.myRegistr.data.value=="") {
         var data = document.getElementsByName("data");
         for(var i=0; i < data.length; i++){
-            data[i].style.boxShadow="0 0 0 0.25rem #e400007a";
+            data[i].style.boxShadow="box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5);";
         }
         b = false;
     }
