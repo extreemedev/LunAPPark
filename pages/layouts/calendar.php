@@ -1,4 +1,4 @@
-<div class="container-xxl p-5" style="border-radius: 20px;">
+<div class="container-xxl" style="border-radius: 20px;">
     <div class="month">      
         <ul>
             <li id="prec" class="prev">&#10094;</li>

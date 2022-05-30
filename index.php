@@ -14,7 +14,7 @@ define("TITLE","LunAPPark");
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
     <style>
         .imgback{
-            background-image: url("../../src/assets/img/wide-park.jpg");
+            background-image: url("../../src/assets/img/wide-park-big.jpg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: 100% ;

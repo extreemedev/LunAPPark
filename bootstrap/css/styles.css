@@ -220,6 +220,23 @@ header {
   margin-right: auto;
 }
 
+/*@media screen and (max-width:908px) {
+  .imgback{
+    background-image: url("../../src/assets/img/wide-park-small.png") !important;
+  }
+}*/
+@media screen and (max-width:590px) {
+  .imgback{
+    background-image: url("../../src/assets/img/wide-park-small2.png") !important;
+  }
+}
+
+@media screen and (max-width:452px) {
+  .imgback{
+    background-image: url("../../src/assets/img/wide-park-small3.png") !important;
+  }
+}
+
 
 
 /*
@@ -652,14 +669,13 @@ body {font-family: "Montserrat", sans-serif;}
   .days, .weekdays{
     padding-left: 6px;
   }
-  .weekdays li, .days li {width: 13.1%;}
+  .weekdays li, .days li {width: 13.2%;}
 }
 
 @media screen and (max-width: 420px) {
   .days, .weekdays{
     padding-left: 2px;
   }
-  .weekdays li, .days li {width: 12.9%;}
   .days li .active {padding: 2px;}
 }
 
@@ -8459,11 +8475,11 @@ textarea.form-control-lg {
   padding: 3rem !important;
 }
 
-@media screen and (max-width: 420px) {
+/*@media screen and (max-width: 420px) {
   .p-5{
     padding: 0px !important;
   }
-}
+}*/
 
 .px-0 {
   padding-right: 0 !important;
