@@ -127,13 +127,7 @@ include("./pages/layouts/navbar.php")
     </section>
 
     
-    <!--picture style="display: absolute;" id="scroll"><img class="imgcut imgcenter" src="../src/assets/img/wide-park.jpg" width="100%" alt=""></picture-->   
     <script src="./bootstrap/js/bootstrap.bundle.js"></script>
-    <script>
-        $(window).scroll(function(){
-        $('nav').toggleClass('scrolled', $(this).scrollTop() > 300);
-        });
-    </script>
 
 <?php 
 include("./pages/layouts/footer.php")
