@@ -30,9 +30,11 @@
                 <?php
                 } else {
                 ?>
+                <div class="text-center mt-5">
                     <div class="alert alert-danger text-center ml-5 mr-5" style="display: initial;" role="alert">
-                        Si è verificato un errore
+                        Si è verificato un errore: non é possibile connettersi al server SMTP.
                     </div>
+                </div>
             <?php
                 }
             }
