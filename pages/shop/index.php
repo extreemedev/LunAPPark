@@ -10,6 +10,10 @@ include("../layouts/header.php")
 include("../layouts/navbar.php")
 ?>
 
+<?php
+include("../layouts/calendar.php")
+?>
+
     <div class="pt-5"></div>
     <div style="margin-left: 30px; margin-right: 30px;" class="container">
         
@@ -37,6 +41,7 @@ include("../layouts/navbar.php")
         </div>
     </div>
 
+    <script src="../../scripts/calendar.js"></script>
         
 <?php
 include("../layouts/footer.php")
