@@ -185,14 +185,14 @@ header {
   color: white;            
   box-shadow: 0px 0px 10px rgb(17, 17, 17);
   border-radius: 30px;
-  border: 2px solid transparent; /* QUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
+  border: 2px solid transparent;
   border-color: transparent;
   border-style: none;
   display: block;
 }
 
 .btn-grad:hover {
-   background-position: right center; /* change the direction of the change here */
+   background-position: right center;
    color: #fff;
 }
 
@@ -494,7 +494,7 @@ header {
   100% { transform: rotate(360deg); }
 }
 
-/* Add animation to "page content" */
+
 .animate-bottom {
   position: relative;
   -webkit-animation-name: animatebottom;
@@ -655,7 +655,7 @@ body {font-family: "Montserrat", sans-serif;}
   color: white !important
 }
 
-/* Add media queries for smaller screens */
+
 @media screen and (max-width:1000px) {
   .days, .weekdays{
     padding-left: 10px;

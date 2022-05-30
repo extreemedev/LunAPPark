@@ -175,6 +175,6 @@ function validaForm() {
         //window.alert("Dati non inseriti correttamente");
         return false;
     }
-    window.alert("Dati inseriti correttamente");
+    /*window.alert("Dati inseriti correttamente");*/
     return true;
 }
