@@ -14,7 +14,7 @@ include("../layouts/navbar.php")
 include("../layouts/calendar.php")
 ?>
 
-    <div class="pt-5"></div>
+    <!--div class="pt-5"></div-->
     <div style="margin-left: 30px; margin-right: 30px;" class="container">
         
        
@@ -33,11 +33,13 @@ include("../layouts/calendar.php")
     <!-- Offcanvas -->
     <div class="offcanvas offcanvas-end" style="top: 143px;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title text" style="color: black" id="offcanvasRightLabel">Riepilogo acquisti:</h5>
+            <h5 class="offcanvas-title text" style="color: black" id="offcanvasRightLabel">Riepilogo ordine:</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            ...
+            <div id="dataScelta"></div>
+            <div id="prezzoNormale"></div>
+            <div id="prezzoRidotto"></div>
         </div>
     </div>
 

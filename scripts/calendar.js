@@ -414,4 +414,22 @@ $("#giorni >").click(function(){
             }
         }
     }
+    if($(this).css("background-color")=="rgb(255, 182, 86)"){
+        /*$("#meseScelto").text($("#mese").text().replace(/\s+/g, " ").replace(/^\s|\s$/g, ""));*/
+        /*window.alert("ciao");*/
+        if(parseInt($(this).attr("id"))<100){
+            $("#dataScelta").text("Giorno : "+$(this).text()+"/"+$("#mese").text().replace(/\s+/g, " ").replace(/^\s|\s$/g, "")+"/"+parseInt($("#anno").text()));
+        } else{
+            var ccc=parseInt($(this).attr("id"))-100;
+            $("#dataScelta").text("Giorno :  "+$("#"+ccc).text()+"/"+$("#mese").text().replace(/\s+/g, " ").replace(/^\s|\s$/g, "")+"/"+parseInt($("#anno").text()));
+        }
+        var cc=parseInt($(this).attr("id"));
+        if(cc==106 || cc==107 || cc==113 || cc==114 || cc==120 || cc==121 || cc==127 || cc==128 || cc==134 || cc==135 || cc==141 || cc==142 || cc==6 || cc==7 || cc==13 || cc==14 || cc==20 || cc==21 || cc==27 || cc==28 || cc==34 || cc==35 || cc==41 || cc==42){
+            $("#prezzoNormale").html("<br>Adulti<br>Prezzo: 30.00€");
+            $("#prezzoRidotto").html("<br>Ridotti 16.00€ :<br>(sotto i 7 anni)");
+        } else{
+            $("#prezzoNormale").html("<br>Adulti<br>Prezzo: 22.50€");
+            $("#prezzoRidotto").html("<br>Ridotti 10.00€ :<br>(sotto i 7 anni)");
+        }
+    }
 });
