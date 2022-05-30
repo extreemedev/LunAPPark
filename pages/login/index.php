@@ -54,6 +54,7 @@ include("../layouts/navbar.php")
         </form>
         <label class="checky">Se ancora non hai un account registrati</label>
     </div>
+    <script src="rememberMe.js"></script>
     <script src="../../scripts/loader.js" ></script>
 
 <?php
