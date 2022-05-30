@@ -19,10 +19,18 @@ define("TITLE","LunAPPark");
             background-position: center;
             background-size: 100% ;
         }
+        .bg-dark {
+            background:transparent !important;
+            transition:0.75s ease;
+        }
+        .bg-dark.scrolled {
+            background:#000 !important;
+        }
+        
     </style>
 </head>
 <body id="page-top" class="back5">
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-custom bg-dark fixed-top">
         <div class="container">
             <a class="logo" href="#page-top"><img src="src/assets/img/logo.png" width="120px" height="110px" object-fit="scale-down" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -133,6 +141,11 @@ define("TITLE","LunAPPark");
     
     <!--picture style="display: absolute;" id="scroll"><img class="imgcut imgcenter" src="../src/assets/img/wide-park.jpg" width="100%" alt=""></picture-->   
     <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+    <script>
+        $(window).scroll(function(){
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 300);
+        });
+    </script>
 
 <?php 
 include("./pages/layouts/footer.php")
