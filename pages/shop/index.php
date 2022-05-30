@@ -31,7 +31,7 @@ include("../layouts/calendar.php")
 
 
     <!-- Offcanvas -->
-    <div class="offcanvas offcanvas-end" style="top: 143px;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas offcanvas-end" style="top: 127px;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title text" style="color: black" id="offcanvasRightLabel">Riepilogo ordine:</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>

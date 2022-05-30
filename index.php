@@ -34,8 +34,8 @@ define("TITLE","LunAPPark");
 include("./pages/layouts/navbar.php")
 ?>
 
-    <div style="padding-top: 38px;"></div>
-    <!--div style="padding-top: 22px;"></div-->
+    <!--div style="padding-top: 38px;"></div-->
+    <div style="padding-top: 22px;"></div>
 
         <div class="container pt-custom pb-5 mb-5 imgback" style="max-width: 100%; filter: drop-shadow(0px 5px 50px #222);">
             <div class="title" style="text-align: center; filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));">Scopri un nuovo mondo pieno di emozioni!
@@ -127,13 +127,7 @@ include("./pages/layouts/navbar.php")
     </section>
 
     
-    <!--picture style="display: absolute;" id="scroll"><img class="imgcut imgcenter" src="../src/assets/img/wide-park.jpg" width="100%" alt=""></picture-->   
     <script src="./bootstrap/js/bootstrap.bundle.js"></script>
-    <script>
-        $(window).scroll(function(){
-        $('nav').toggleClass('scrolled', $(this).scrollTop() > 300);
-        });
-    </script>
 
 <?php 
 include("./pages/layouts/footer.php")

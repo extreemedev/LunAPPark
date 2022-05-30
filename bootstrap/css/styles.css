@@ -14,7 +14,7 @@ header {
   background: #3e434a;
 }
 
-.mb-top {
+.mt-custom {
   margin-top: 6.5rem !important;
 }
 
@@ -23,7 +23,7 @@ header {
 }
 
 .pt-custom{
-  padding-top: 6.5rem !important;
+  padding-top: 5.5rem !important;
 }
 
 .pb-custom{

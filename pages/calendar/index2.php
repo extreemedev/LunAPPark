@@ -1,7 +1,7 @@
 
-  <div class="title pt-custom">Calendario di apertura e Tariffe
+  <div class="title pt-custom">Calendario e tariffe
     <div class="nav-item" style="font-size: 20px;"><br>Consulta il nostro calendario di apertura e le tariffe per organizzare al meglio la tua giornata.<br><br></div>
-    <div class="nav-item" style="font-size: 17px;">Sfruttare al massimo il tuo giorno al Parco è fondamentale. Ti invitiamo a<br>consultare tutte le informazioni riguardanti i nostri orari e i prezzi d’entrata. Così non ti<br>perderai nulla e trascorrerai una giornata che vorrai ripetere il prima possibile! Ti aspettiamo!</div>
+    <div class="nav-item" style="font-size: 17px;">Sfruttare al massimo il tuo giorno al Parco è fondamentale. Ti invitiamo a<br>consultare tutte le informazioni riguardanti i nostri orari e i costi d'ingresso. Così non ti<br>perderai nulla e trascorrerai una giornata che vorrai ripetere il prima possibile! Ti aspettiamo!</div>
   </div>
   <br>
   <br>
