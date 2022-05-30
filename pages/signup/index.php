@@ -16,7 +16,7 @@ include("../layouts/navbar.php")
 ?>
 
         <div id="loader" style="display: none;"></div>
-        <div id="form" class="title pt-custom" style="text-align: center;">Effettua la registrazione
+        <div id="mypage" class="title pt-custom" style="text-align: center;">Effettua la registrazione
 
         <?php
         // Controllo valid
@@ -79,6 +79,30 @@ include("../layouts/navbar.php")
         </div>
         <script src="validaForm.js"></script>
         <script src="../../scripts/loader.js" ></script>
+
+        <script>
+        var myVar;
+
+        function myLoader() {
+        myVar = setTimeout(showLoader, 0);
+        myVar = setTimeout(showPage, 2000);
+
+        }
+
+        function showLoader(){
+        document.getElementById("loader").style.display = "block";
+        document.getElementById("mypage").style.display = "none";
+
+        }
+
+        function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("mypage").style.display = "block";
+        }
+
+        </script>
+
+
 <?php
 include("../layouts/footer.php")
 ?>

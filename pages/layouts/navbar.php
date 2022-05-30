@@ -1,4 +1,4 @@
-<body id="page-top" class="back5" onload="<?php if(TITLE=="Area personale" and $_SESSION["load"]==0){echo "myLoader()"; $_SESSION["load"]=1; } elseif(TITLE=="Accedi" and $_SESSION["signupload"]==0){echo "myLoader()"; $_SESSION["signupload"]=1; } ?>">
+<body id="page-top" class="back5" onload="<?php if(TITLE=="Area personale" and $_SESSION["load"]==0){echo "myLoader()"; $_SESSION["load"]=1; } elseif($_GET['valid'] == "ok"){echo "myLoader()";} ?>">
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
         <div class="container">
             <a class="logo" href="#page-top"><img src="../../src/assets/img/logo.png" width="120px" height="110px" object-fit="scale-down" alt="logo"></a>

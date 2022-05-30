@@ -21,8 +21,6 @@
             $query2 = 'INSERT into public."UTENTE" values ($1,$2,$3,$4,$5,$6)';
             $result = pg_query_params($dbconn, $query2, array($email, $nome, $cognome, $password, $telefono, $datanasc));
             if($result) {
-                session_start();
-                $_SESSION["signupload"] = 0;
                 header("location: index.php?valid=ok");
             }
             else{
