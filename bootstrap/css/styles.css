@@ -637,23 +637,15 @@ body {font-family: "Montserrat", sans-serif;}
   color: #777;
 }
 
-.active {
-  /*border-radius: 0%;*/
+/*.active {
+  border-radius: 0%;
   padding-bottom: 100px;
   padding-left: 39px;
   padding-right: 39px;
-  /*background: #ffb656;*/
+  background: #ffb656;
   color: white !important
-}
+}*/
 
-.active2 {
-  /*border-radius: 12%;*/
-  padding-bottom: 100px;
-  padding-left: 44px;
-  padding-right: 44px;
-  /*background: #ffb656;*/
-  color: white !important
-}
 
 
 @media screen and (max-width:1000px) {
