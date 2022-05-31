@@ -23,54 +23,127 @@ include("../layouts/navbar.php")
 <div class="pt-custom"></div>
 <div id="mypage" style="display: block;" class="animate-bottom">
     <div class="title mb-custom"><?php echo"Benvenuto ".$sessioname?></div>
-
-
-    <div class="container w-75 pb-custom">
+    <div class="container w-50 pb-custom">
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
+          
+          <?php
+            session_start();
+            $dbconn = pg_connect("host=postgresql port=5432
+            dbname=lunappark user=extreemedev password=example");
+            $email = $_SESSION["id"];
+            $querydate = 'SELECT codice,data,tipo FROM public."BIGLIETTO" where email=$1'; 
+            $resultdate = pg_query_params($dbconn, $querydate, array($email));
+            if(!($tuple=pg_fetch_array($resultdate,null,PGSQL_ASSOC))) {
+              ?>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="card2" style="width: 100%;">
+                      <img src="../../src/assets/img/ticket.png" align="right" height="120px" width="120px">
+                      <div class="nav-item" style="font-size: 50px;"><b>Niente biglietti porcodio!</b></div>
+                      <div class="nav-item" style="font-size: 30px;">Controlla i nostri giorni di apertura e pianifica un soggiorno indimenticabile!</div>
+                      <br>
+                      <p>In questa sezione troverai i giorni di <b>apertura</b> del parco. Vuoi conoscere le giornate in cui siamo
+                        aperti per <B>prenotare</B>? O quali sono gli <b>orari</b> di apertura del Parco per il giorno in cui vorresti
+                        venire? In questa sezione trovi tutte le informazioni di cui hai bisogno!</p>
+                      <p>Siamo aperti tutti i giorni!</p>
+                      <hr>
+                      <p>
+                        <ul>
+                          <li>Da lunedì fino a venerdi: 10:30-18:00</li>
+                          <br>
+                          <li>Sabato: 10:30-01:30</li>
+                          <br>
+                          <li>Domenica: 10:30-22:30</li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+              <?php
+            }
+            else {
+              $resultdate = pg_query_params($dbconn, $querydate, array($email));
+              $slider = 0;
+              while($finaldate = pg_fetch_array($resultdate,null,PGSQL_NUM)){
+                  /*echo ($finaldate[0]).", ";*/
+                  if ($slider==0){
+                    ?>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <?php
+                  }
+                  else{
+                    echo ('<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="').($slider).('" aria-label=""></button>');
+                  }
+                  $slider ++; 
+              }
+              ?>
+              </div>
+              <?php
+              $resultdate = pg_query_params($dbconn, $querydate, array($email));
+              $active = 0;
+              while($finaldate = pg_fetch_array($resultdate,null,PGSQL_NUM)){
+                if ($active==0){
+                  $active ++;
+                  ?>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="card2" style="width: 100%;">
+                        <img src="../../src/assets/img/qrcode.png" align="right" height="120px" width="120px">
+                        <div class="nav-item" style="font-size: 50px;"><b>Niente biglietti porcodio!</b></div>
+                        <div class="nav-item" style="font-size: 30px;">Controlla i nostri giorni di apertura e pianifica un soggiorno indimenticabile!</div>
+                        <br>
+                        <p>In questa sezione troverai i giorni di <b>apertura</b> del parco. Vuoi conoscere le giornate in cui siamo
+                          aperti per <B>prenotare</B>? O quali sono gli <b>orari</b> di apertura del Parco per il giorno in cui vorresti
+                          venire? In questa sezione trovi tutte le informazioni di cui hai bisogno!</p>
+                        <p>Siamo aperti tutti i giorni!</p>
+                        <hr>
+                        <p>
+                          <ul>
+                            <li>Da lunedì fino a venerdi: 10:30-18:00</li>
+                            <br>
+                            <li>Sabato: 10:30-01:30</li>
+                            <br>
+                            <li>Domenica: 10:30-22:30</li>
+                          </ul>
+                        </p>
+                      </div>
+                    </div>
+                  <?php
+                }
+                else{
+                  ?>
+                  <div class="carousel-item">
+                    <div class="card2" style="width: 100%;">
+                      <img src="../../src/assets/img/qrcode.png" align="right" height="120px" width="120px">
+                      <div class="nav-item" style="font-size: 50px;"><b>Niente biglietti porcodio!</b></div>
+                      <div class="nav-item" style="font-size: 30px;">Controlla i nostri giorni di apertura e pianifica un soggiorno indimenticabile!</div>
+                      <br>
+                      <p>In questa sezione troverai i giorni di <b>apertura</b> del parco. Vuoi conoscere le giornate in cui siamo
+                        aperti per <B>prenotare</B>? O quali sono gli <b>orari</b> di apertura del Parco per il giorno in cui vorresti
+                        venire? In questa sezione trovi tutte le informazioni di cui hai bisogno!</p>
+                      <p>Siamo aperti tutti i giorni!</p>
+                      <hr>
+                      <p>
+                        <ul>
+                          <li>Da lunedì fino a venerdi: 10:30-18:00</li>
+                          <br>
+                          <li>Sabato: 10:30-01:30</li>
+                          <br>
+                          <li>Domenica: 10:30-22:30</li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                  <?php
+                }
 
-        
-          <div class="carousel-item active">
-            <div class="card2" style="width: 100%;">
-              <img src="../../src/assets/img/ticket.png" align="right" height="120px" width="120px">
-              <div class="nav-item" style="font-size: 50px;"><b>Niente biglietti porcodio!</b></div>
-              <div class="nav-item" style="font-size: 30px;">Controlla i nostri giorni di apertura e pianifica un soggiorno indimenticabile!</div>
-              <br>
-              <p>In questa sezione troverai i giorni di <b>apertura</b> del parco. Vuoi conoscere le giornate in cui siamo
-                aperti per <B>prenotare</B>? O quali sono gli <b>orari</b> di apertura del Parco per il giorno in cui vorresti
-                venire? In questa sezione trovi tutte le informazioni di cui hai bisogno!</p>
-              <p>Siamo aperti tutti i giorni!</p>
-              <hr>
-              <p>
-                <ul>
-                  <li>Da lunedì fino a venerdi: 10:30-18:00</li>
-                  <br>
-                  <li>Sabato: 10:30-01:30</li>
-                  <br>
-                  <li>Domenica: 10:30-22:30</li>
-                </ul>
-              </p>
-            </div>
-          </div>
-
-
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-
-
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-
-
-        </div>
-        
+              }
+            }
+          ?>
+              
+        </div>     
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

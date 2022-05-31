@@ -4,12 +4,14 @@
     dbname=lunappark user=extreemedev password=example");
     $email = $_SESSION["id"];
     echo($email);
-    $querydate = 'SELECT data FROM public."BIGLIETTO" where email=$1';
-    echo ($querydate);
+    $querydate = 'SELECT codice,data,tipo FROM public."BIGLIETTO" where email=$1'; 
     $resultdate = pg_query_params($dbconn, $querydate, array($email));
-    echo ($resultdate);
-    $finaldate = pg_fetch_array($resultdate,null,PGSQL_NUM);
-    echo ($finaldate);
+
+    while($finaldate = pg_fetch_array($resultdate,null,PGSQL_NUM)){
+        echo ($finaldate[0]).", ";
+    }
+    
+    
     
 
     /*
@@ -32,6 +34,5 @@
         else{
             header("location: index.php?valid=pw");
         };
-    }
-    /*
+    }*/
 ?>
