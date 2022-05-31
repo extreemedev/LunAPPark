@@ -38,22 +38,29 @@ include("../layouts/calendar.php")
         </div>
         <div class="offcanvas-body">
             <form action="pagamento.php" class="form" method="post" name="myShop" onsubmit="return salvaShop();">
-                <div id="dataScelta" nome="dataScelta"></div>
+                <div>Giorno scelto:</div>
+                <div id="dataScelta" nome="dataScelta" ></div>
                 <hr>
-                <div id="prezzoNormale" nome="prezzoNormale"></div>
+                <div>Prezzo adulto:</div>
+                <div id="prezzoNormale" nome="prezzoNormale" style="float: left;"></div>
+                <div style="float: left;">€</div>
                 <br>
                 <button type="button" name="btInt-" id="btInt-" class="btn btn-primary" style="width: 35px;" disabled>-</button>
                 <label id="bigliettiInt" nome="bigliettiInt" style="border: 1px solid; width: 30px; text-align: center;">1</label>
                 <button type="button" name="btInt" id="btInt" class="btn btn-primary" style="width: 35px;" disabled>+</button>
                 <hr>
-                <div id="prezzoRidotto" nome="prezzoRidotto"></div>
+                <div>Prezzo ridotto (sotto i 7 anni):</div>
+                <div id="prezzoRidotto" nome="prezzoRidotto" style="float: left;"></div>
+                <div style="float: left;">€</div>
                 <br>
                 <button type="button" name="btRid-" id="btRid-" class="btn btn-primary" style="width: 35px;" disabled>-</button>
                 <label id="bigliettiRid" nome="bigliettiRid" style="border: 1px solid; width: 30px; text-align: center;">0</label>
                 <button type="button" name="btRid" id="btRid" class="btn btn-primary" style="width: 35px;" disabled>+</button>
                 <hr>
                 <div id="prezzoTot" name="prezzoTot">Prezzo totale:</div>
-                <div id="totale" nome="totale" style="border: 1px solid; width: 80px; text-align: center;">0</div>
+                <div id="totale" nome="totale" style="border: 1px solid; width: 80px; text-align: center; float: left;">0</div>
+                <div style="float: left;">€</div>
+                <br>
                 <br>
                 <button name="pagamento" id="pagamento" class="btn btn-warning" type="submit" disabled>Procedi al pagamento</button>
             </form>
