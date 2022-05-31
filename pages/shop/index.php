@@ -62,7 +62,7 @@ include("../layouts/calendar.php")
                 <div style="float: left;">€</div>
                 <br>
                 <br>
-                <button name="pagamento" id="pagamento" class="btn btn-warning" type="submit" disabled>Procedi al pagamento</button>
+                <button name="pagamento" id="pagamento" class="btn-grad" type="submit" disabled>Procedi al pagamento</button>
             </form>
         </div>
     </div>
