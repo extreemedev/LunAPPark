@@ -329,6 +329,11 @@ $("#succ").click(function(){
 });
 
 
+var gg2;
+var mm2;
+var an2;
+
+
 $("#giorni >").click(function(){
     var data = new Date();
     var mese, giorno, anno, gs;
@@ -424,6 +429,8 @@ $("#giorni >").click(function(){
         $("#offcanvasRight").attr("aria-hidden","");
         $("#offcanvasRight").attr("role","dialog");
 
+        var mm=$("#mese").text().replace(/\s+/g, " ").replace(/^\s|\s$/g, "");
+        var an=$("#anno").text();
 
         for(var c = 0; c<month_names.length; c++){
             if($("#mese").text().replace(/\s+/g, " ").replace(/^\s|\s$/g, "")==month_names[c]){
@@ -435,9 +442,11 @@ $("#giorni >").click(function(){
 
         if(parseInt($(this).attr("id"))<100){
             $("#dataScelta").text(m2+"/"+$(this).text()+"/"+parseInt($("#anno").text()));
+            var gg=$(this).text();
         } else{
             var ccc=parseInt($(this).attr("id"))-100;
             $("#dataScelta").text(m2+"/"+$("#"+ccc).text()+"/"+parseInt($("#anno").text()));
+            var gg=$("#"+ccc).text();
         }
         var cc=parseInt($(this).attr("id"));
         if(cc==106 || cc==107 || cc==113 || cc==114 || cc==120 || cc==121 || cc==127 || cc==128 || cc==134 || cc==135 || cc==141 || cc==142 || cc==6 || cc==7 || cc==13 || cc==14 || cc==20 || cc==21 || cc==27 || cc==28 || cc==34 || cc==35 || cc==41 || cc==42){
@@ -446,10 +455,16 @@ $("#giorni >").click(function(){
 
             /*$("#prezzoNormale").html("Adulto<br>Prezzo: 30");
             $("#prezzoRidotto").html("Ridotto (sotto i 7 anni)<br>Prezzo: 16");*/
-            if(parseInt($("#totale").text())==0){
+            if(gg==gg2 && mm==mm2 && an==an2){
+                if(parseInt($("#totale").text())==0){
+                    $("#totale").text("30");
+                }else{
+                    $("#totale").text(parseInt($("#totale").text()));
+                }
+            } else {
                 $("#totale").text("30");
-            }else{
-                $("#totale").text(parseInt($("#totale").text()));
+                $("#bigliettiInt").text("1");
+                $("#bigliettiRid").text("0");
             }
         } else{
             $("#prezzoNormale").html("22");
@@ -457,10 +472,16 @@ $("#giorni >").click(function(){
 
             /*$("#prezzoNormale").html("Adulto<br>Prezzo: 22");
             $("#prezzoRidotto").html("Ridotto (sotto i 7 anni)<br>Prezzo: 10");*/
-            if(parseInt($("#totale").text())==0){
+            if(gg==gg2 && mm==mm2 && an==an2){
+                if(parseInt($("#totale").text())==0){
+                    $("#totale").text("22");
+                }else{
+                    $("#totale").text(parseInt($("#totale").text()));
+                }
+            } else {
                 $("#totale").text("22");
-            }else{
-                $("#totale").text(parseInt($("#totale").text()));
+                $("#bigliettiInt").text("1");
+                $("#bigliettiRid").text("0");
             }
         }
         $("#pagamento").attr("disabled", false);
@@ -468,6 +489,10 @@ $("#giorni >").click(function(){
         $("#btRid").attr("disabled", false);
         $("#btInt-").attr("disabled", false);
         $("#btRid-").attr("disabled", false);
+
+        gg2=gg;
+        mm2=mm;
+        an2=an;
     }
 });
 
