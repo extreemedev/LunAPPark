@@ -10,6 +10,9 @@ include("../layouts/header.php")
 include("../layouts/navbar.php")
 ?>
 
+
+<div class="title pt-custom">Seleziona un giorno</div>
+
 <?php
 include("../layouts/calendar.php")
 ?>
