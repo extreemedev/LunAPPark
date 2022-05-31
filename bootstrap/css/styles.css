@@ -447,9 +447,9 @@ header {
   .cta {
     display: none;
   }
-  .btn-grad{
+  /*.btn-grad{
     display: none;
-  }
+  }*/
   .menu {
     display: initial;
   }
