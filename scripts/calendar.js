@@ -493,6 +493,12 @@ $("#giorni >").click(function(){
         gg2=gg;
         mm2=mm;
         an2=an;
+    } else {
+        $("#offcanvasRight").attr("class","offcanvas offcanvas-end");
+        $("#offcanvasRight").css("visibility","hidden");
+        $("#offcanvasRight").attr("aria-modal","");
+        $("#offcanvasRight").attr("aria-hidden","true");
+        $("#offcanvasRight").attr("role","");
     }
 });
 

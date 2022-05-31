@@ -15,19 +15,19 @@ include("../layouts/calendar.php")
 ?>
 
     <!--div class="pt-5"></div-->
-    <div style="margin-left: 30px; margin-right: 30px;" class="container">
+    <!--div style="margin-left: 30px; margin-right: 30px;" class="container"-->
         
        
 
 
         <!-- Button trigger offcanvas -->
-        <button type="button" style="right: 70px; position: absolute;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <!--button type="button" style="right: 70px; position: absolute;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
             <a id="carrello" href="#page-top"><img src="../../src/assets/img/icons8-cart-64.png" alt="cart"></a>
         </button>
 
         
 
-    </div>
+    </div-->
 
 
     <!-- Offcanvas -->
