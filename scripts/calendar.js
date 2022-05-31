@@ -427,10 +427,10 @@ $("#giorni >").click(function(){
 
 
         if(parseInt($(this).attr("id"))<100){
-            $("#dataScelta").text($(this).text()+"/"+m2+"/"+parseInt($("#anno").text()));
+            $("#dataScelta").text(m2+"/"+$(this).text()+"/"+parseInt($("#anno").text()));
         } else{
             var ccc=parseInt($(this).attr("id"))-100;
-            $("#dataScelta").text($("#"+ccc).text()+"/"+m2+"/"+parseInt($("#anno").text()));
+            $("#dataScelta").text($(m2+"/"+"#"+ccc).text()+"/"+parseInt($("#anno").text()));
         }
         var cc=parseInt($(this).attr("id"));
         if(cc==106 || cc==107 || cc==113 || cc==114 || cc==120 || cc==121 || cc==127 || cc==128 || cc==134 || cc==135 || cc==141 || cc==142 || cc==6 || cc==7 || cc==13 || cc==14 || cc==20 || cc==21 || cc==27 || cc==28 || cc==34 || cc==35 || cc==41 || cc==42){
