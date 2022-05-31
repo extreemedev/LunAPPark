@@ -37,13 +37,32 @@ include("../layouts/calendar.php")
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <div id="dataScelta"></div>
-            <div id="prezzoNormale"></div>
-            <div id="prezzoRidotto"></div>
+            <form action="pagamento.php" class="form" method="post" name="myShop" onsubmit="return salvaShop();">
+                <div id="dataScelta" nome="dataScelta"></div>
+                <hr>
+                <div id="prezzoNormale" nome="prezzoNormale"></div>
+                <br>
+                <button type="button" name="btInt-" id="btInt-" class="btn btn-primary" style="width: 35px;" disabled>-</button>
+                <label id="bigliettiInt" nome="bigliettiInt" style="border: 1px solid; width: 30px; text-align: center;">1</label>
+                <button type="button" name="btInt" id="btInt" class="btn btn-primary" style="width: 35px;" disabled>+</button>
+                <hr>
+                <div id="prezzoRidotto" nome="prezzoRidotto"></div>
+                <br>
+                <button type="button" name="btRid-" id="btRid-" class="btn btn-primary" style="width: 35px;" disabled>-</button>
+                <label id="bigliettiRid" nome="bigliettiRid" style="border: 1px solid; width: 30px; text-align: center;">0</label>
+                <button type="button" name="btRid" id="btRid" class="btn btn-primary" style="width: 35px;" disabled>+</button>
+                <hr>
+                <div id="prezzoTot" name="prezzoTot">Prezzo totale:</div>
+                <div id="totale" nome="totale" style="border: 1px solid; width: 80px; text-align: center;">0</div>
+                <br>
+                <button name="pagamento" id="pagamento" class="btn btn-warning" type="submit" disabled>Procedi al pagamento</button>
+            </form>
         </div>
     </div>
 
+    <script src="salvaShop.js"></script>
     <script src="../../scripts/calendar.js"></script>
+    <script src="../../scripts/shop.js"></script>
         
 <?php
 include("../layouts/footer.php")
