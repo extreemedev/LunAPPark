@@ -30,6 +30,9 @@ $tot=htmlspecialchars($_COOKIE['tot']);
         $result = pg_query_params($dbconn, $query, array($email, $dat, $tipo, $pRid));    
     }
     if($result) {
-        header("Location: index.php");
-    } else die("C'é stato un errore");
+        header("location: index.php");
+    } 
+    else {
+        header("location: index.php?buy=no");
+    }
 ?>
