@@ -447,9 +447,9 @@ header {
   .cta {
     display: none;
   }
-  /*.btn-grad{
-    display: none;
-  }*/
+  .btn-grad{
+    margin-left: 10px !important;
+  }
   .menu {
     display: initial;
   }
@@ -743,9 +743,9 @@ padding:8px;
 
 .ticket {
   height: 340px !important;
-  width: 500px !important;
+  width: 350px !important;
   min-height: 272px !important;
-  min-width: 400px !important;
+  min-width: 350px !important;
   margin: auto;
   border-radius: 12px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

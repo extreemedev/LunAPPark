@@ -11,26 +11,11 @@ include("../layouts/navbar.php")
 ?>
 
 
-<div class="title pt-custom">Seleziona un giorno</div>
+<div class="title pt-custom pb-4">Seleziona un giorno</div>
 
 <?php
 include("../layouts/calendar.php")
 ?>
-
-    <!--div class="pt-5"></div-->
-    <!--div style="margin-left: 30px; margin-right: 30px;" class="container"-->
-        
-       
-
-
-        <!-- Button trigger offcanvas -->
-        <!--button type="button" style="right: 70px; position: absolute;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-            <a id="carrello" href="#page-top"><img src="../../src/assets/img/icons8-cart-64.png" alt="cart"></a>
-        </button>
-
-        
-
-    </div-->
 
 
     <!-- Offcanvas -->

@@ -24,7 +24,7 @@ include("../layouts/navbar.php")
 <div id="mypage" style="display: block;" class="animate-bottom">
     <div class="title mb-3"><?php echo"Benvenuto ".$sessioname?></div>
     <div class="text text-center mb-5">I tuoi biglietti:</div>
-    <div class="container w-50 pb-custom">
+    <div class="container pb-custom">
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
         <div class="carousel-indicators">
           
@@ -43,8 +43,8 @@ include("../layouts/navbar.php")
                   <div class="carousel-item active">
                     <div class="ticket" style="width: 100%; background: linear-gradient(90deg, rgb(109, 106, 143) 0%, rgb(77, 76, 74) 100%);">
                       <img src="../../src/assets/img/ticket.png" align="right" height="120px" width="120px">
-                      <div class="nav-item" style="font-size: 45px;"><b>Non hai ancora acquistato biglietti</b></div>
-                      <div class="nav-item" style="font-size: 30px;">Controlla i nostri giorni di apertura e pianifica un soggiorno indimenticabile!</div>
+                      <div class="nav-item" style="font-size: 35px;"><b>Non hai ancora acquistato biglietti</b></div>
+                      <div class="nav-item" style="font-size: 24px;">Controlla i nostri giorni di apertura e pianifica un soggiorno indimenticabile!</div>
                       <br>
                       
                       
@@ -91,7 +91,8 @@ include("../layouts/navbar.php")
                         <div class="mt-3">Biglietto <?php echo($tipo) ?> </div>
                         <div class="" style="font-size: 30px;">LunAPPark</div>
                         <br>
-                        <div class="mt-2" style="font-size: 20px;">Codice biglietto: <?php echo($codice) ?></div>
+                        <div class="mt-2" style="font-size: 20px;">Codice biglietto:</div>
+                        <div class="mt-2" style="font-size: 20px;"><?php echo($codice) ?></div>
                         <hr>
                         <p>
                           <ul>
@@ -115,7 +116,8 @@ include("../layouts/navbar.php")
                       <div class="mt-3">Biglietto <?php echo($tipo) ?> </div>
                       <div class="" style="font-size: 30px;">LunAPPark</div>
                       <br>
-                      <div class="mt-2" style="font-size: 20px;">Codice biglietto: <?php echo($codice) ?></div>
+                      <div class="mt-2" style="font-size: 20px;">Codice biglietto:</div>
+                      <div class="mt-2" style="font-size: 20px;"><?php echo($codice) ?></div>
                       <hr>
                       <p>
                         <ul>
