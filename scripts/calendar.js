@@ -418,6 +418,13 @@ $("#giorni >").click(function(){
         /*$("#meseScelto").text($("#mese").text().replace(/\s+/g, " ").replace(/^\s|\s$/g, ""));*/
         /*window.alert("ciao");*/
 
+        $("#offcanvasRight").attr("class","offcanvas offcanvas-end show");
+        $("#offcanvasRight").css("visibility","visible");
+        $("#offcanvasRight").attr("aria-modal","true");
+        $("#offcanvasRight").attr("aria-hidden","");
+        $("#offcanvasRight").attr("role","dialog");
+
+
         for(var c = 0; c<month_names.length; c++){
             if($("#mese").text().replace(/\s+/g, " ").replace(/^\s|\s$/g, "")==month_names[c]){
                 var m2=c+1;
@@ -439,16 +446,22 @@ $("#giorni >").click(function(){
 
             /*$("#prezzoNormale").html("Adulto<br>Prezzo: 30");
             $("#prezzoRidotto").html("Ridotto (sotto i 7 anni)<br>Prezzo: 16");*/
-
-            $("#totale").text("30");
+            if(parseInt($("#totale").text())==0){
+                $("#totale").text("30");
+            }else{
+                $("#totale").text(parseInt($("#totale").text()));
+            }
         } else{
             $("#prezzoNormale").html("22");
             $("#prezzoRidotto").html("10");
 
             /*$("#prezzoNormale").html("Adulto<br>Prezzo: 22");
             $("#prezzoRidotto").html("Ridotto (sotto i 7 anni)<br>Prezzo: 10");*/
-
-            $("#totale").text("22");
+            if(parseInt($("#totale").text())==0){
+                $("#totale").text("22");
+            }else{
+                $("#totale").text(parseInt($("#totale").text()));
+            }
         }
         $("#pagamento").attr("disabled", false);
         $("#btInt").attr("disabled", false);
@@ -456,4 +469,13 @@ $("#giorni >").click(function(){
         $("#btInt-").attr("disabled", false);
         $("#btRid-").attr("disabled", false);
     }
+});
+
+
+$("#buttonCloseShop").click(function(){
+    $("#offcanvasRight").attr("class","offcanvas offcanvas-end");
+    $("#offcanvasRight").css("visibility","hidden");
+    $("#offcanvasRight").attr("aria-modal","");
+    $("#offcanvasRight").attr("aria-hidden","true");
+    $("#offcanvasRight").attr("role","");
 });
