@@ -41,7 +41,7 @@ include("../layouts/navbar.php")
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <div class="card2" style="width: 100%;">
+                    <div class="ticket" style="width: 100%;">
                       <img src="../../src/assets/img/ticket.png" align="right" height="120px" width="120px">
                       <div class="nav-item" style="font-size: 50px;"><b>Niente biglietti porcodio!</b></div>
                       <div class="nav-item" style="font-size: 30px;">Controlla i nostri giorni di apertura e pianifica un soggiorno indimenticabile!</div>
@@ -94,7 +94,7 @@ include("../layouts/navbar.php")
                   ?>
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <div class="card2" style="width: 100%;">
+                      <div class="ticket">
                         <img src="../../src/assets/img/qrcode.png" align="right" height="120px" width="120px">
 
                         <div class="mt-3">Biglietto <?php echo($tipo) ?> </div>
@@ -118,7 +118,7 @@ include("../layouts/navbar.php")
                 else{
                   ?>
                   <div class="carousel-item">
-                    <div class="card2" style="width: 100%;">
+                    <div class="ticket">
                       <img src="../../src/assets/img/qrcode.png" align="right" height="120px" width="120px">
 
                       <div class="mt-3">Biglietto <?php echo($tipo) ?> </div>

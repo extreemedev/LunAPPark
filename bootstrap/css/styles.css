@@ -741,6 +741,24 @@ padding:8px;
   color: rgb(255, 255, 255);
 }
 
+.ticket {
+  height: 340px !important;
+  width: 500px !important;
+  min-height: 272px !important;
+  min-width: 400px !important;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: left;
+  /*background-color: #f1f1f1;*/
+  background: rgb(227,129,129);
+  background: linear-gradient(90deg, rgba(227,129,129,1) 0%, rgba(255,201,91,1) 100%);
+  color: rgb(255, 255, 255);
+}
+
+
+
 /* Responsive columns */
 
 @media screen and (max-width: 2520px) {
