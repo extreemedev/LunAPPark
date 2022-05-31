@@ -41,24 +41,15 @@ include("../layouts/navbar.php")
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <div class="ticket" style="width: 100%;">
+                    <div class="ticket" style="width: 100%; background: linear-gradient(90deg, rgb(109, 106, 143) 0%, rgb(77, 76, 74) 100%);">
                       <img src="../../src/assets/img/ticket.png" align="right" height="120px" width="120px">
-                      <div class="nav-item" style="font-size: 50px;"><b>Niente biglietti porcodio!</b></div>
+                      <div class="nav-item" style="font-size: 45px;"><b>Non hai ancora acquistato biglietti</b></div>
                       <div class="nav-item" style="font-size: 30px;">Controlla i nostri giorni di apertura e pianifica un soggiorno indimenticabile!</div>
                       <br>
-                      <p>In questa sezione troverai i giorni di <b>apertura</b> del parco. Vuoi conoscere le giornate in cui siamo
-                        aperti per <B>prenotare</B>? O quali sono gli <b>orari</b> di apertura del Parco per il giorno in cui vorresti
-                        venire? In questa sezione trovi tutte le informazioni di cui hai bisogno!</p>
-                      <p>Siamo aperti tutti i giorni!</p>
-                      <hr>
+                      
+                      
                       <p>
-                        <ul>
-                          <li>Da lunedì fino a venerdi: 10:30-18:00</li>
-                          <br>
-                          <li>Sabato: 10:30-01:30</li>
-                          <br>
-                          <li>Domenica: 10:30-22:30</li>
-                        </ul>
+
                       </p>
                     </div>
                   </div>
