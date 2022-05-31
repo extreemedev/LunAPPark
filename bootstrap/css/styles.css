@@ -1261,11 +1261,13 @@ sup {
 }
 
 a {
-  color: #ee0979;
+  color: #F2C94C;
   text-decoration: underline;
+  transition: color 0.3s ease 0s
 }
 a:hover {
-  color: #be0761;
+  color: #F2994A;
+  transition: color 0.3s ease 0s
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
