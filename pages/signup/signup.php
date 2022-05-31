@@ -9,7 +9,8 @@
         $query = 'SELECT * FROM public."UTENTE" where email=$1';
         $result = pg_query_params($dbconn, $query, array($email));
         if($tuple=pg_fetch_array($result,null,PGSQL_ASSOC)) {
-            echo"Nel nostro sistema esiste già un account con questa email.";
+            echo"Nel nostro sistema esiste già un account con questa email";
+            header("location: index.php?valid=mail");
         }
         else {
             $nome = $_POST["nome"];
@@ -20,10 +21,11 @@
             $query2 = 'INSERT into public."UTENTE" values ($1,$2,$3,$4,$5,$6)';
             $result = pg_query_params($dbconn, $query2, array($email, $nome, $cognome, $password, $telefono, $datanasc));
             if($result) {
-                /*echo'<script type="title/javascript">myLoader();</script>';*/
-                header("Location: loading.html");
+                header("location: index.php?valid=ok");
             }
-            else die("C'é stato un errore");
+            else{
+                header("location: index.php?valid=db");
+            };
         }
     }
 ?>

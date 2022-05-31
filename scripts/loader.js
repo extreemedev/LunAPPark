@@ -1,19 +1,18 @@
 var myVar;
-var myVar2;
 
 function myLoader() {
-  myVar = setTimeout(hidePage, 3000);
-  myVar2 = setTimeout(showPage, 3000);
+  myVar = setTimeout(showLoader, 0);
+  myVar = setTimeout(showPage, 2000);
+
 }
 
-
-function hidePage() {
-  document.getElementById("form").style.display = "none";
+function showLoader(){
   document.getElementById("loader").style.display = "block";
-}
+  document.getElementById("mypage").style.display = "none";
 
+}
 
 function showPage() {
-  document.getElementById("form").style.display = "block";
   document.getElementById("loader").style.display = "none";
+  document.getElementById("mypage").style.display = "block";
 }

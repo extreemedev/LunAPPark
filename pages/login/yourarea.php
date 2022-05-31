@@ -22,7 +22,7 @@ include("../layouts/navbar.php")
 <div id="loader" style="display: none;"></div>
 <div class="pt-custom"></div>
 <div id="mypage" style="display: block;" class="animate-bottom">
-    <div class="title"><?php echo"Benvenuto ".$sessioname?></div>
+    <div class="title mb-custom"><?php echo"Benvenuto ".$sessioname?></div>
     <a class="btn-grad" style="display: initial;" href="./out.php">Logout</a>
 </div>
 

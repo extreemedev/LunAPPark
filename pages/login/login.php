@@ -10,7 +10,7 @@
     $query = 'SELECT * FROM public."UTENTE" where email=$1';
     $result = pg_query_params($dbconn, $query, array($email));
     if(!($tuple=pg_fetch_array($result,null,PGSQL_ASSOC))) {
-        echo"L'utente non é registrato!";
+        header("location: index.php?valid=mail");
     }
     else {
         $password = md5($_POST["inputPassword"]);
@@ -24,7 +24,7 @@
             header("location: yourarea.php");
         }
         else{
-            header("location: error.php");
+            header("location: index.php?valid=pw");
         };
     }
 ?>

@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="p-5">
-                        <h2 class="title text-start">Assistenza 24/7</h2>
+                        <div class="title text-start">Assistenza 24/7</div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                 <?php
                 } else {
                 ?>
-                <div class="text-center mt-5">
+                <div class="text-center mt-5 d-row">
                     <div class="alert alert-danger text-center ml-5 mr-5" style="display: initial;" role="alert">
                         Si è verificato un errore: non é possibile connettersi al server SMTP.
                     </div>
