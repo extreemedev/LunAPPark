@@ -20,23 +20,24 @@ $tot=htmlspecialchars($_COOKIE['tot']);
         $dbconn = pg_connect("host=postgresql port=5432
         dbname=lunappark user=extreemedev password=example");
         session_start();
-        for($i = 0; $i < count($tInt); $i++) {
+        for($i = 0; $i < intval($tInt); $i++) {
             $codice_random = bin2hex(openssl_random_pseudo_bytes(6));
             $codice_univoco = uniqid().$codice_random;
             $email=$_SESSION["id"];
             $tipo="intero";
-            $query = 'INSERT into public."BIGLIETTO" values ($1,$2,$3,$4,$5)';
-            $result = pg_query_params($dbconn, $query, array($codice_univoco, $email, $dat, $tipo, $pInt));
+            $query = 'INSERT into public."BIGLIETTO" values ($1,$2,$3,$4)';
+            echo (strtotime($dat));
+            $result = pg_query_params($dbconn, $query, array($email, $dat, $tipo, $pInt));
             
         }
 
-        for($i = 0; $i < count($tRid); $i++) {
+        for($i = 0; $i < intval($tRid); $i++) {
             $codice_random = bin2hex(openssl_random_pseudo_bytes(6));
             $codice_univoco = uniqid().$codice_random;
             $email=$_SESSION["id"];
             $tipo="ridotto";
-            $query = 'INSERT into public."BIGLIETTO" values ($1,$2,$3,$4,$5)';
-            $result = pg_query_params($dbconn, $query, array($codice_univoco, $email, $dat, $tipo, $pRid));
+            $query = 'INSERT into public."BIGLIETTO" values ($1,$2,$3,$4)';
+            $result = pg_query_params($dbconn, $query, array($email, $dat, $tipo, $pRid));
             
         }
         if($result) {
