@@ -83,6 +83,6 @@ include("../layouts/navbar.php")
     <script src="rememberMe.js"></script>
     <script src="../../scripts/loader.js" ></script>
 
-<?php
-include("../layouts/footer.php")
-?>
+    <script src="../../bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+</html>

@@ -92,5 +92,15 @@ include("../layouts/navbar.php")
     <script src="../../scripts/shop.js"></script>
         
 <?php
-include("../layouts/footer.php")
+session_start();
+if (isset($_SESSION["id"])){
+  include("../layouts/footer.php");
+}
+else{
+  ?>
+  <script src="../../bootstrap/js/bootstrap.bundle.js"></script>
+  </body>
+  </html>
+  <?php 
+}
 ?>

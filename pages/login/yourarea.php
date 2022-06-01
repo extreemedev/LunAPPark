@@ -176,6 +176,7 @@ function showPage() {
 
 </script>
 
-<?php
-include("../layouts/footer.php")
-?>
+ 
+    <script src="../../bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+</html>
