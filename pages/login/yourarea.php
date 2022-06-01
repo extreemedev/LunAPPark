@@ -149,8 +149,9 @@ include("../layouts/navbar.php")
       </button>
     </div>
 
-
+    <div class="text-center">       
     <a class="btn-grad" style="display: initial;" href="./out.php">Logout</a>
+    </div>
 </div>
 
 <script>

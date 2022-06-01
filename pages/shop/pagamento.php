@@ -30,7 +30,9 @@ $tot=htmlspecialchars($_COOKIE['tot']);
         $result = pg_query_params($dbconn, $query, array($email, $dat, $tipo, $pRid));    
     }
     if($result) {
-        header("location: index.php");
+        session_start();
+        $_SESSION["shopload"]=1;
+        header("location: index.php?buy=ok");
     } 
     else {
         header("location: index.php?buy=no");

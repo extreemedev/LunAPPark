@@ -14,10 +14,29 @@ include("../layouts/navbar.php")
     session_start();
     if (isset($_SESSION["id"])){
         ?>
+        <div id="loader" style="display: none;"></div>
+        <div id="mypage" style="display: block;">
         <div class="title pt-custom pb-4">Seleziona un giorno</div>
         <?php
+            if(isset($_GET['buy'])){
+                if ($_GET['buy'] == "ok") {
+                    ?>
+                    <div class="text-center mt-3 " style="font-size: 18px;">
+                        <div class="alert alert-success text-center pb-2 pt-2 ml-5 mr-5" style="display: initial;" role="alert">Pagamento effettuato con successo!</div>
+                    </div>
+                    <?php
+                }
+                elseif ($_GET['buy'] == "no") {
+                    ?>
+                    <div class="text-center mt-3 " style="font-size: 18px;">
+                        <div class="alert alert-danger text-center pb-2 pt-2 ml-5 mr-5" style="display: initial;" role="alert">La transazione non é stata eseguita.</div>
+                    </div>
+                    <?php
+                }
+            }
         include("../layouts/calendar.php")
         ?>
+        </div>
         <!-- Offcanvas -->
         <div class="offcanvas offcanvas-end" style="top: 126px;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header">
