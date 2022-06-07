@@ -2,6 +2,19 @@ version: "3.4"
     
 services:
 
+  nginx:
+    depends_on:
+      - postgresql
+    container_name: webphp
+    image: webdevops/php-nginx:latest
+    volumes:
+      - type: bind
+        source: /home/matt/app/linguaggiweb  #localhost
+        target: /app  #container
+    ports:
+      - "80:80"   #localhost:container
+    restart: always
+
   postgresql:
     container_name: database
     image: postgres
