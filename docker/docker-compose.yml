@@ -1,41 +1,40 @@
-version: "3.4"
+version: "3.8"
     
 services:
 
-  nginx:
+  web:
     depends_on:
-      - postgresql
-    container_name: webphp
+      - database
+    container_name: nginxphp
     image: webdevops/php-nginx:latest
     volumes:
-      - type: bind
-        source: /home/matt/app/linguaggiweb  #localhost
-        target: /app  #container
+      - ..:/app
     ports:
-      - "80:80"   #localhost:container
+      - "80:80"
     restart: always
 
-  postgresql:
-    container_name: database
+  database:
+    container_name: postgres
     image: postgres
     volumes:
       - pg_data:/var/lib/postgresql/data
     restart: always
     environment:
-      - POSTGRES_USER=extreemedev
+      - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=example
       - POSTGRES_DB=lunappark
     ports:
       - 5432:5432
 
-  admin:
-    container_name: admindb
+  adminer:
+    container_name: pgadmin
     image: dpage/pgadmin4
     volumes:
       - admin_data:/var/lib/pgadmin
+      - ../database:/var/lib/pgadmin/storage/admin_admin.com/
     restart: always
     environment:
-      - PGADMIN_DEFAULT_EMAIL=mattallev@gmail.com
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
       - PGADMIN_DEFAULT_PASSWORD=example
     ports:
       - 5050:80
@@ -45,4 +44,8 @@ volumes:
   pg_data: {}
   admin_data: {}
 
+networks:
+  default:
+    name: lunappark_network
+    driver: bridge
 

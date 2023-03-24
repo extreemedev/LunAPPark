@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS BigliettoPdf(
+	codice int not null,
+	tipo varchar(10) not null,
+	prezzo int not null,
+	giorno date not null,
+PRIMARY KEY(codice)
+);
