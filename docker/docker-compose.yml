@@ -31,9 +31,11 @@ services:
     image: dpage/pgadmin4
     volumes:
       - admin_data:/var/lib/pgadmin
-      - ../database:/var/lib/pgadmin/storage/admin_admin.com/
+      - ../database:/var/lib/pgadmin/storage # To ensure correct binding, execute the following command in the terminal: sudo chown -R 5050:5050 database
     restart: always
     environment:
+      #- PGADMIN_LISTEN_PORT=5050
+      #- PGADMIN_CONFIG_SERVER_MODE=True
       - PGADMIN_DEFAULT_EMAIL=admin@admin.com
       - PGADMIN_DEFAULT_PASSWORD=example
     ports:
