@@ -1,7 +1,105 @@
 CREATE TABLE IF NOT EXISTS BigliettoPdf(
 	codice int not null,
 	tipo varchar(10) not null,
-	prezzo int not null,
+	prezzo real not null,
 	giorno date not null,
 PRIMARY KEY(codice)
+);
+
+CREATE TABLE IF NOT EXISTS Attrazione(
+	id int not null,
+	nome varchar(10) not null,
+	ora_inizio time not null,
+	ora_fine time not null,
+	zona_attr int not null,
+PRIMARY KEY(id),
+FOREIGN KEY(zona_attr) REFERENCES Zona(numero)
+);
+
+CREATE TABLE IF NOT EXISTS Giostra(
+	idgiostra int not null,
+	n_posti int not null,
+	tipologia varchar(10) not null,
+	altezzamin real,
+	lunghezza real,
+PRIMARY KEY(idgiostra),
+FOREIGN KEY(idgiostra) REFERENCES Attrazione(id)
+);
+
+CREATE TABLE IF NOT EXISTS Spettacolo(
+	idspett int not null,
+	descrizione varchar(255) not null,
+PRIMARY KEY(idspett),
+FOREIGN KEY(idspett) REFERENCES Attrazione(id)
+);
+
+CREATE TABLE IF NOT EXISTS PrenotazioneGiostra(
+	ora_turno time not null,
+	pren_cf varchar(16) not null,
+	pren_data date not null,
+	pren_idgiostra int not null,
+PRIMARY KEY(ora_turno, pren_cf),
+FOREIGN KEY(pren_cf) REFERENCES UtenteRegistrato(cf),
+FOREIGN KEY(pren_idgiostra) REFERENCES Giostra(idgiostra)
+);
+
+CREATE TABLE IF NOT EXISTS Locale(
+	id int not null,
+	nome varchar(10) not null,
+	ora_apertura time not null,
+	ora_chiusura time not null,
+	ora_pulizia time not null,
+	locale_dir varchar(16) not null,
+	locale_zona int not null,
+	locale_pul varchar(16) not null,
+PRIMARY KEY(id),
+FOREIGN KEY(locale_dir) REFERENCES Titolare(idtitolare),
+FOREIGN KEY(locale_zona) REFERENCES Zona(numero),
+FOREIGN KEY(locale_pul) REFERENCES Pulizia(piva)
+);
+
+CREATE TABLE IF NOT EXISTS Shop(
+	idshop int not null,
+PRIMARY KEY(idshop),
+FOREIGN KEY(idshop) REFERENCES Locale(id)
+);
+
+CREATE TABLE IF NOT EXISTS Bar(
+	idbar int not null,
+PRIMARY KEY(idbar),
+FOREIGN KEY(idbar) REFERENCES Locale(id)
+);
+
+CREATE TABLE IF NOT EXISTS Ristorante(
+	idristorante int not null,
+PRIMARY KEY(idristorante),
+FOREIGN KEY(idristorante) REFERENCES Locale(id)
+);
+
+CREATE TABLE IF NOT EXISTS Bagno(
+	numero int not null,
+	invalido boolean default 'False',
+	bagno_zona,
+	bagno_pul,
+PRIMARY KEY(numero),
+FOREIGN KEY(bagno_zona) REFERENCES Zona(numero),
+FOREIGN KEY(bagno_pul) REFERENCES Pulizia(piva)
+);
+
+CREATE TABLE IF NOT EXISTS Zona(
+	numero int not null,
+	nome varchar(10),
+	colore varchar(10) not null,
+PRIMARY KEY(numero)
+);
+
+CREATE TABLE IF NOT EXISTS Revisione(
+	id int not null,
+	tagliando varchar(255) not null,
+	data_tagliando date not null,
+	rev_attr int not null,
+	rev_man,
+PRIMARY KEY(id),
+FOREIGN KEY(rev_attr) REFERENCES Attrazione(id),
+FOREIGN KEY(rev_man) REFERENCES Manutenzione(piva)
 );
