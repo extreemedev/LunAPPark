@@ -31,7 +31,7 @@ services:
     image: dpage/pgadmin4
     volumes:
       - admin_data:/var/lib/pgadmin
-      - ../database:/var/lib/pgadmin/storage # To ensure correct binding, execute the following command in the terminal: sudo chown -R 5050:5050 database
+      - ../database:/var/lib/pgadmin/storage # To ensure correct binding, execute the following command in the terminal: sudo chmod -R 777 database
     restart: always
     environment:
       #- PGADMIN_LISTEN_PORT=5050
