@@ -1,0 +1,7 @@
+CREATE TYPE tipo_stanza AS ENUM ('economy', 'business');
+
+CREATE TYPE tipo_attr AS ENUM ('acqua', 'terra', 'aria');
+
+CREATE TYPE tipo_rist AS ENUM ('carne', 'pesce', 'burger', 'vegan', 'misto');
+
+CREATE TYPE tipo_bigl AS ENUM ('intero', 'ridotto');
