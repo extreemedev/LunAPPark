@@ -242,3 +242,9 @@ CREATE TABLE IF NOT EXISTS Città(
 	distanza_parco real not null,
 PRIMARY KEY(nome)
 );
+
+CREATE TABLE IF NOT EXISTS CittàNuova(
+	nome varchar(20) not null,
+	distanza_parco real not null,
+PRIMARY KEY(nome)
+);
