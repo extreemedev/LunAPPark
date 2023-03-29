@@ -28,10 +28,9 @@ PRIMARY KEY(id)
 CREATE TABLE IF NOT EXISTS Titolare(
 	idtitolare varchar(16) not null,
 	tit_punto int not null,
-PRIMARY KEY(idtitolare),
-FOREIGN KEY(idtitolare) REFERENCES Dipendente(cf) ,
-FOREIGN KEY(tit_punto) REFERENCES PuntoVendita(id)
+PRIMARY KEY(idtitolare)
 );
+
 
 CREATE TABLE IF NOT EXISTS Locale(
 	id int not null,
@@ -42,11 +41,9 @@ CREATE TABLE IF NOT EXISTS Locale(
 	locale_dir varchar(16) not null,
 	locale_zona int not null,
 	locale_pul varchar(16) not null,
-PRIMARY KEY(id),
-FOREIGN KEY(locale_dir) REFERENCES Titolare(idtitolare),
-FOREIGN KEY(locale_zona) REFERENCES Zona(numero),
-FOREIGN KEY(locale_pul) REFERENCES Pulizia(piva)
+PRIMARY KEY(id)
 );
+
 
 CREATE TABLE IF NOT EXISTS Dipendente(
 	cf varchar(16) not null,
@@ -59,11 +56,9 @@ CREATE TABLE IF NOT EXISTS Dipendente(
 	dip_punto int not null,
 	dip_loc int not null,
 	dip_attr int not null,
-PRIMARY KEY(cf),
-FOREIGN KEY(dip_punto) REFERENCES PuntoVendita(id),
-FOREIGN KEY(dip_loc) REFERENCES Locale(id),
-FOREIGN KEY(dip_attr) REFERENCES Attrazione(id)
+PRIMARY KEY(cf)
 );
+
 
 CREATE TABLE IF NOT EXISTS Attrazione(
 	id int not null,
@@ -71,9 +66,9 @@ CREATE TABLE IF NOT EXISTS Attrazione(
 	ora_inizio time not null,
 	ora_fine time not null,
 	zona_attr int not null,
-PRIMARY KEY(id),
-FOREIGN KEY(zona_attr) REFERENCES Zona(numero)
+PRIMARY KEY(id)
 );
+
 
 CREATE TABLE IF NOT EXISTS Giostra(
 	idgiostra int not null,
@@ -81,57 +76,55 @@ CREATE TABLE IF NOT EXISTS Giostra(
 	tipologia tipo_attr not null,
 	altezzamin real,
 	lunghezza real,
-PRIMARY KEY(idgiostra),
-FOREIGN KEY(idgiostra) REFERENCES Attrazione(id)
+PRIMARY KEY(idgiostra)
 );
+
 
 CREATE TABLE IF NOT EXISTS Spettacolo(
 	idspett int not null,
 	descrizione varchar(255) not null,
-PRIMARY KEY(idspett),
-FOREIGN KEY(idspett) REFERENCES Attrazione(id)
+PRIMARY KEY(idspett)
 );
+
 
 CREATE TABLE IF NOT EXISTS PrenotazioneGiostra(
 	ora_turno time not null,
 	pren_cf varchar(16) not null,
 	pren_data date not null,
 	pren_idgiostra int not null,
-PRIMARY KEY(ora_turno, pren_cf),
-FOREIGN KEY(pren_cf) REFERENCES UtenteRegistrato(cf),
-FOREIGN KEY(pren_idgiostra) REFERENCES Giostra(idgiostra)
+PRIMARY KEY(ora_turno, pren_cf)
 );
+
 
 CREATE TABLE IF NOT EXISTS Shop(
 	idshop int not null,
-PRIMARY KEY(idshop),
-FOREIGN KEY(idshop) REFERENCES Locale(id)
+PRIMARY KEY(idshop)
 );
+
 
 CREATE TABLE IF NOT EXISTS Bar(
 	idbar int not null,
-PRIMARY KEY(idbar),
-FOREIGN KEY(idbar) REFERENCES Locale(id)
+PRIMARY KEY(idbar)
 );
+
 
 CREATE TABLE IF NOT EXISTS Ristorante(
 	idristorante int not null,
 	tipologia tipo_rist not null,
 	posti_interni int not null,
 	posti_esterni int not null,
-PRIMARY KEY(idristorante),
-FOREIGN KEY(idristorante) REFERENCES Locale(id)
+PRIMARY KEY(idristorante)
 );
+
 
 CREATE TABLE IF NOT EXISTS Bagno(
 	numero int not null,
 	invalido boolean default 'False',
 	bagno_zona int not null,
 	bagno_pul varchar(16) not null,
-PRIMARY KEY(numero),
-FOREIGN KEY(bagno_zona) REFERENCES Zona(numero),
-FOREIGN KEY(bagno_pul) REFERENCES Pulizia(piva)
+PRIMARY KEY(numero)
 );
+
 
 CREATE TABLE IF NOT EXISTS Revisione(
 	id int not null,
@@ -139,55 +132,56 @@ CREATE TABLE IF NOT EXISTS Revisione(
 	data_tagliando date not null,
 	rev_attr int not null,
 	rev_man varchar(16) not null,
-PRIMARY KEY(id),
-FOREIGN KEY(rev_attr) REFERENCES Attrazione(id),
-FOREIGN KEY(rev_man) REFERENCES Manutenzione(piva)
+PRIMARY KEY(id)
 );
+
 
 CREATE TABLE IF NOT EXISTS Manutenzione(
 	piva varchar(16) not null,
 	nome varchar(10) not null,
 	residenzafiscale varchar(35) not null,
 	man_città varchar(20) not null,
-PRIMARY KEY(piva),
-FOREIGN KEY(man_città) REFERENCES Città(nome)
+PRIMARY KEY(piva)
 );
+
 
 CREATE TABLE IF NOT EXISTS Alimenti(
 	piva varchar(16) not null,
 	nome varchar(10) not null,
 	residenzafiscale varchar(35) not null,
 	alim_città varchar(20) not null,
-PRIMARY KEY(piva),
-FOREIGN KEY(alim_città) REFERENCES Città(nome)
+PRIMARY KEY(piva)
 );
+
 
 CREATE TABLE IF NOT EXISTS Articoli(
 	piva varchar(16) not null,
 	nome varchar(10) not null,
 	residenzafiscale varchar(35) not null,
 	art_città varchar(20) not null,
-PRIMARY KEY(piva),
-FOREIGN KEY(art_città) REFERENCES Città(nome)
+PRIMARY KEY(piva)
 );
+
 
 CREATE TABLE IF NOT EXISTS Pulizia(
 	piva varchar(16) not null,
 	nome varchar(10) not null,
 	residenzafiscale varchar(35) not null,
 	pul_città varchar(20) not null,
-PRIMARY KEY(piva),
-FOREIGN KEY(pul_città) REFERENCES Città(nome)
+PRIMARY KEY(piva)
 );
+
 
 CREATE TABLE IF NOT EXISTS BigliettoPdf(
 	codice int not null,
 	tipo tipo_bigl not null,
 	prezzo real not null,
-	prezzo real not null,
 	giorno date not null,
+	bigl_utente varchar(16) not null,
+	bigl_data date not null,
 PRIMARY KEY(codice)
 );
+
 
 CREATE TABLE IF NOT EXISTS BigliettoCarta(
 	codice int not null,
@@ -195,9 +189,9 @@ CREATE TABLE IF NOT EXISTS BigliettoCarta(
 	prezzo real not null,
 	giorno date not null,
 	carta_punto int not null,
-PRIMARY KEY(codice),
-FOREIGN KEY(carta_punto) REFERENCES PuntoVendita(id)
+PRIMARY KEY(codice)
 );
+
 
 CREATE TABLE IF NOT EXISTS Biglietteria(
 	park_data date not null,
@@ -214,10 +208,9 @@ CREATE TABLE IF NOT EXISTS PrenotazioneHotel(
 	check_out date not null,
 	pren_utente varchar(16) not null,
 	pren_hotel varchar(16) not null,
-PRIMARY KEY(n_pren),
-FOREIGN KEY(pren_utente) REFERENCES UtenteRegistrato(cf),
-FOREIGN KEY(pren_hotel) REFERENCES Hotel(piva)
+PRIMARY KEY(n_pren)
 );
+
 
 CREATE TABLE IF NOT EXISTS Hotel(
 	piva varchar(16) not null,
@@ -225,9 +218,9 @@ CREATE TABLE IF NOT EXISTS Hotel(
 	indirizzo varchar(20) not null,
 	stelle int not null check ((stelle > 1) AND (stelle < 6)),
 	hotel_città varchar(20) not null,
-PRIMARY KEY(piva),
-FOREIGN KEY(hotel_città) REFERENCES Città(nome)
+PRIMARY KEY(piva)
 );
+
 
 CREATE TABLE IF NOT EXISTS Stanza(
 	numero int not null,
@@ -237,17 +230,11 @@ CREATE TABLE IF NOT EXISTS Stanza(
 	n_letti int not null check( (n_letti > 0) AND (n_letti < 6)),
 	check (piano > 0),
 	check (n_letti > 0),
-PRIMARY KEY(numero, stanza_hotel),
-FOREIGN KEY(stanza_hotel) REFERENCES Hotel(piva)
+PRIMARY KEY(numero, stanza_hotel)
 );
+
 
 CREATE TABLE IF NOT EXISTS Città(
-	nome varchar(20) not null,
-	distanza_parco real not null,
-PRIMARY KEY(nome)
-);
-
-CREATE TABLE IF NOT EXISTS CittàNuova(
 	nome varchar(20) not null,
 	distanza_parco real not null,
 PRIMARY KEY(nome)

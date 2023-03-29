@@ -1,0 +1,3 @@
+SELECT idgiostra, nome
+FROM giostra join attrazione on (idgiostra=id)
+WHERE (altezzamin > 1.30);
