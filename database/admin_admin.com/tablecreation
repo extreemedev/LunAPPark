@@ -9,32 +9,32 @@ PRIMARY KEY(numero)
 
 CREATE TABLE IF NOT EXISTS UtenteRegistrato(
 	cf varchar(16) not null,
-	nome varchar(10) not null,
-	cognome varchar(10) not null,
+	nome varchar(30) not null,
+	cognome varchar(30) not null,
 	data_nascita date not null,
 	telefono varchar(10) not null unique,
 	user_mail varchar(50) not null,
-	user_password varchar(64) not null,
+	user_password varchar(50) not null,
 PRIMARY KEY(cf)
 );
 
 CREATE TABLE IF NOT EXISTS PuntoVendita(
-	id int not null,
-	apertura date not null,
-	chiusura date not null,
+	id serial,
+	apertura time not null,
+	chiusura time not null,
+	dir_punto varchar(16) not null,
 PRIMARY KEY(id)
 );
 
 CREATE TABLE IF NOT EXISTS Titolare(
 	idtitolare varchar(16) not null,
-	tit_punto int not null,
 PRIMARY KEY(idtitolare)
 );
 
 
 CREATE TABLE IF NOT EXISTS Locale(
-	id int not null,
-	nome varchar(10) not null,
+	id serial,
+	nome varchar(255) not null,
 	ora_apertura time not null,
 	ora_chiusura time not null,
 	ora_pulizia time not null,
@@ -47,22 +47,22 @@ PRIMARY KEY(id)
 
 CREATE TABLE IF NOT EXISTS Dipendente(
 	cf varchar(16) not null,
-	nome varchar(10) not null,
-	cognome varchar(10) not null,
+	nome varchar(30) not null,
+	cognome varchar(30) not null,
 	data_nascita date not null,
 	telefono varchar(10) not null unique,
-	matricola varchar(8) not null,
-	indirizzo varchar(20) not null,
-	dip_punto int not null,
-	dip_loc int not null,
-	dip_attr int not null,
+	matricola varchar(8) not null unique,
+	indirizzo varchar(255) not null,
+	dip_punto int default null,
+	dip_loc int default null,
+	dip_attr int default null,
 PRIMARY KEY(cf)
 );
 
 
 CREATE TABLE IF NOT EXISTS Attrazione(
-	id int not null,
-	nome varchar(10) not null,
+	id serial,
+	nome varchar(255) not null unique,
 	ora_inizio time not null,
 	ora_fine time not null,
 	zona_attr int not null,
@@ -139,7 +139,7 @@ PRIMARY KEY(id)
 CREATE TABLE IF NOT EXISTS Manutenzione(
 	piva varchar(16) not null,
 	nome varchar(10) not null,
-	residenzafiscale varchar(35) not null,
+	residenzafiscale varchar(255) not null,
 	man_città varchar(20) not null,
 PRIMARY KEY(piva)
 );
@@ -148,7 +148,7 @@ PRIMARY KEY(piva)
 CREATE TABLE IF NOT EXISTS Alimenti(
 	piva varchar(16) not null,
 	nome varchar(10) not null,
-	residenzafiscale varchar(35) not null,
+	residenzafiscale varchar(255) not null,
 	alim_città varchar(20) not null,
 PRIMARY KEY(piva)
 );
@@ -157,7 +157,7 @@ PRIMARY KEY(piva)
 CREATE TABLE IF NOT EXISTS Articoli(
 	piva varchar(16) not null,
 	nome varchar(10) not null,
-	residenzafiscale varchar(35) not null,
+	residenzafiscale varchar(255) not null,
 	art_città varchar(20) not null,
 PRIMARY KEY(piva)
 );
@@ -166,14 +166,14 @@ PRIMARY KEY(piva)
 CREATE TABLE IF NOT EXISTS Pulizia(
 	piva varchar(16) not null,
 	nome varchar(10) not null,
-	residenzafiscale varchar(35) not null,
+	residenzafiscale varchar(255) not null,
 	pul_città varchar(20) not null,
 PRIMARY KEY(piva)
 );
 
 
 CREATE TABLE IF NOT EXISTS BigliettoPdf(
-	codice int not null,
+	codice serial,
 	tipo tipo_bigl not null,
 	prezzo real not null,
 	giorno date not null,
@@ -184,7 +184,7 @@ PRIMARY KEY(codice)
 
 
 CREATE TABLE IF NOT EXISTS BigliettoCarta(
-	codice int not null,
+	codice serial,
 	tipo tipo_bigl not null,
 	prezzo real not null,
 	giorno date not null,
@@ -201,7 +201,7 @@ PRIMARY KEY(park_data)
 );
 
 CREATE TABLE IF NOT EXISTS PrenotazioneHotel(
-	n_pren int not null,
+	n_pren serial,
 	n_persone int not null,
 	prezzo real not null,
 	check_in date not null,
@@ -215,7 +215,7 @@ PRIMARY KEY(n_pren)
 CREATE TABLE IF NOT EXISTS Hotel(
 	piva varchar(16) not null,
 	nome varchar(10) not null,
-	indirizzo varchar(20) not null,
+	indirizzo varchar(255) not null,
 	stelle int not null check ((stelle > 1) AND (stelle < 6)),
 	hotel_città varchar(20) not null,
 PRIMARY KEY(piva)
@@ -235,7 +235,53 @@ PRIMARY KEY(numero, stanza_hotel)
 
 
 CREATE TABLE IF NOT EXISTS Città(
-	nome varchar(20) not null,
+	nome varchar(255) not null,
 	distanza_parco real not null,
 PRIMARY KEY(nome)
+);
+
+
+CREATE TABLE IF NOT EXISTS Telefono(
+	numero varchar(10) not null, 
+	tel_hotel varchar(16) default null,
+	tel_man varchar(16) default null,
+	tel_pul varchar(16) default null,
+	tel_alim varchar(16) default null,
+	tel_art varchar(16) default null,
+PRIMARY KEY(numero)
+);
+
+
+CREATE TABLE IF NOT EXISTS Afferisce(
+	punto_vendita int not null, 
+	biglietteria date not null,
+PRIMARY KEY(punto_vendita, biglietteria)
+);
+
+
+CREATE TABLE IF NOT EXISTS FoodRist(
+	ristorante int not null, 
+	alimenti varchar(16) not null,
+PRIMARY KEY(ristorante, alimenti)
+);
+
+
+CREATE TABLE IF NOT EXISTS FoodBar(
+	bar int not null, 
+	alimenti varchar(16) not null,
+PRIMARY KEY(bar, alimenti)
+);
+
+
+CREATE TABLE IF NOT EXISTS RestockBar(
+	bar int not null, 
+	articoli varchar(16) not null,
+PRIMARY KEY(bar, articoli)
+);
+
+
+CREATE TABLE IF NOT EXISTS RestockShop(
+	shop int not null, 
+	articoli varchar(16) not null,
+PRIMARY KEY(shop, articoli)
 );

@@ -1,3 +1,19 @@
 SELECT idgiostra, nome
-FROM giostra join attrazione on (idgiostra=id)
+FROM giostra JOIN attrazione ON (idgiostra=id)
 WHERE (altezzamin > 1.30);
+
+
+--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+SELECT id, nome, n_posti, tipologia
+FROM Attrazione JOIN Giostra ON (id = idgiostra)
+WHERE ((tipologia, n_posti) = ANY(SELECT tipologia, MAX(n_posti)
+								 FROM Giostra
+								 GROUP BY tipologia))
+
+--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+SELECT id, nome, descrizione
+FROM Attrazione JOIN Spettacolo ON (id = idspett)
+WHERE ((ora_inizio >= '18:00') AND (ora_fine <= '23:00'))

@@ -1,0 +1,223 @@
+
+DELETE FROM Zona;
+INSERT INTO Zona(numero, nome, colore)
+VALUES
+(1, 'Entrata', 'Bianco'),
+(2, 'Adventure', 'Blu'),
+(3, 'Thriller', 'Nero'),
+(4, 'Horror', 'Rosso'),
+(5, 'Mystery', 'Verde'),
+(6, 'Fantasy', 'Giallo');
+
+
+DELETE FROM Attrazione;
+INSERT INTO Attrazione(id, nome, ora_inizio, ora_fine, zona_attr)
+VALUES
+(1,'Strunkun','10:00', '17:00',	2),
+(2,'Storm','10:00', '17:00', 5),
+(3,'Kakatunkan','10:00', '17:00',	6),
+(4,'Ghostrider','10:00', '17:00',	4),
+(5,'Femicide','10:00', '17:00',	4),
+(6,'LosPuercos','10:00', '17:00',	5),
+(7,'Amongus','10:00', '17:00',	5),
+(8,'Circo Pazzo','22:00', '23:00',	4),
+(9,'Sgommate Sgravate','14:00', '15:00',	2),
+(10,'Parata dei Sorci','20:00', '21:00',	6);
+
+
+DELETE FROM Giostra;
+INSERT INTO Giostra(idgiostra, n_posti, tipologia, altezzamin, lunghezza)
+VALUES
+(1, 14, 'aria',  1.50, default),
+(2, 12, 'terra', 1.50, default),
+(3, 20, 'acqua', 1.50, default),
+(4, 30, 'terra', 1.50, default),
+(5, 20, 'terra', 1.50, default),
+(6, 20, 'terra', 1.50, default),
+(7, 10, 'terra', 1.50, default);
+
+
+DELETE FROM Spettacolo;
+INSERT INTO Spettacolo(idspett, descrizione)
+VALUES
+(8, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'),
+(9, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'),
+(10, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+
+
+DELETE FROM PrenotazioneGiostra;
+INSERT INTO PrenotazioneGiostra(ora_turno, pren_cf, pren_data, pren_idgiostra)
+VALUES
+('10:00', 'LLVMTT00C28H501N', '2000-03-30', 2),
+('10:15', 'LLVMTT00C28H501N', '2000-03-30', 2),
+('10:30', 'LLVMTT00C28H501N', '2000-03-30', 2),
+('10:30', 'LLVMRK00C30H501N', '2000-03-30', 2);
+
+
+DELETE FROM Locale;
+INSERT INTO Locale(id, nome, ora_apertura, ora_chiusura, ora_pulizia, locale_dir, locale_zona, locale_pul)
+VALUES
+(1, 'Carne Fresca', '12:00', '22:00', '22:30', 'SPCMDA13S14G943K', 1, 61869925791),
+(2, 'PokePazzi', '12:00', '20:00', '22:30', 'BNRDNL89R48E317N', 2, 61869925791),
+(3, 'Verduryan', '12:00', '22:00', '22:30', 'BLGRNL50P18I868G', 1, 61869925791),
+(4, 'Pizza e Polli', '12:00', '22:00', '22:30', 'MNRDLF74B13C349K', 1, 61869925791),
+(5, 'KakiMazzi', '12:00', '22:00', '22:30', 'MSSMRZ10P50L838Y', 1, 61869925791),
+(6, 'CrazyBar', '10:00', '21:00', '21:30', 'MZZLLL74A61A312D', 1, 61869925791),
+(7, 'HotCafè', '10:00', '21:00', '21:30', 'NTNRNN31L27F774W', 1, 61869925791),
+(8, 'BarSlot', '10:00', '21:00', '21:30', 'DNSLDI66A50H359W', 1, 61869925791),
+(9, 'RainbowShop', '10:00', '20:00', '20:30', 'LSMGLL60L53A000Q', 1, 61869925791),
+(10, 'FluffyShop', '10:00', '20:00', '20:30', 'RTGGTN63B07B169I', 1, 61869925791);
+
+
+
+DELETE FROM Shop;
+INSERT INTO Shop(idshop)
+VALUES
+(9),
+(10);
+
+
+DELETE FROM Bar;
+INSERT INTO Bar(idbar)
+VALUES
+(6),
+(7),
+(8);
+
+
+DELETE FROM Ristorante;
+INSERT INTO Ristorante(idristorante, tipologia, posti_interni, posti_esterni)
+VALUES
+(1, 'carne', 30, 20),
+(2, 'pesce', 30, 20),
+(3, 'vegan', 30, 20),
+(4, 'misto', 30, 20),
+(5, 'misto', 30, 20);
+
+
+DELETE FROM Bagno;
+INSERT INTO Bagno(numero, invalido, bagno_zona, bagno_pul)
+VALUES
+(1, 'True', 1, 61869925791),
+(2, default, 1, 61869925791),
+(3, default, 1, 61869925791),
+(4, default, 1, 61869925791),
+(5, default, 2, 61869925791),
+(6, 'True', 2, 61869925791),
+(7, default, 2, 61869925791),
+(8, default, 2, 61869925791),
+(9, default, 2, 61869925791),
+(10, default, 3, 61869925791),
+(11, default, 3, 61869925791),
+(12, default, 3, 61869925791),
+(13, 'True', 4, 61869925791),
+(14, default, 4, 61869925791),
+(15, default, 4, 61869925791),
+(16, default, 5, 61869925791),
+(17, default, 5, 61869925791),
+(18, default, 6, 61869925791),
+(19, default, 6, 61869925791),
+(20, default, 6, 61869925791);
+ /*
+DELETE FROM Revisione;
+INSERT INTO Revisione(id, tagliando, data_tagliando, rev_attr, rev_man)
+VALUES
+
+DELETE FROM Manutenzione;
+INSERT INTO Manutenzione(piva, nome, residenzafiscale, man_città)
+VALUES
+
+DELETE FROM Alimenti;
+INSERT INTO Alimenti(piva, nome, residenzafiscale, alim_città)
+VALUES
+
+DELETE FROM Articoli;
+INSERT INTO Articoli(piva, nome, residenzafiscale, art_città)
+VALUES
+*/
+
+DELETE FROM Pulizia;
+INSERT INTO Pulizia(piva, nome, residenzafiscale, pul_città)
+VALUES
+(61869925791, 'Clean&Co', 'Via Pulinbello 32, Arrigone Di Saccarazzio, ST', 'Strompi');
+
+DELETE FROM UtenteRegistrato;
+INSERT INTO UtenteRegistrato(cf, nome, cognome, data_nascita, telefono, user_mail, user_password)
+VALUES
+('LLVMTT00C28H501N', 'Matteo', 'Alleva',	'2000-03-30', 3387482422, 'mattallev@gmail.com', 'example'),
+('LLVMRK00C30H501N', 'Mirko', 'Alleva',	'2000-03-30', 3456544877, 'mirkallev@gmail.com', 'example');
+
+
+DELETE FROM Dipendente;
+INSERT INTO Dipendente(matricola, cognome, nome, data_nascita, cf, indirizzo, telefono, dip_punto, dip_loc, dip_attr)
+VALUES
+--TITOLARI
+(1,'Polo','Daniele','1965-08-14','PLODNL65M14I151Q','Bastioni Ciovassano, 122','0744228059', 1, default, default),
+(2,'Spicciariello','Amadeo','2013-11-14','SPCMDA13S14G943K','Via Pio XI, 249','0721522945', default, 1, default),
+(3,'Buonarrota','Daniela','1989-10-08','BNRDNL89R48E317N','Via M.Dati, 112/e','0881104422', default, 2, default),
+(4,'Bulgarelli','Reginaldo','1950-09-18','BLGRNL50P18I868G','Via Cernala, 224','0321373719', default, 3, default),
+(5,'Muneratto','Adolfo','1974-02-13','MNRDLF74B13C349K','Alzaia A.Renda, 52','010385104', default, 4, default),
+(6,'Massasogni','Marzia','2010-09-10','MSSMRZ10P50L838Y','Via Tibaldi, 235','0825778296', default, 5, default),
+(7,'Mazzarello','Lorella','1974-01-21','MZZLLL74A61A312D','Via F.Bartolozzi, 117','0575592142', default, 6, default),
+(8,'Antonicelli','Aronne','1931-07-27','NTNRNN31L27F774W','Via Friuli, 249','091962136', default, 7, default),
+(9,'Danesi','Lidia','1966-01-10','DNSLDI66A50H359W','Via G.Tre, 30','071612542', default, 8, default),
+(10,'Lesmo','Gisella','1960-07-13','LSMGLL60L53A000Q','Via P.Bordone, 132','0831355425', default, 9, default),
+(11,'Rutigliano','Gaetano','1963-02-07','RTGGTN63B07B169I','Largo E.Monte, 188','0783388352', default, 10, default),
+
+--DIPENDENTI
+(12,'Galiano','Onofrio','2010-06-17','GLNNFR10H17F916K','Via R.Riserva, 143/i','089344216', default, default, default),
+(13,'Colombo','Ennio','1939-09-23','CLMNNE39P23A300D','Via Livorno, 128','0432859485', default, default, default),
+(14,'Armellini','Maddalena','1993-07-27','RMLMDL93L67F299P','Via A.Mapelli, 155','0862641073', default, default, default),
+(15,'Fusi','Pierluigi','2020-09-15','FSUPLG20P15H637G','Via Porta Romana, 113','035996708', default, default, default),
+(16,'Vasini','Patroclo','1952-03-08','VSNPRC52C08E376P','Via F.Ramondetti, 46','0744482716', default, default, default),
+(17,'Calandrello','Giordano','2019-12-26','CLNGDN19T26G125T','Via Privata Aldo Moro, 195','0736782614', default, default, default),
+(18,'Cassanelli','Porziano','2012-06-21','CSSPZN12H21I327L','Via Assiano, 164','0161179844', default, default, default),
+(19,'Montalti','Natalina','2015-05-26','MNTNLN15E66G924S','Via F.Cruti, 232','02837045', default, default, default),
+(20,'Candotti','Monica','1955-07-16','CNDMNC55L56D312N','Via Melette, 175','0984455116', default, default, default);
+
+
+DELETE FROM Titolare;
+INSERT INTO Titolare(idtitolare)
+VALUES
+('PLODNL65M14I151Q'),
+('SPCMDA13S14G943K'),
+('BNRDNL89R48E317N'),
+('BLGRNL50P18I868G'),
+('MNRDLF74B13C349K'),
+('MSSMRZ10P50L838Y'),
+('MZZLLL74A61A312D'),
+('NTNRNN31L27F774W'),
+('DNSLDI66A50H359W'),
+('LSMGLL60L53A000Q'),
+('RTGGTN63B07B169I');
+
+
+/*
+INSERT INTO BigliettoPdf(codice, tipo, prezzo, giorno, bigl_utente, bigl_data)
+INSERT INTO BigliettoCarta(codice, tipo, prezzo, giorno, carta_punto)
+INSERT INTO Biglietteria(park_data, posti_disponibili)
+*/
+
+
+DELETE FROM PuntoVendita;
+INSERT INTO PuntoVendita(id, apertura, chiusura, dir_punto)
+VALUES
+(1, '10:00', '23:00', 'PLODNL65M14I151Q');
+
+
+/*
+INSERT INTO PrenotazioneHotel(n_pren, n_persone, prezzo, check_in, check_out, pren_utente, pren_hotel)
+INSERT INTO Hotel(piva, nome, indirizzo, stelle, hotel_città)
+INSERT INTO Stanza(numero, stanza_hotel, tipo, piano, n_letti)
+*/
+
+
+DELETE FROM Città;
+INSERT INTO Città(nome, distanza_parco)
+VALUES
+('Strompi', 5.7),
+('Menma', 9.6),
+('Capicci', 3.4),
+('Rento', 5.1),
+('Castrignazzo', 15.8),
+('Peri', 6.7);
