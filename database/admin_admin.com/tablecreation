@@ -2,8 +2,8 @@
 
 CREATE TABLE IF NOT EXISTS Zona(
 	numero int not null,
-	nome varchar(10),
-	colore varchar(10) not null,
+	nome varchar(25),
+	colore varchar(25) not null,
 PRIMARY KEY(numero)
 );
 
@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS UtenteRegistrato(
 	nome varchar(30) not null,
 	cognome varchar(30) not null,
 	data_nascita date not null,
-	telefono varchar(10) not null unique,
+	telefono varchar(25) not null unique,
 	user_mail varchar(50) not null,
 	user_password varchar(50) not null,
 PRIMARY KEY(cf)
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS Dipendente(
 	nome varchar(30) not null,
 	cognome varchar(30) not null,
 	data_nascita date not null,
-	telefono varchar(10) not null unique,
+	telefono varchar(25) not null unique,
 	matricola varchar(8) not null unique,
 	indirizzo varchar(255) not null,
 	dip_punto int default null,
@@ -138,7 +138,7 @@ PRIMARY KEY(id)
 
 CREATE TABLE IF NOT EXISTS Manutenzione(
 	piva varchar(16) not null,
-	nome varchar(10) not null,
+	nome varchar(25) not null,
 	residenzafiscale varchar(255) not null,
 	man_città varchar(20) not null,
 PRIMARY KEY(piva)
@@ -147,7 +147,7 @@ PRIMARY KEY(piva)
 
 CREATE TABLE IF NOT EXISTS Alimenti(
 	piva varchar(16) not null,
-	nome varchar(10) not null,
+	nome varchar(25) not null,
 	residenzafiscale varchar(255) not null,
 	alim_città varchar(20) not null,
 PRIMARY KEY(piva)
@@ -156,7 +156,7 @@ PRIMARY KEY(piva)
 
 CREATE TABLE IF NOT EXISTS Articoli(
 	piva varchar(16) not null,
-	nome varchar(10) not null,
+	nome varchar(25) not null,
 	residenzafiscale varchar(255) not null,
 	art_città varchar(20) not null,
 PRIMARY KEY(piva)
@@ -165,7 +165,7 @@ PRIMARY KEY(piva)
 
 CREATE TABLE IF NOT EXISTS Pulizia(
 	piva varchar(16) not null,
-	nome varchar(10) not null,
+	nome varchar(25) not null,
 	residenzafiscale varchar(255) not null,
 	pul_città varchar(20) not null,
 PRIMARY KEY(piva)
@@ -195,7 +195,7 @@ PRIMARY KEY(codice)
 
 CREATE TABLE IF NOT EXISTS Biglietteria(
 	park_data date not null,
-	posti_disponibili int not null,
+	posti_disponibili int not null default 1500,
 	check (posti_disponibili >= 0),
 PRIMARY KEY(park_data)
 );
@@ -214,7 +214,7 @@ PRIMARY KEY(n_pren)
 
 CREATE TABLE IF NOT EXISTS Hotel(
 	piva varchar(16) not null,
-	nome varchar(10) not null,
+	nome varchar(255) not null,
 	indirizzo varchar(255) not null,
 	stelle int not null check ((stelle > 1) AND (stelle < 6)),
 	hotel_città varchar(20) not null,
@@ -242,7 +242,7 @@ PRIMARY KEY(nome)
 
 
 CREATE TABLE IF NOT EXISTS Telefono(
-	numero varchar(10) not null, 
+	numero varchar(25) not null, 
 	tel_hotel varchar(16) default null,
 	tel_man varchar(16) default null,
 	tel_pul varchar(16) default null,

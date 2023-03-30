@@ -57,16 +57,16 @@ VALUES
 DELETE FROM Locale;
 INSERT INTO Locale(id, nome, ora_apertura, ora_chiusura, ora_pulizia, locale_dir, locale_zona, locale_pul)
 VALUES
-(1, 'Carne Fresca', '12:00', '22:00', '22:30', 'SPCMDA13S14G943K', 1, 61869925791),
-(2, 'PokePazzi', '12:00', '20:00', '22:30', 'BNRDNL89R48E317N', 2, 61869925791),
-(3, 'Verduryan', '12:00', '22:00', '22:30', 'BLGRNL50P18I868G', 1, 61869925791),
-(4, 'Pizza e Polli', '12:00', '22:00', '22:30', 'MNRDLF74B13C349K', 1, 61869925791),
-(5, 'KakiMazzi', '12:00', '22:00', '22:30', 'MSSMRZ10P50L838Y', 1, 61869925791),
-(6, 'CrazyBar', '10:00', '21:00', '21:30', 'MZZLLL74A61A312D', 1, 61869925791),
-(7, 'HotCafè', '10:00', '21:00', '21:30', 'NTNRNN31L27F774W', 1, 61869925791),
-(8, 'BarSlot', '10:00', '21:00', '21:30', 'DNSLDI66A50H359W', 1, 61869925791),
-(9, 'RainbowShop', '10:00', '20:00', '20:30', 'LSMGLL60L53A000Q', 1, 61869925791),
-(10, 'FluffyShop', '10:00', '20:00', '20:30', 'RTGGTN63B07B169I', 1, 61869925791);
+(1, 'Carne Fresca', '12:00', '22:00', '22:30', 'SPCMDA13S14G943K', 1, '61869925791'),
+(2, 'PokePazzi', '12:00', '20:00', '22:30', 'BNRDNL89R48E317N', 2, '61869925791'),
+(3, 'Verduryan', '12:00', '22:00', '22:30', 'BLGRNL50P18I868G', 1, '61869925791'),
+(4, 'Pizza e Polli', '12:00', '22:00', '22:30', 'MNRDLF74B13C349K', 1, '61869925791'),
+(5, 'KakiMazzi', '12:00', '22:00', '22:30', 'MSSMRZ10P50L838Y', 1, '61869925791'),
+(6, 'CrazyBar', '10:00', '21:00', '21:30', 'MZZLLL74A61A312D', 1, '61869925791'),
+(7, 'HotCafè', '10:00', '21:00', '21:30', 'NTNRNN31L27F774W', 1, '61869925791'),
+(8, 'BarSlot', '10:00', '21:00', '21:30', 'DNSLDI66A50H359W', 1, '61869925791'),
+(9, 'RainbowShop', '10:00', '20:00', '20:30', 'LSMGLL60L53A000Q', 1, '61869925791'),
+(10, 'FluffyShop', '10:00', '20:00', '20:30', 'RTGGTN63B07B169I', 1, '61869925791');
 
 
 
@@ -98,54 +98,86 @@ VALUES
 DELETE FROM Bagno;
 INSERT INTO Bagno(numero, invalido, bagno_zona, bagno_pul)
 VALUES
-(1, 'True', 1, 61869925791),
-(2, default, 1, 61869925791),
-(3, default, 1, 61869925791),
-(4, default, 1, 61869925791),
-(5, default, 2, 61869925791),
-(6, 'True', 2, 61869925791),
-(7, default, 2, 61869925791),
-(8, default, 2, 61869925791),
-(9, default, 2, 61869925791),
-(10, default, 3, 61869925791),
-(11, default, 3, 61869925791),
-(12, default, 3, 61869925791),
-(13, 'True', 4, 61869925791),
-(14, default, 4, 61869925791),
-(15, default, 4, 61869925791),
-(16, default, 5, 61869925791),
-(17, default, 5, 61869925791),
-(18, default, 6, 61869925791),
-(19, default, 6, 61869925791),
-(20, default, 6, 61869925791);
- /*
+(1, 'True', 1, '61869925791'),
+(2, default, 1, '61869925791'),
+(3, default, 1, '61869925791'),
+(4, default, 1, '61869925791'),
+(5, default, 2, '61869925791'),
+(6, 'True', 2, '61869925791'),
+(7, default, 2, '61869925791'),
+(8, default, 2, '61869925791'),
+(9, default, 2, '61869925791'),
+(10, default, 3, '61869925791'),
+(11, default, 3, '61869925791'),
+(12, default, 3, '61869925791'),
+(13, 'True', 4, '61869925791'),
+(14, default, 4, '61869925791'),
+(15, default, 4, '61869925791'),
+(16, default, 5, '61869925791'),
+(17, default, 5, '61869925791'),
+(18, default, 6, '61869925791'),
+(19, default, 6, '61869925791'),
+(20, default, 6, '61869925791');
+
+
+
 DELETE FROM Revisione;
 INSERT INTO Revisione(id, tagliando, data_tagliando, rev_attr, rev_man)
 VALUES
+(1, 'Stato della revisione: OK', '2022-12-03', 4, '68398582408'),
+(2, 'Stato della revisione: Sostituzione cingoli vagone 4', '2022-12-05', 3, '68398582408'),
+(3, 'Stato della revisione: Sostituzione filtri aria', '2023-02-07', 1, '68398582408');
+
 
 DELETE FROM Manutenzione;
 INSERT INTO Manutenzione(piva, nome, residenzafiscale, man_città)
 VALUES
+('68398582408', 'MekRepair', 'Via Piacenza, 91, Lozza, ST', 'Strompi'),
+('05020407804', 'Secureself', 'Via D.Gorgia 121, Smandria, ME', 'Menma'); 
+
 
 DELETE FROM Alimenti;
 INSERT INTO Alimenti(piva, nome, residenzafiscale, alim_città)
 VALUES
+(77141121789, 'Foodure', 'Via Pizzoscalzone, 84, Rizza, CP', 'Capicci');
+
 
 DELETE FROM Articoli;
 INSERT INTO Articoli(piva, nome, residenzafiscale, art_città)
 VALUES
-*/
+(61864498167, 'TransToys','Via Folate, 23, Castrignazzo sul Vate, CP', 'Capicci');
+
 
 DELETE FROM Pulizia;
 INSERT INTO Pulizia(piva, nome, residenzafiscale, pul_città)
 VALUES
-(61869925791, 'Clean&Co', 'Via Pulinbello 32, Arrigone Di Saccarazzio, ST', 'Strompi');
+(61869925791, 'Clean&Co', 'Via Pulinbello, 32, Arrigone Di Saccarazzio, ST', 'Strompi');
 
 DELETE FROM UtenteRegistrato;
-INSERT INTO UtenteRegistrato(cf, nome, cognome, data_nascita, telefono, user_mail, user_password)
+INSERT INTO UtenteRegistrato(cognome, nome, data_nascita, cf, telefono, user_mail, user_password)
 VALUES
-('LLVMTT00C28H501N', 'Matteo', 'Alleva',	'2000-03-30', 3387482422, 'mattallev@gmail.com', 'example'),
-('LLVMRK00C30H501N', 'Mirko', 'Alleva',	'2000-03-30', 3456544877, 'mirkallev@gmail.com', 'example');
+('Alleva', 'Matteo', '2000-03-30', 'LLVMTT00C28H501N', '3387482422' , 'mattallev@gmail.com', 'example'),
+('Alleva', 'Mirko',	'2000-03-30', 'LLVMRK00C30H501N', '3456544877', 'mirkallev@gmail.com', 'example'),
+('Borello','Albina','1987-05-16','BRLLBN87E56A955J','0736601437','a.borello@gmail.com','AZ23woisY75O'),
+('Fumo','Leopoldo','1998-04-12','FMULLD98D12H889A','02813436','leopoldo.fumo@tele2.it','YZ53gtlpQ19Y'),
+('Massafra','Michelangelo','1968-03-04','MSSMHL68C04I400N','031929764','michelangelo.massafra@lycos.it','JB37gefsW06Q'),
+('Alfonsi','Pierangelo','1962-03-18','LFNPNG62C18F943T','0711049832','pier.alfo@lycos.it','CN36nqcnJ18X'),
+('Ruvolo','Isacco','1969-01-31','RVLSCC69A31C993V','099190599','isacco.ruvolo@tin.it','DG91oiwdJ54E'),
+('Sambiagio','Oderico','1984-10-16','SMBDRC84R16I225I','035918946','oderico.sambiagio@gmail.com','IE38kdyyC68X'),
+('Fosco','Evaristo','1983-04-01','FSCVST83D01L237X','0832/563424','evaristo.fosco@gmail.com','WO25tpbuK69Q'),
+('Giorgetti','Bonifacio','1998-11-21','GRGBFC98S21G698Z','091594444','bonifacio.giorgetti@aruba.it','KR41qlayA52A'),
+('Pederzini','Baldassarre','1986-10-03','PDRBDS86R03D678U','0444403010','baldassarre.pederzini@libero.it','UW64drswA52S'),
+('Caramiello','Patroclo','1985-12-06','CRMPRC85T06I154K','078216714','p.caramiello@yahoo.it','DA28ijvqT34M'),
+('Cerrino','Gianfranco','1960-08-05','CRRGFR60M05A028E','0161767807','gianfranco.cerrino@katamail.it','GU93asyoP82A'),
+('Cappella','Ausilia','1988-12-07','CPPSLA88T47I649Z','011890625','ausilia.cappella@gmail.com','HZ18nqgiR21R'),
+('Altavilla','Benvenuto','1991-08-09','LTVBVN91M09D943X','0961370666','benvenuto.altavilla@aruba.it','HC33cpkvX72Y'),
+('Borzelli','Fiorenza','1960-01-04','BRZFNZ60A44H404O','031394415','fiorenza.borzelli@yahoo.com','PX43pfxhG67O'),
+('Cadau','Nina','1986-05-11','CDANNI86E51B858D','0736750790','nina.cadau@yahoo.it','FV00jbvtL52V'),
+('Castellari','Diogene','1954-06-26','CSTDGN54H26L488K','07830171','diogene.castellari@tin.it','BE08jdvpV18Q'),
+('Rovaris','Lorena','1968-09-29','RVRLRN68P69M019B','0935151453','lorena.rovaris@tin.it','NJ56zxgtN62I'),
+('Patirani','Greta','1940-02-09','PTRGRT40B49B278Z','0332685252','gpatirani@yahoo.it','LE97lykkT19H'),
+('Curci','Sofia','1936-09-04','CRCSFO36P44H375F','0173629058','s.curci@tiscali.it','XE92zereH07D'),
+('Montecolle','Alina','2003-12-11','MNTLNA03T51M180R','0736104786','alin.mont@hotmail.com','IA98xachL91A');
 
 
 DELETE FROM Dipendente;
@@ -192,11 +224,45 @@ VALUES
 ('RTGGTN63B07B169I');
 
 
-/*
+DELETE FROM BigliettoPdf;
 INSERT INTO BigliettoPdf(codice, tipo, prezzo, giorno, bigl_utente, bigl_data)
+VALUES
+(1, 'intero', 22.50, '2023-04-03', 'LLVMTT00C28H501N', '2023-03-30'),
+(2, 'intero', 22.50, '2023-04-03', 'LLVMTT00C28H501N', '2023-03-30'),
+(3, 'intero', 22.50, '2023-04-03', 'LLVMTT00C28H501N', '2023-03-30'),
+(4, 'intero', 22.50, '2023-04-03', 'LLVMTT00C28H501N', '2023-03-30'),
+(5, 'ridotto', 10, '2023-04-03', 'LLVMTT00C28H501N', '2023-03-30');
+
+DELETE FROM BigliettoCarta;
 INSERT INTO BigliettoCarta(codice, tipo, prezzo, giorno, carta_punto)
+VALUES
+(1, 'intero', 30, '2023-03-30', 1),
+(2, 'intero', 30, '2023-03-30', 1),
+(3, 'intero', 30, '2023-03-30', 1),
+(4, 'intero', 30, '2023-03-30', 1),
+(5, 'intero', 30, '2023-03-30', 1),
+(6, 'intero', 30, '2023-03-30', 1),
+(7, 'intero', 30, '2023-03-30', 1),
+(8, 'intero', 30, '2023-03-30', 1),
+(9, 'ridotto', 15, '2023-03-30', 1),
+(10, 'ridotto', 15, '2023-03-30', 1),
+(11, 'ridotto', 15, '2023-03-30', 1),
+(12, 'ridotto', 15, '2023-03-30', 1);
+
+
+
+DELETE FROM Biglietteria;
 INSERT INTO Biglietteria(park_data, posti_disponibili)
-*/
+VALUES
+('2023-03-28', default),
+('2023-03-29', default),
+('2023-03-30', default),
+('2023-03-31', default),
+('2023-04-01', default),
+('2023-04-02', default),
+('2023-04-03', default),
+('2023-04-04', default);
+
 
 
 DELETE FROM PuntoVendita;
@@ -205,11 +271,165 @@ VALUES
 (1, '10:00', '23:00', 'PLODNL65M14I151Q');
 
 
-/*
+
+DELETE FROM PrenotazioneHotel;
 INSERT INTO PrenotazioneHotel(n_pren, n_persone, prezzo, check_in, check_out, pren_utente, pren_hotel)
-INSERT INTO Hotel(piva, nome, indirizzo, stelle, hotel_città)
+VALUES
+(1, 3, 450, '2023-04-04', '2023-04-06', 'BRLLBN87E56A955J', '14124273363'),
+(2, 3, 320, '2023-04-05', '2023-04-06', 'FMULLD98D12H889A', '51142981616'),
+(3, 3, 590, '2023-04-03', '2023-04-06', 'FSCVST83D01L237X', '51142981616'),
+(4, 2, 670, '2023-04-04', '2023-04-06', 'LTVBVN91M09D943X', '41965973567'),
+(5, 1, 100, '2023-04-04', '2023-04-06', 'MNTLNA03T51M180R', '20072963567');
+
+
+
+DELETE FROM Hotel;
+INSERT INTO Hotel(piva, nome, stelle, indirizzo, hotel_città)
+VALUES
+('14124273363', 'Hotel Stelle Vacanzi', 3, 'Via S.Nicolao, 231, Lozza, ST', 'Strompi'),
+('07248761018', 'Hotel Miralbergolandia', 4, 'Via A.Colautti, 105, Membrone, ST', 'Strompi'),
+('51142981616', 'Hotel L`Albergo', 3, 'Via P.Uccello, 93, Capazzo, ME', 'Menma'),
+('41965973567', 'Resort LunAPPark', 5, 'Via Bordighera, 66, Sornio, ME', 'Menma'),
+('94792874730', 'Relais LaFinestra', 4, 'Via F.Crispi, 123, Sirzi, CP', 'Capicci'),
+('20072963567', 'Hotel Cascomare', 3, 'Via Belisario, 267, Perdura, CP', 'Capicci');
+
+
+DELETE FROM Stanza;
 INSERT INTO Stanza(numero, stanza_hotel, tipo, piano, n_letti)
-*/
+VALUES
+(100, '14124273363', 'economy', 1, 3),
+(101, '14124273363', 'economy', 1, 4),
+(102, '14124273363', 'business', 1, 2),
+(103, '14124273363', 'economy', 1, 3),
+(104, '14124273363', 'economy', 1, 3),
+(105, '14124273363', 'economy', 1, 3),
+(106, '14124273363', 'economy', 1, 2),
+(107, '14124273363', 'business', 1, 3),
+(108, '14124273363', 'economy', 1, 3),
+(109, '14124273363', 'business', 1, 1),
+(110, '14124273363', 'economy', 1, 3),
+(111, '14124273363', 'economy', 1, 3),
+(112, '14124273363', 'business', 1, 5),
+(113, '14124273363', 'economy', 1, 3),
+(114, '14124273363', 'economy', 1, 3),
+(115, '14124273363', 'economy', 1, 2),
+(116, '14124273363', 'economy', 1, 3),
+(117, '14124273363', 'economy', 1, 3),
+(118, '14124273363', 'economy', 1, 3),
+(119, '14124273363', 'business', 1, 4),
+(120, '14124273363', 'economy', 1, 3),
+
+(100, '07248761018', 'economy', 1, 3),
+(101, '07248761018', 'economy', 1, 4),
+(102, '07248761018', 'economy', 1, 2),
+(103, '07248761018', 'economy', 1, 3),
+(104, '07248761018', 'business', 1, 3),
+(105, '07248761018', 'economy', 1, 3),
+(106, '07248761018', 'business', 1, 2),
+(107, '07248761018', 'economy', 1, 3),
+(108, '07248761018', 'economy', 1, 3),
+(109, '07248761018', 'economy', 1, 1),
+(110, '07248761018', 'business', 1, 3),
+(111, '07248761018', 'economy', 1, 3),
+(112, '07248761018', 'economy', 1, 5),
+(113, '07248761018', 'economy', 1, 3),
+(114, '07248761018', 'economy', 1, 3),
+(115, '07248761018', 'economy', 1, 2),
+(116, '07248761018', 'business', 1, 3),
+(117, '07248761018', 'economy', 1, 3),
+(118, '07248761018', 'economy', 1, 3),
+(119, '07248761018', 'economy', 1, 4),
+(120, '07248761018', 'business', 1, 3),
+
+(100, '51142981616', 'economy', 1, 3),
+(101, '51142981616', 'economy', 1, 4),
+(102, '51142981616', 'economy', 1, 2),
+(103, '51142981616', 'economy', 1, 3),
+(104, '51142981616', 'business', 1, 3),
+(105, '51142981616', 'economy', 1, 3),
+(106, '51142981616', 'business', 1, 2),
+(107, '51142981616', 'economy', 1, 3),
+(108, '51142981616', 'economy', 1, 3),
+(109, '51142981616', 'economy', 1, 1),
+(110, '51142981616', 'business', 1, 3),
+(111, '51142981616', 'economy', 1, 3),
+(112, '51142981616', 'economy', 1, 5),
+(113, '51142981616', 'economy', 1, 3),
+(114, '51142981616', 'economy', 1, 3),
+(115, '51142981616', 'economy', 1, 2),
+(116, '51142981616', 'business', 1, 3),
+(117, '51142981616', 'economy', 1, 3),
+(118, '51142981616', 'economy', 1, 3),
+(119, '51142981616', 'economy', 1, 4),
+(120, '51142981616', 'business', 1, 3),
+
+(100, '41965973567', 'economy', 1, 3),
+(101, '41965973567', 'economy', 1, 4),
+(102, '41965973567', 'economy', 1, 2),
+(103, '41965973567', 'economy', 1, 3),
+(104, '41965973567', 'business', 1, 3),
+(105, '41965973567', 'economy', 1, 3),
+(106, '41965973567', 'business', 1, 2),
+(107, '41965973567', 'economy', 1, 3),
+(108, '41965973567', 'economy', 1, 3),
+(109, '41965973567', 'economy', 1, 1),
+(110, '41965973567', 'business', 1, 3),
+(111, '41965973567', 'economy', 1, 3),
+(112, '41965973567', 'economy', 1, 5),
+(113, '41965973567', 'economy', 1, 3),
+(114, '41965973567', 'economy', 1, 3),
+(115, '41965973567', 'economy', 1, 2),
+(116, '41965973567', 'business', 1, 3),
+(117, '41965973567', 'economy', 1, 3),
+(118, '41965973567', 'economy', 1, 3),
+(119, '41965973567', 'economy', 1, 4),
+(120, '41965973567', 'business', 1, 3),
+
+(100, '94792874730', 'economy', 1, 3),
+(101, '94792874730', 'economy', 1, 4),
+(102, '94792874730', 'economy', 1, 2),
+(103, '94792874730', 'economy', 1, 3),
+(104, '94792874730', 'business', 1, 3),
+(105, '94792874730', 'economy', 1, 3),
+(106, '94792874730', 'business', 1, 2),
+(107, '94792874730', 'economy', 1, 3),
+(108, '94792874730', 'economy', 1, 3),
+(109, '94792874730', 'economy', 1, 1),
+(110, '94792874730', 'business', 1, 3),
+(111, '94792874730', 'economy', 1, 3),
+(112, '94792874730', 'economy', 1, 5),
+(113, '94792874730', 'economy', 1, 3),
+(114, '94792874730', 'economy', 1, 3),
+(115, '94792874730', 'economy', 1, 2),
+(116, '94792874730', 'business', 1, 3),
+(117, '94792874730', 'economy', 1, 3),
+(118, '94792874730', 'economy', 1, 3),
+(119, '94792874730', 'economy', 1, 4),
+(120, '94792874730', 'business', 1, 3),
+
+(100, '20072963567', 'economy', 1, 3),
+(101, '20072963567', 'economy', 1, 4),
+(102, '20072963567', 'economy', 1, 2),
+(103, '20072963567', 'economy', 1, 3),
+(104, '20072963567', 'business', 1, 3),
+(105, '20072963567', 'economy', 1, 3),
+(106, '20072963567', 'business', 1, 2),
+(107, '20072963567', 'economy', 1, 3),
+(108, '20072963567', 'economy', 1, 3),
+(109, '20072963567', 'economy', 1, 1),
+(110, '20072963567', 'business', 1, 3),
+(111, '20072963567', 'economy', 1, 3),
+(112, '20072963567', 'economy', 1, 5),
+(113, '20072963567', 'economy', 1, 3),
+(114, '20072963567', 'economy', 1, 3),
+(115, '20072963567', 'economy', 1, 2),
+(116, '20072963567', 'business', 1, 3),
+(117, '20072963567', 'economy', 1, 3),
+(118, '20072963567', 'economy', 1, 3),
+(119, '20072963567', 'economy', 1, 4),
+(120, '20072963567', 'business', 1, 3);
+
+
 
 
 DELETE FROM Città;
@@ -217,7 +437,65 @@ INSERT INTO Città(nome, distanza_parco)
 VALUES
 ('Strompi', 5.7),
 ('Menma', 9.6),
-('Capicci', 3.4),
-('Rento', 5.1),
-('Castrignazzo', 15.8),
-('Peri', 6.7);
+('Capicci', 3.4);
+
+
+DELETE FROM Telefono;
+INSERT INTO Telefono(numero, tel_hotel, tel_man, tel_pul, tel_alim, tel_art)
+VALUES
+('030414514', '41965973567', default, default, default, default),
+('0861854335', '41965973567', default, default, default, default),
+('011154250', '14124273363', default, default, default, default),
+('0871139886', '07248761018', default, default, default, default),
+('011786086', '51142981616', default, default, default, default),
+('0984469655', '94792874730', default, default, default, default),
+('0543685486', '20072963567', default, default, default, default),
+('0701094460', '20072963567', default, default, default, default),
+('0865735643', default, '68398582408', default, default, default),
+('0372958596', default, '68398582408', default, default, default),
+('035767655', default, '05020407804', default, default, default),
+('0824359244', default, '05020407804', default, default, default),
+('079914275', default, default, default, '77141121789', default),
+('0544511138', default, default, default, '77141121789', default),
+('0573532315', default, default, '61869925791', default, default),
+('089589777', default, default, default, default, '61864498167');
+
+
+DELETE FROM Afferisce;
+INSERT INTO Afferisce(punto_vendita, biglietteria)
+VALUES
+(1, '2023-03-31'),
+(1, '2023-04-01'),
+(1, '2023-04-03'),
+(1, '2023-04-04');
+
+
+
+DELETE FROM FoodRist;
+INSERT INTO FoodRist(ristorante, alimenti)
+VALUES
+(1, '77141121789'),
+(2, '77141121789'),
+(3, '77141121789'),
+(4, '77141121789'),
+(5, '77141121789');
+
+DELETE FROM FoodBar;
+INSERT INTO FoodBar(bar, alimenti)
+VALUES
+(6, '77141121789'),
+(7, '77141121789'),
+(8, '77141121789');
+
+DELETE FROM RestockBar;
+INSERT INTO RestockBar(bar, articoli)
+VALUES
+(6, '61864498167'),
+(7, '61864498167'),
+(8, '61864498167');
+
+DELETE FROM RestockShop;
+INSERT INTO RestockShop(shop, articoli)
+VALUES
+(9, '61864498167'),
+(10, '61864498167');
