@@ -10,10 +10,47 @@ SELECT id, nome, n_posti, tipologia
 FROM Attrazione JOIN Giostra ON (id = idgiostra)
 WHERE ((tipologia, n_posti) = ANY(SELECT tipologia, MAX(n_posti)
 								 FROM Giostra
-								 GROUP BY tipologia))
+								 GROUP BY tipologia));
 
 --||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 SELECT id, nome, descrizione
 FROM Attrazione JOIN Spettacolo ON (id = idspett)
-WHERE ((ora_inizio >= '18:00') AND (ora_fine <= '23:00'))
+WHERE ((ora_inizio >= '18:00') AND (ora_fine <= '23:00'));
+
+--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+SELECT piva, nome
+FROM Alimenti, FoodRist as fr, FoodBar as fb
+WHERE ((piva = fr.alimenti) AND (piva = fb.alimenti));
+
+--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+SELECT piva, nome
+FROM Articoli, RestockShop as rs, RestockBar as rb
+WHERE ((piva = rs.articoli) AND (piva = rb.articoli));
+
+--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+SELECT Attrazione.id, nome
+FROM Attrazione JOIN Revisione ON (Attrazione.id = rev_attr)
+WHERE ( data_tagliando = (SELECT MAX( data_tagliando)
+						 FROM Attrazione JOIN Revisione ON (Attrazione.id = rev_attr)));
+
+--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| DA VEDERE 
+
+SELECT *
+FROM Attrazione JOIN Revisione ON (Attrazione.id = rev_attr)
+WHERE ((MONTH(data_tagliando) = MONTH(CURRENT_DATE)) AND (YEAR(data_tagliando) = YEAR(CURRENT_DATE)));
+
+--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+SELECT piva, nome, SUM(prezzo) AS guadagno
+FROM Hotel JOIN PrenotazioneHotel ON (piva = pren_hotel)
+WHERE (YEAR(check_in) = YEAR(CURRENT_DATE))
+GROUP BY (piva)
+HAVING SUM(prezzo) >= ALL (SELECT SUM(prezzo)
+						   FROM Hotel JOIN PrenotazioneHotel ON (piva = pren_hotel)
+						   WHERE (YEAR(check_in) = YEAR(CURRENT_DATE))
+						   GROUP BY (piva));
+
