@@ -30,10 +30,10 @@ include("../layouts/navbar.php")
           
           <?php
             session_start();
-            $dbconn = pg_connect("host=postgresql port=5432
-            dbname=lunappark user=extreemedev password=example");
+            $dbconn = pg_connect("host=database port=5432
+            dbname=lunappark user=admin password=example");
             $email = $_SESSION["id"];
-            $querydate = 'SELECT data,tipo,prezzo,codice FROM public."BIGLIETTO" where email=$1'; 
+            $querydate = 'SELECT giorno,tipo,prezzo,codice FROM BigliettoPdf JOIN UtenteRegistrato ON (cf = bigl_utente) WHERE user_mail=$1'; 
             $resultdate = pg_query_params($dbconn, $querydate, array($email));
             if(!($tuple=pg_fetch_array($resultdate,null,PGSQL_ASSOC))) {
               ?>
@@ -148,8 +148,12 @@ include("../layouts/navbar.php")
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+    
+    <div class="text-center mb-5">       
+    <a class="btn-grad" style="display: initial;" href="./queue.php">Prenota un turno sulla Giostra</a>
+    </div>
 
-    <div class="text-center">       
+    <div class="text-center mt-5">       
     <a class="btn-grad" style="display: initial;" href="./out.php">Logout</a>
     </div>
 </div>
