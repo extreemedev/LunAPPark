@@ -217,7 +217,7 @@ CREATE TABLE IF NOT EXISTS Hotel(
 	nome varchar(255) not null,
 	indirizzo varchar(255) not null,
 	stelle int not null check ((stelle > 1) AND (stelle < 6)),
-	hotel_città varchar(20) not null,
+	hotel_città varchar(255) not null,
 PRIMARY KEY(piva)
 );
 

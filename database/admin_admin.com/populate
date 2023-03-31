@@ -28,11 +28,11 @@ VALUES
 DELETE FROM Giostra;
 INSERT INTO Giostra(idgiostra, n_posti, tipologia, altezzamin, lunghezza)
 VALUES
-(1, 14, 'aria',  1.50, default),
-(2, 12, 'terra', 1.50, default),
+(1, 14, 'aria',  1.20, default),
+(2, 12, 'terra', 1.10, default),
 (3, 20, 'acqua', 1.50, default),
 (4, 30, 'terra', 1.50, default),
-(5, 20, 'terra', 1.50, default),
+(5, 20, 'terra', 1.25, default),
 (6, 20, 'terra', 1.50, default),
 (7, 10, 'terra', 1.50, default);
 
@@ -92,7 +92,7 @@ VALUES
 (2, 'pesce', 30, 20),
 (3, 'vegan', 30, 20),
 (4, 'misto', 30, 20),
-(5, 'misto', 30, 20);
+(5, 'misto', 50, 10);
 
 
 DELETE FROM Bagno;

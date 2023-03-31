@@ -1,6 +1,6 @@
-SELECT idgiostra, nome
+SELECT idgiostra, nome, altezzamin
 FROM giostra JOIN attrazione ON (idgiostra=id)
-WHERE (altezzamin > 1.30);
+WHERE ((altezzamin < 1.30) OR (altezzamin = NULL));
 
 
 --||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -70,3 +70,53 @@ WHERE (EXISTS (SELECT m1.piva
 																						  FROM Revisione AS r2, Manutenzione AS m2
 																						  WHERE((a1.id = r2.rev_attr) AND (r2.rev_man = m2.piva)))))));
 								  
+--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+DROP VIEW IF EXISTS Postirist;
+CREATE VIEW Postirist (ristorante, tipo, postitot) AS
+SELECT idristorante, tipologia, posti_interni + posti_esterni
+FROM Ristorante;
+
+SELECT nome, tipo, postitot
+FROM Locale JOIN Postirist ON (id = ristorante)
+WHERE ((tipo, postitot) = ANY (SELECT tipo, MAX(postitot)
+							  FROM Postirist
+							  GROUP BY tipo));
+							  
+--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+DROP VIEW IF EXISTS Gettonate;
+CREATE VIEW Gettonate (nomec, popolarità) AS
+SELECT Città.nome, COUNT(*)
+FROM PrenotazioneHotel JOIN Hotel ON (pren_hotel = piva) JOIN Città ON (hotel_città = Città.nome)
+GROUP BY Città.nome;
+
+SELECT *
+FROM Città AS ci
+WHERE (ci.nome = ANY (SELECT nomec
+					 FROM Gettonate
+					 WHERE (popolarità = (SELECT MAX(popolarità) AS maxpop
+										 FROM Gettonate))));
+										 
+--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+DROP VIEW IF EXISTS Postiturnoocc;
+CREATE VIEW Postiturnoocc (idgio, postiocc) AS
+SELECT Attrazione.id, COUNT(*)
+FROM Attrazione JOIN Giostra ON (id = idgiostra) JOIN PrenotazioneGiostra ON (idgiostra = pren_idgiostra)
+WHERE (ora_turno = '10:30')
+GROUP BY Attrazione.id;
+
+SELECT Attrazione.nome, n_posti AS post_disponibili
+FROM Attrazione JOIN Giostra ON (id = idgiostra)
+WHERE (idgiostra = ANY (SELECT idgiostra
+						FROM Giostra
+						EXCEPT
+						SELECT idgio
+						FROM Postiturnoocc))
+UNION
+SELECT Attrazione.nome, n_posti - postiocc
+FROM Attrazione JOIN Giostra ON (id = idgiostra) JOIN Postiturnoocc ON (idgiostra = idgio)
+ORDER BY (post_disponibili);
+
+
