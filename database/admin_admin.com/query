@@ -37,13 +37,13 @@ FROM Attrazione JOIN Revisione ON (Attrazione.id = rev_attr)
 WHERE ( data_tagliando = (SELECT MAX( data_tagliando)
 						 FROM Attrazione JOIN Revisione ON (Attrazione.id = rev_attr)));
 
---|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| DA VEDERE 
+--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| 
 
 SELECT Attrazione.id, nome, tagliando, data_tagliando
 FROM Attrazione JOIN Revisione ON (Attrazione.id = rev_attr)
 WHERE ((date_part('month', data_tagliando) = date_part('month', CURRENT_DATE)) AND (date_part('year', data_tagliando) = date_part('year', CURRENT_DATE)));
 
---|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| date_part(‘year’, nome_colonna_date)
+--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| 
 
 SELECT piva, nome, SUM(prezzo) AS guadagno
 FROM Hotel JOIN PrenotazioneHotel ON (piva = pren_hotel)
