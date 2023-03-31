@@ -20,37 +20,53 @@ WHERE ((ora_inizio >= '18:00') AND (ora_fine <= '23:00'));
 
 --||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-SELECT piva, nome
-FROM Alimenti, FoodRist as fr, FoodBar as fb
+SELECT DISTINCT piva, nome
+FROM Alimenti, FoodRist AS fr, FoodBar AS fb
 WHERE ((piva = fr.alimenti) AND (piva = fb.alimenti));
 
 --||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-SELECT piva, nome
-FROM Articoli, RestockShop as rs, RestockBar as rb
+SELECT DISTINCT piva, nome
+FROM Articoli, RestockShop AS rs, RestockBar AS rb
 WHERE ((piva = rs.articoli) AND (piva = rb.articoli));
 
 --||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-SELECT Attrazione.id, nome
+SELECT Attrazione.id, nome, tagliando
 FROM Attrazione JOIN Revisione ON (Attrazione.id = rev_attr)
 WHERE ( data_tagliando = (SELECT MAX( data_tagliando)
 						 FROM Attrazione JOIN Revisione ON (Attrazione.id = rev_attr)));
 
 --|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| DA VEDERE 
 
-SELECT *
+SELECT Attrazione.id, nome, tagliando, data_tagliando
 FROM Attrazione JOIN Revisione ON (Attrazione.id = rev_attr)
-WHERE ((MONTH(data_tagliando) = MONTH(CURRENT_DATE)) AND (YEAR(data_tagliando) = YEAR(CURRENT_DATE)));
+WHERE ((date_part('month', data_tagliando) = date_part('month', CURRENT_DATE)) AND (date_part('year', data_tagliando) = date_part('year', CURRENT_DATE)));
 
---||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| date_part(‘year’, nome_colonna_date)
 
 SELECT piva, nome, SUM(prezzo) AS guadagno
 FROM Hotel JOIN PrenotazioneHotel ON (piva = pren_hotel)
-WHERE (YEAR(check_in) = YEAR(CURRENT_DATE))
+WHERE (date_part('year', check_in) = date_part('year', CURRENT_DATE))
 GROUP BY (piva)
 HAVING SUM(prezzo) >= ALL (SELECT SUM(prezzo)
 						   FROM Hotel JOIN PrenotazioneHotel ON (piva = pren_hotel)
-						   WHERE (YEAR(check_in) = YEAR(CURRENT_DATE))
+						   WHERE (date_part('year', check_in) = date_part('year', CURRENT_DATE))
 						   GROUP BY (piva));
+						   
+--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+SELECT date_part('year', CURRENT_DATE) AS anno, SUM(bc.prezzo) AS guadagno_carta, SUM(bpdf.prezzo) AS guadagno_pdf, SUM(bc.prezzo) + SUM(bpdf.prezzo) AS guadagno_totale
+FROM BigliettoCarta AS bc RIGHT JOIN Afferisce AS af ON (bc.giorno = af.biglietteria) JOIN Biglietteria AS big ON (biglietteria = big.park_data) LEFT JOIN BigliettoPdf AS bpdf ON (big.park_data = bigl_data)
+WHERE ((date_part('year', bc.giorno) = date_part('year', CURRENT_DATE)) OR (date_part('year', bpdf.giorno) = date_part('year', CURRENT_DATE)));
+
+--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+SELECT a1.id, a1.nome
+FROM Attrazione AS a1
+WHERE (EXISTS (SELECT m1.piva
+			  FROM Revisione AS r1, Manutenzione AS m1
+			  WHERE (((a1.id = r1.rev_attr) AND (r1.rev_man = m1.piva)) AND (m1.piva = ALL(SELECT m2.piva
+																						  FROM Revisione AS r2, Manutenzione AS m2
+																						  WHERE((a1.id = r2.rev_attr) AND (r2.rev_man = m2.piva)))))));
+								  
