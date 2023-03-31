@@ -31,7 +31,7 @@ $tot=htmlspecialchars($_COOKIE['tot']);
         $querycf = pg_query_params($dbconn, 'SELECT cf FROM UtenteRegistrato WHERE user_mail=$1', array($email));
         $cf = pg_fetch_array($querycf,null,PGSQL_NUM);
         $query = 'INSERT INTO BigliettoPdf(tipo, prezzo, giorno, bigl_utente, bigl_data) VALUES ($1,$2,$3,$4,$5)';
-        $result = pg_query_params($dbconn, $query, array($tipo, $pInt, $dat, $cf[0], $dat)); 
+        $result = pg_query_params($dbconn, $query, array($tipo, $pRid, $dat, $cf[0], $dat)); 
     }
     if($result) {
         session_start();
