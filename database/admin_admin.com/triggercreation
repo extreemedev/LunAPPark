@@ -1,12 +1,12 @@
 CREATE OR REPLACE FUNCTION checkhour()
     RETURNS trigger
-    LANGUAGE 'plpgsql'
-AS $BODY$
-BEGIN
-	IF (Attrazione.ora_fine <= Attrazione.ora_inizio) THEN
-		SET MESSAGE_TEXT = 'Errore: L`ora di termine deve essere maggiore dell`ora di inizio.';
-	END IF;
-END;
+	LANGUAGE 'plpgsql'
+AS $BODY$	
+	BEGIN
+		IF (Attrazione.ora_fine <= Attrazione.ora_inizio) THEN
+			RAISE EXCEPTION 'Errore: L`ora di termine deve essere maggiore dell`ora di inizio.';
+		END IF;
+	END;
 $BODY$;
 CREATE OR REPLACE TRIGGER checkhour
 BEFORE INSERT ON Attrazione
@@ -21,7 +21,7 @@ CREATE OR REPLACE FUNCTION checkpren()
 AS $BODY$
 BEGIN
 	IF (PrenotazioneGiostra.pren_data = CURRENT_DATE) THEN
-		SET MESSAGE_TEXT = 'Errore: La data non corrisponde';
+		RAISE EXCEPTION 'Errore: La data non corrisponde';
 	END IF;
 END;
 $BODY$;

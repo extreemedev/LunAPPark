@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Seleziona un turno</title>
+	<style>
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Seleziona un turno:</h1>
+	<form>
+		<label>
+			<input type="radio" name="turno" value="00" required>
+			00 minuti
+		</label>
+		<label>
+			<input type="radio" name="turno" value="10">
+			10 minuti
+		</label>
+		<label>
+			<input type="radio" name="turno" value="20">
+			20 minuti
+		</label>
+		<label>
+			<input type="radio" name="turno" value="30">
+			30 minuti
+		</label>
+		<label>
+			<input type="radio" name="turno" value="40">
+			40 minuti
+		</label>
+		<label>
+			<input type="radio" name="turno" value="50">
+			50 minuti
+		</label>
+		<input type="submit" value="Seleziona">
+	</form>
+	<script>
+		// Otteniamo l'ora attuale
+		const now = new Date();
+		const minutes = now.getMinutes();
+		
+		// Disabilitiamo i turni passati di 10 minuti
+		const radios = document.querySelectorAll('input[name="turno"]');
+		for (let i = 0; i < radios.length; i++) {
+			const value = radios[i].value;
+			if (value < minutes || value >= 60) {
+				radios[i].disabled = true;
+			}
+		}
+	</script>
+</body>
+</html>

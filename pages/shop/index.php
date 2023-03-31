@@ -78,8 +78,8 @@ include("../layouts/navbar.php")
     else {
         ?>
         <div class="title pt-custom pb-4 mb-4">Per acquistare il biglietto devi prima effettuare l'accesso
-        <div class="subtitle text-center mt-4 mb-custom"><a href="../login/index.php">Clicca qui per accedere!</a></div>
-        <picture ><img style="width: 10%; height: 10%;" src="../../src/assets/img/stop.png" alt=""></picture>
+        <div class="text-center mt-4 mb-custom"><a href="../login/index.php">Clicca qui per accedere!</a></div>
+        <!--picture ><img style="width: 10%; height: 10%;" src="../../src/assets/img/stop.png" alt=""></picture-->
         </div>
         <?php
     }

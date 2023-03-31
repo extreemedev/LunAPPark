@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS Zona(
 PRIMARY KEY(numero)
 );
 
+
 CREATE TABLE IF NOT EXISTS UtenteRegistrato(
 	cf varchar(16) not null,
 	nome varchar(30) not null,
@@ -18,6 +19,7 @@ CREATE TABLE IF NOT EXISTS UtenteRegistrato(
 PRIMARY KEY(cf)
 );
 
+
 CREATE TABLE IF NOT EXISTS PuntoVendita(
 	id serial,
 	apertura time not null,
@@ -25,6 +27,7 @@ CREATE TABLE IF NOT EXISTS PuntoVendita(
 	dir_punto varchar(16) not null,
 PRIMARY KEY(id)
 );
+
 
 CREATE TABLE IF NOT EXISTS Titolare(
 	idtitolare varchar(16) not null,
@@ -199,6 +202,7 @@ CREATE TABLE IF NOT EXISTS Biglietteria(
 	check (posti_disponibili >= 0),
 PRIMARY KEY(park_data)
 );
+
 
 CREATE TABLE IF NOT EXISTS PrenotazioneHotel(
 	n_pren serial,

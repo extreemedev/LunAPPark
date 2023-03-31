@@ -73,6 +73,9 @@ include("../layouts/navbar.php")
                 
                 <label class="checky" for="data">Data di nascita:</label>
                 <input type="date" name="data" class="form-control" max="2021-12-31" min="1900-01-01">
+
+                <label class="checky" for="cf">Codice Fiscale:</label>
+                <input type="cf" name="cf" class="form-control" placeholder="Codice Fiscale" max="16">
                 <div class="mt-4" ></div>
                 <button class="btn-grad" name="signupButton" type="submit">Registrati</button>
             </form>

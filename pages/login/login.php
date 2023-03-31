@@ -1,20 +1,20 @@
 <?php
-    $dbconn = pg_connect("host=postgresql port=5432
-    dbname=lunappark user=extreemedev password=example");
+    $dbconn = pg_connect("host=database port=5432
+    dbname=lunappark user=admin password=example");
     $email = $_POST["inputEmail"];
 
-    $queryname = 'SELECT nome FROM public."UTENTE" where email=$1';
+    $queryname = 'SELECT nome FROM UtenteRegistrato WHERE user_mail=$1';
     $resultname = pg_query_params($dbconn, $queryname, array($email));
     $finalname = pg_fetch_array($resultname,null,PGSQL_NUM);
 
-    $query = 'SELECT * FROM public."UTENTE" where email=$1';
+    $query = 'SELECT * FROM UtenteRegistrato WHERE user_mail=$1';
     $result = pg_query_params($dbconn, $query, array($email));
     if(!($tuple=pg_fetch_array($result,null,PGSQL_ASSOC))) {
         header("location: index.php?valid=mail");
     }
     else {
         $password = md5($_POST["inputPassword"]);
-        $query2 = 'SELECT * FROM public."UTENTE" where email=$1 and password=$2';
+        $query2 = 'SELECT * FROM UtenteRegistrato WHERE user_mail=$1 and user_password=$2';
         $result = pg_query_params($dbconn, $query2, array($email, $password));
         if(($tuple=pg_fetch_array($result,null,PGSQL_ASSOC))) {
             session_start();
