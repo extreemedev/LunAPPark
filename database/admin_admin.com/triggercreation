@@ -20,7 +20,7 @@ CREATE OR REPLACE FUNCTION checkpren()
     LANGUAGE 'plpgsql'
 AS $BODY$
 BEGIN
-	IF (PrenotazioneGiostra.pren_data = CURRENT_DATE) THEN
+	IF (PrenotazioneGiostra.pren_data != CURRENT_DATE) THEN
 		RAISE EXCEPTION 'Errore: La data non corrisponde';
 	END IF;
 END;
@@ -28,6 +28,6 @@ $BODY$;
 CREATE OR REPLACE TRIGGER checkpren
 BEFORE INSERT ON PrenotazioneGiostra
 FOR EACH ROW
-EXECUTE PROCEDURE checkhour();
+EXECUTE PROCEDURE checkpren();
 
 

@@ -80,6 +80,7 @@ include("../layouts/navbar.php")
 			$querygiostra = pg_query_params($dbconn, 'SELECT id FROM Attrazione WHERE nome=$1', array($nomegiostra));
         	$idgiostra = pg_fetch_array($querygiostra, null, PGSQL_NUM);
 			$insert = pg_query_params($dbconn, 'INSERT INTO PrenotazioneGiostra VALUES ($1,$2,$3,$4)', array($hour, $cf[0], $data, $idgiostra[0]));
+			#echo($insert);
 			if ($insert) {
 				?>
 					<div class="text-center pt-5" style="font-size: 18px;">
