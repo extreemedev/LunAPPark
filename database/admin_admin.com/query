@@ -1,6 +1,6 @@
 SELECT idgiostra, nome, altezzamin
 FROM giostra JOIN attrazione ON (idgiostra=id)
-WHERE ((altezzamin < 1.30) OR (altezzamin = NULL));
+WHERE ((altezzamin < 1.30) OR (altezzamin IS NULL));
 
 
 --||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -119,4 +119,18 @@ SELECT Attrazione.nome, n_posti - postiocc
 FROM Attrazione JOIN Giostra ON (id = idgiostra) JOIN Postiturnoocc ON (idgiostra = idgio)
 ORDER BY (post_disponibili);
 
+--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+SELECT h.nome, COUNT(*) AS Stanze_matrimoniali
+FROM Hotel AS h JOIN Stanza ON (piva = stanza_hotel)
+WHERE (n_letti = 4)
+GROUP BY (h.nome)
+ORDER BY (Stanze_matrimoniali);
+
+--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+SELECT z.numero, z.nome, COUNT(*) AS tot_bagni_invalidi
+FROM Zona AS z JOIN Bagno ON (z.numero = bagno_zona)
+WHERE (invalido IS TRUE)
+GROUP BY (z.numero, z.nome)
+ORDER BY (z.numero);
