@@ -1,3 +1,5 @@
+DROP VIEW IF EXISTS Attrazioni_min_1_30;
+CREATE VIEW Attrazioni_min_1_30 (id_giostra, nome_giostra, altezza_min) AS
 SELECT idgiostra, nome, altezzamin
 FROM giostra JOIN attrazione ON (idgiostra=id)
 WHERE ((altezzamin < 1.30) OR (altezzamin IS NULL));
@@ -14,6 +16,8 @@ WHERE ((tipologia, n_posti) = ANY(SELECT tipologia, MAX(n_posti)
 
 --||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+DROP VIEW IF EXISTS Spettacoli_serali;
+CREATE VIEW Spettacoli_serali (id_spettacoli, nome_spettacoli, descrizione_spettacoli) AS
 SELECT id, nome, descrizione
 FROM Attrazione JOIN Spettacolo ON (id = idspett)
 WHERE ((ora_inizio >= '18:00') AND (ora_fine <= '23:00'));
@@ -91,6 +95,8 @@ SELECT Città.nome, COUNT(*)
 FROM PrenotazioneHotel JOIN Hotel ON (pren_hotel = piva) JOIN Città ON (hotel_città = Città.nome)
 GROUP BY Città.nome;
 
+DROP VIEW IF EXISTS Gettonate2;
+CREATE VIEW Gettonate2 (nome_città, distanza_dal_parco) AS
 SELECT *
 FROM Città AS ci
 WHERE (ci.nome = ANY (SELECT nomec
@@ -107,6 +113,8 @@ FROM Attrazione JOIN Giostra ON (id = idgiostra) JOIN PrenotazioneGiostra ON (id
 WHERE (ora_turno = '10:30')
 GROUP BY Attrazione.id;
 
+DROP VIEW IF EXISTS PostiTotDisponibili;
+CREATE VIEW PostiTotDisponibili (nome_attrazione, posti_disponibili) AS
 SELECT Attrazione.nome, n_posti AS post_disponibili
 FROM Attrazione JOIN Giostra ON (id = idgiostra)
 WHERE (idgiostra = ANY (SELECT idgiostra
@@ -121,14 +129,18 @@ ORDER BY (post_disponibili);
 
 --||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-SELECT h.nome, COUNT(*) AS Stanze_matrimoniali
+DROP VIEW IF EXISTS Numero_stanze_matrimoniali;
+CREATE VIEW Numero_stanze_matrimoniali (nome_hotel, numero_stanze_matrimoniali) AS
+SELECT h.nome, COUNT(*) AS stanze_matrimoniali
 FROM Hotel AS h JOIN Stanza ON (piva = stanza_hotel)
 WHERE (n_letti = 4)
 GROUP BY (h.nome)
-ORDER BY (Stanze_matrimoniali);
+ORDER BY (stanze_matrimoniali);
 
 --||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+DROP VIEW IF EXISTS Numero_bagni_invalidi;
+CREATE VIEW Numero_bagni_invalidi (numero_zona, nome_zona, totale_bagni_invalidi) AS
 SELECT z.numero, z.nome, COUNT(*) AS tot_bagni_invalidi
 FROM Zona AS z JOIN Bagno ON (z.numero = bagno_zona)
 WHERE (invalido IS TRUE)
