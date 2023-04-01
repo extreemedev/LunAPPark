@@ -22,7 +22,7 @@ CREATE OR REPLACE FUNCTION checkpren()
     LANGUAGE 'plpgsql'
 AS $BODY$
 BEGIN
-	IF (PrenotazioneGiostra.pren_data != CURRENT_DATE) THEN
+	IF (new.pren_data != CURRENT_DATE) THEN
 		RAISE EXCEPTION 'Errore: La data non corrisponde';
 		ELSE
             RETURN NEW;
@@ -33,6 +33,108 @@ CREATE OR REPLACE TRIGGER checkpren
 BEFORE INSERT ON PrenotazioneGiostra
 FOR EACH ROW
 EXECUTE PROCEDURE checkpren();
+
+
+
+CREATE OR REPLACE FUNCTION checkoralocale()
+    RETURNS trigger
+    LANGUAGE 'plpgsql'
+AS $BODY$
+BEGIN
+	IF (new.ora_chiusura < new.ora_apertura) THEN
+		RAISE EXCEPTION 'Errore: L’attributo ora-chiusura deve essere maggiore di ora-apertura';
+		ELSE
+            RETURN NEW;
+	END IF;
+END;
+$BODY$;
+CREATE OR REPLACE TRIGGER checkoralocale
+BEFORE INSERT ON Locale
+FOR EACH ROW
+EXECUTE PROCEDURE checkoralocale();
+
+
+
+
+CREATE OR REPLACE FUNCTION checkoralocalepulizia()
+    RETURNS trigger
+    LANGUAGE 'plpgsql'
+AS $BODY$
+BEGIN
+	IF ((new.ora_pulizia < new.ora_chiusura) AND (new.ora_pulizia > new.ora_apertura)) THEN
+		RAISE EXCEPTION 'Errore: L’attributo ora-pulizia deve essere maggiore di ora-chiusura e minore di ora-apertura';
+		ELSE
+            RETURN NEW;
+	END IF;
+END;
+$BODY$;
+CREATE OR REPLACE TRIGGER checkoralocalepulizia
+BEFORE INSERT ON Locale
+FOR EACH ROW
+EXECUTE PROCEDURE checkoralocalepulizia();
+
+
+
+
+
+CREATE OR REPLACE FUNCTION checkgiornobigliettopdf()
+    RETURNS trigger
+    LANGUAGE 'plpgsql'
+AS $BODY$
+BEGIN
+	IF (new.giorno < CURRENT_DATE) THEN
+		RAISE EXCEPTION 'Errore: L’attributo giorno deve essere maggiore uguale della data attuale';
+		ELSE
+            RETURN NEW;
+	END IF;
+END;
+$BODY$;
+CREATE OR REPLACE TRIGGER checkgiornobigliettopdf
+BEFORE INSERT ON BigliettoPdf
+FOR EACH ROW
+EXECUTE PROCEDURE checkgiornobigliettopdf();
+
+
+
+CREATE OR REPLACE FUNCTION checkgiornobigliettocarta()
+    RETURNS trigger
+    LANGUAGE 'plpgsql'
+AS $BODY$
+BEGIN
+	IF (new.giorno = CURRENT_DATE) THEN
+		RAISE EXCEPTION 'Errore: L’attributo giorno deve essere uguale della data attuale';
+		ELSE
+            RETURN NEW;
+	END IF;
+END;
+$BODY$;
+CREATE OR REPLACE TRIGGER checkgiornobigliettocarta
+BEFORE INSERT ON BigliettoCarta
+FOR EACH ROW
+EXECUTE PROCEDURE checkgiornobigliettocarta();
+
+
+
+
+
+CREATE OR REPLACE FUNCTION checkorachiusurapuntovendita()
+    RETURNS trigger
+    LANGUAGE 'plpgsql'
+AS $BODY$
+BEGIN
+	IF (new.apertura > new.chiusura) THEN
+		RAISE EXCEPTION 'Errore: L’attributo chiusura deve essere maggiore di apertura';
+		ELSE
+            RETURN NEW;
+	END IF;
+END;
+$BODY$;
+CREATE OR REPLACE TRIGGER checkorachiusurapuntovendita
+BEFORE INSERT ON PuntoVendita
+FOR EACH ROW
+EXECUTE PROCEDURE checkorachiusurapuntovendita();
+
+
 
 
 
