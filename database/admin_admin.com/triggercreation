@@ -3,8 +3,10 @@ CREATE OR REPLACE FUNCTION checkhour()
 	LANGUAGE 'plpgsql'
 AS $BODY$	
 	BEGIN
-		IF (Attrazione.ora_fine <= Attrazione.ora_inizio) THEN
+		IF (new.ora_inizio) >= (new.ora_fine)  THEN
 			RAISE EXCEPTION 'Errore: L`ora di termine deve essere maggiore dell`ora di inizio.';
+			ELSE
+            	RETURN NEW;
 		END IF;
 	END;
 $BODY$;
@@ -22,6 +24,8 @@ AS $BODY$
 BEGIN
 	IF (PrenotazioneGiostra.pren_data != CURRENT_DATE) THEN
 		RAISE EXCEPTION 'Errore: La data non corrisponde';
+		ELSE
+            RETURN NEW;
 	END IF;
 END;
 $BODY$;
@@ -31,3 +35,20 @@ FOR EACH ROW
 EXECUTE PROCEDURE checkpren();
 
 
+
+CREATE OR REPLACE FUNCTION checkcheckincheckoutprenotazione()
+    RETURNS trigger
+    LANGUAGE 'plpgsql'
+AS $BODY$
+BEGIN
+	IF ((new.check_in < CURRENT_DATE) OR (new.check_in > new.check_out)) THEN
+		RAISE EXCEPTION 'Errore: L’attributo check-in deve essere maggiore della data attuale, e check-out deve essere maggiore di check-in';
+		ELSE
+            RETURN NEW;
+	END IF;
+END;
+$BODY$;
+CREATE OR REPLACE TRIGGER checkcheckincheckoutprenotazione
+BEFORE INSERT ON PrenotazioneHotel
+FOR EACH ROW
+EXECUTE PROCEDURE checkcheckincheckoutprenotazione();
